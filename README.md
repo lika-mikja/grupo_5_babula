@@ -1,4 +1,4 @@
-# grupo_5_proyectointegrador
+# grupo_5_babula
 
 Nuestros integrantes del grupo son
 Nicolas García es Psicologo y estudiante de Programación.

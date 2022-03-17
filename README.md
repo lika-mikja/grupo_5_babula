@@ -1,8 +1,8 @@
 # grupo_5_babula
 
-**Nuestros integrantes del grupo son**
+**Nuestro grupo se encuentra conformado por**
 
-Nicolas García es Psicologo y estudiante de Programación.
+Nicolas García que es Psicologo y estudiante de Programación.
 
 Alan Arias es Gammer en constante aprendizaje.
 

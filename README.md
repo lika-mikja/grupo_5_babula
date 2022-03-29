@@ -8,5 +8,5 @@ Alan Arias es Gammer en constante aprendizaje.
 
 Anjelika Grebnev es Chef y amante de la música.
 
-Como servicio ofrecido tendremos una carta de comidas tipicas Euro-Asiaticas provenientes de Rusia por lo cual, nuestro e-commerce estará destinado aa toda persona que quiera experimentar nuevos sabores en su paladar.
+Como servicio ofrecido tendremos una carta de comidas tipicas Euro-Asiaticas provenientes de Rusia. Nuestro e-commerce estará destinado aa toda persona que quiera experimentar nuevos sabores en su paladar.
 

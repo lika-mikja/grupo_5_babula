@@ -1,6 +1,6 @@
 # grupo_5_babula
 
-**Nuestro grupo se encuentra conformado por**
+**- Nuestro grupo se encuentra conformado por**
 
 Nicolas García => Psicologo y estudiante de Programación.
 
@@ -10,7 +10,7 @@ Anjelika Grebneva => Chef y amante de la música.
 
 El servicio que ofreceremos es una carta de comidas tipicas Euro-Asiaticas provenientes de Rusia. Nuestro e-commerce estará destinado a toda persona que quiera experimentar nuevos sabores en su paladar.
 
-**Sitios de referencia:**
+**- Sitios de referencia:**
 
 En primer instancia elegimos "https://www.sakara.com/" por la organización de su barra de menú.
 
@@ -21,7 +21,7 @@ En tercer instancia seleccionamos "https://aforkandapencil.com/" por su presenta
 Como última instancia, agregamos "Mis compras" a la barra de menu, la cual contiene pedidos antiguos realizados. Esta idea la sacamos de "https://www.pedidosya.com.ar/"
 
 
--
+
 
 
 *Wireframes:*

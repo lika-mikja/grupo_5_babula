@@ -2,11 +2,11 @@
 
 **Nuestro grupo se encuentra conformado por**
 
-Nicolas García: Psicologo y estudiante de Programación.
+Nicolas García => Psicologo y estudiante de Programación.
 
-Alan Arias: Gammer en constante aprendizaje.
+Alan Arias => Gammer en constante aprendizaje.
 
-Anjelika Grebneva: Chef y amante de la música.
+Anjelika Grebneva => Chef y amante de la música.
 
 El servicio que ofreceremos es una carta de comidas tipicas Euro-Asiaticas provenientes de Rusia. Nuestro e-commerce estará destinado a toda persona que quiera experimentar nuevos sabores en su paladar.
 

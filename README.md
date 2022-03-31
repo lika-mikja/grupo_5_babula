@@ -21,6 +21,9 @@ En tercer instancia seleccionamos "https://aforkandapencil.com/" por su presenta
 Como última instancia, agregamos "Mis compras" a la barra de menu, la cual contiene pedidos antiguos realizados. Esta idea la sacamos de "https://www.pedidosya.com.ar/"
 
 
+-
+
+
 *Wireframes:*
 https://www.figma.com/file/dVQxUgIxU2gyHeYhfyzsQJ/Proyecto_fullstack?node-id=0%3A1
 

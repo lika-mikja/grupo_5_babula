@@ -1,0 +1,131 @@
+:root {
+    --blanco: white;
+    --azul-home: #2449A8;
+    --crema-home: #F8E8DA;
+    --naranja: #CA841B;
+}
+
+* {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    padding: auto;
+   
+
+}
+
+/*body {
+    height:650px;
+    background-image: url(/images/fondo.jpg);
+    background-size: 10rem;
+   }*/
+
+/* Menu de la página */
+
+.menu {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: var(--crema-home);
+    font-size: 20px;
+    margin: auto;
+}
+
+.name {
+    color: var(--azul-home);
+    padding: 7px;
+}
+/* Los iconos de ingreso y compra no se pone en el margen superior derecho ¿?*/
+
+div.icon-menu{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.bula {
+    font-weight: bold;
+}
+
+body header div i.fas {
+    font-size: 30px;
+    margin: 1rem;
+}
+
+div.bars {
+    background-color: var(--azul-home);
+}
+
+.fa-bars {
+    color: white;
+}
+
+.fa-user-alt,
+.fa-shopping-cart {
+    color: var(--azul-home);
+    display:flex;
+
+}
+.logo{
+    text-align: center;
+}
+
+/* Main */
+
+h3 {
+    color: var(--azul-home);
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+
+}
+h4{
+    padding: 10px;
+}
+
+.box-experience{
+    color: white;
+    background-color: var(--azul-home);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 7%;
+    margin: auto;
+
+}
+.fa-star-of-life{
+    color: var(--naranja);
+    font-size: 2rem;
+    text-align: center;;
+}
+
+section.images{
+    width: 100vw;
+
+}
+
+
+/* Footer */
+
+.foot{
+    text-align: center;
+    color: var(--azul-home);
+    background-color: var(--crema-home);
+    padding: 10px;
+}
+.fa-twitter , .fa-instagram-square {
+    font-size: 2rem;
+}
+.icons-footer{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.recipes{
+    text-align: center;
+    color: var(--azul-home);
+    font-size: 16px;;
+}
+/*  Hay que hacer??
+3) que sea para mobile
+4) que los iconos de la barra de menu vayan del costado izquierdo
+5) poner en negrita la letra?
+*/

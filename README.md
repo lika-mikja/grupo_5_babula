@@ -24,8 +24,7 @@ Como última instancia, agregamos "Mis compras" a la barra de menu, la cual cont
 
 
 
-*Wireframes del proyecto:**
-https://www.figma.com/file/dVQxUgIxU2gyHeYhfyzsQJ/Proyecto_fullstack?node-id=0%3A1
+
 
 
 

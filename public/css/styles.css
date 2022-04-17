@@ -104,7 +104,9 @@ section.images{
 
 /* Seccion Productos */
 
-
+.product1 {
+    display:flex;
+}
 
 
 

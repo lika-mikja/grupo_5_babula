@@ -43,6 +43,10 @@ div.icon-menu {
     justify-content: flex-end;
 }
 
+div.icon-menu a{
+    text-decoration: none;
+}
+
 .bula {
     font-weight: bold;
 }

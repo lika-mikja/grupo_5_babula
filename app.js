@@ -7,10 +7,9 @@ const path = require("path");
 app.use(express.static(path.resolve(__dirname, "./public")));
 
 
-app.listen(3000, () => {
-    console.log('Servidor funcionando en el puerto http://localhost:3000');
+app.listen(4000, () => {
+    console.log('Servidor funcionando en el puerto http://localhost:4000');
 });
-
 
 app.get('/login', (req, res) => {
     res.sendFile(__dirname + '/views/login.html');
@@ -22,4 +21,8 @@ app.get('/register', (req, res) => {
 
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/index.html"))
+});
+
+app.get('/carrito.html', (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/carrito.html"))
 });

@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(/images/img7.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.login-box {
+    width: 320px;
+    height: 720px;
+    background-color: rgba(0, 0, 0, 0.315);
+    color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 50px;
+    border: 3px solid #9B3B5E;
+
+}
+
+.login-box .Grandma {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    box-shadow: 3px 3px 15px #9B3B5E;
+}
+
+.login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box field {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    padding: 5px;
+    color: #000000;
+    background-color: transparent;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box input[type="Email"] {
+    border: none;
+    border-bottom: 1px solid #9B3B5E;
+    border-radius: 50px;
+    background-color: rgb(155, 59, 94, 15%);
+    margin-bottom: 15px;
+    height: 40px;
+    /*color: #fff;*/
+    font-size: 16px;
+}
+
+
+.login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    background: #b80f2342;
+    font-size: 1, 2rem;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: orangered;
+}
+
+
+.login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.login-box a:hover {
+    color: rgb(0, 0, 0);
+
+}
+
+.login-box input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+
+
+}
+
+.Terminos {
+
+    font-size: 14px;
+    font-family: Nunito-Regular;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: rgb(255, 255, 255);
+}
+
+.login-box a {
+    font-size: 14px;
+}
+
+
+
+.social-icons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.facebook {
+    background-color: #385998;
+}
+
+.instagram {
+    background: linear-gradient(rgb(243, 5, 171), rgb(205, 95, 4), yellow);
+}
+
+.twitter {
+    background-color: #00ACEE;
+}
+
+.google {
+    background-color: #CA3224;
+}
+
+.linkedin {
+    background-color: #0E76AB;
+}
+
+input:focus,
+input:hover,
+input:active {
+    outline: none;
+}
+
+/* mobile */
+@media (max-width: 767px) {}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 990px) {}
+
+/* PC */
+@media (min-width: 999px) {}

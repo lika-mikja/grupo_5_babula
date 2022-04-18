@@ -12,4 +12,6 @@ Comprendemos que hubo fallo en la comunicación ya que faltó consultar hasta do
 También notamos que estuvimos desorganizados con el tiempo, no dandole la prioridad que requiere.
 
 Lo que creemos que debemos implementar es trabajar más en conjunto.
+
+Fue un avance lento hasta que pudimos coordinar la dinámica de equipo como forma de trabajo.
  

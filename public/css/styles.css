@@ -34,6 +34,18 @@
 .name {
     color: var(--azul-home);
     padding: 7px;
+    font-weight: bold;
+
+}
+
+.name a {
+    color: var(--azul-home);
+    padding: 7px;
+
+    text-decoration: none;
+
+
+
 }
 
 /* Los iconos de ingreso y compra no se pone en el margen superior derecho ¿?*/
@@ -43,7 +55,7 @@ body header section div.icon-menu {
     justify-content: flex-end;
 }
 
-div.icon-menu a{
+div.icon-menu a {
     text-decoration: none;
 }
 
@@ -216,20 +228,26 @@ img.image5 {
 
 img.image5 {
     padding: 30px;
-    text-align: center;;
+    text-align: center;
+    ;
 
 }
 
 /* Acceder al menú */
 
-main section article.access-menu{
-    color: white;
+main section article.access-menu {
     background-color: var(--azul-home);
-    text-align: center;;
+    text-align: center;
+    ;
     opacity: 90%;
     margin: 5rem;
     padding: 1rem;
-    border-radius: 20px;;
+    border-radius: 20px;
+}
+
+main section article.access-menu a {
+    text-decoration: none;
+    color: white;
 }
 
 /* Footer */

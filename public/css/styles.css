@@ -9,7 +9,7 @@
     margin: 0;
     font-family: 'Roboto Slab', serif;
     padding: auto;
-   
+
 
 }
 
@@ -35,10 +35,11 @@
     color: var(--azul-home);
     padding: 7px;
 }
+
 /* Los iconos de ingreso y compra no se pone en el margen superior derecho ¿?*/
 
-div.icon-menu{
-    display:flex;
+div.icon-menu {
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -62,75 +63,185 @@ div.bars {
 .fa-user-alt,
 .fa-shopping-cart {
     color: var(--azul-home);
-    display:flex;
+    display: flex;
+    justify-content: flex-end;
 
 }
-.logo{
+
+.logo {
     text-align: center;
 }
 
+h1 {
+    color: var(--azul-home);
+    text-align: center;
+}
+
+h2 {
+    color: var(--azul-home);
+    text-align: center;
+    padding: 1.5rem;
+}
+
 /* Main */
+
+
+h2.recipes {
+    font-size: 2rem;
+    ;
+    text-decoration: underline;
+}
 
 h3 {
     color: var(--azul-home);
     text-align: center;
     padding: 30px;
     font-weight: bold;
+}
+
+main section article h4 {
+    font-size: 1.5rem;
+    color: white;
 
 }
-h4{
+
+
+h4 {
     padding: 10px;
 }
 
-.box-experience{
+.box-experience {
     color: white;
     background-color: var(--azul-home);
     text-align: center;
     padding: 2rem;
-    border-radius: 7%;
+    border-radius: 30px;
     margin: auto;
 
 }
-.fa-star-of-life{
+
+.fa-star-of-life {
     color: var(--naranja);
     font-size: 2rem;
-    text-align: center;;
+    text-align: center;
+    ;
 }
 
-section.images{
+section.images {
     width: 100vw;
 
 }
 
 /* Seccion Productos */
 
-.product1 {
-    display:flex;
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+main section article section p {
+    color: var(--naranja);
+    font-weight: bold;
+    padding: 30px;
 }
 
 
+/* Producto 1 */
+
+img.image1 {
+    max-width: 20rem;
+    max-width: 20rem;
+    border-radius: 50px;
+}
+
+img.image1 {
+    padding: 30px;
+}
+
+
+/* Producto 2 */
+
+img.image2 {
+    max-width: 20rem;
+    max-width: 20rem;
+    border-radius: 50px;
+    order: 1;
+}
+
+img.image2 {
+    padding: 30px;
+
+}
+
+/* Producto 3 */
+
+img.image3 {
+    max-width: 20rem;
+    max-width: 20rem;
+    border-radius: 50px;
+}
+
+img.image3 {
+    padding: 30px;
+
+}
+
+/* Producto 4 */
+
+img.image4 {
+    max-width: 20rem;
+    max-width: 20rem;
+    border-radius: 50px;
+    order: 1;
+}
+
+img.image4 {
+    padding: 30px;
+
+}
+
+/* Producto 5 */
+
+img.image5 {
+    max-width: 20rem;
+    max-width: 20rem;
+    border-radius: 50px;
+}
+
+img.image5 {
+    padding: 30px;
+    
+
+}
 
 /* Footer */
 
-.foot{
+.foot {
     text-align: center;
     color: var(--azul-home);
     background-color: var(--crema-home);
     padding: 10px;
 }
-.fa-twitter , .fa-instagram-square {
+
+.fa-twitter,
+.fa-instagram-square {
     font-size: 2rem;
 }
-.icons-footer{
+
+.icons-footer {
     padding: 10px;
     display: flex;
     justify-content: space-around;
 }
-.recipes{
+
+.recipes {
     text-align: center;
     color: var(--azul-home);
-    font-size: 16px;;
+    font-size: 16px;
+    ;
 }
+
 /*  Hay que hacer??
 3) que sea para mobile
 4) que los iconos de la barra de menu vayan del costado izquierdo

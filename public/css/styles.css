@@ -223,13 +223,17 @@ img.image5 {
 /* Acceder al menú */
 
 main section article.access-menu{
-    color: white;
     background-color: var(--azul-home);
     text-align: center;;
     opacity: 90%;
     margin: 5rem;
     padding: 1rem;
-    border-radius: 20px;;
+    border-radius: 20px;
+}
+
+main section article.access-menu a{
+    text-decoration: none;
+    color: white;
 }
 
 /* Footer */

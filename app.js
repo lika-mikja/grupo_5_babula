@@ -11,8 +11,8 @@ app.listen(4000, () => {
     console.log('Servidor funcionando en el puerto http://localhost:4000');
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/views/login.html');
+app.get('/Login.html', (req, res) => {
+    res.sendFile(__dirname + '/views/Login.html');
 });
 
 app.get('/register', (req, res) => {
@@ -26,3 +26,8 @@ app.get("/", (req, res) => {
 app.get('/carrito.html', (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/carrito.html"))
 });
+
+app.get('/productos.html', (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/productos.html"))
+});
+

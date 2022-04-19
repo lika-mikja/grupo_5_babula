@@ -13,11 +13,6 @@
 
 }
 
-/*body {
-    height:650px;
-    background-image: url(/images/fondo.jpg);
-    background-size: 10rem;
-   }*/
 
 /* Menu de la página */
 
@@ -55,7 +50,7 @@ body header section div.icon-menu {
     justify-content: flex-end;
 }
 
-.bula {
+div.name{
     font-weight: bold;
 }
 
@@ -129,6 +124,8 @@ h4 {
     padding: 2rem;
     border-radius: 30px;
     margin: auto;
+    opacity: 90%;
+    text-decoration: none;
 
 }
 
@@ -154,7 +151,7 @@ section.images {
 
 main section article section p {
     color: var(--naranja);
-    font-weight: bold;
+    
     padding: 30px;
     margin: 0;
 }
@@ -229,15 +226,13 @@ img.image5 {
 
 }
 
-.recipes-description{
-    text-align: justify;
-}
+
+
 /* Acceder al menú */
 
 main section article.access-menu {
     background-color: var(--azul-home);
     text-align: center;
-    ;
     opacity: 90%;
     margin: 5rem;
     padding: 1rem;
@@ -260,6 +255,7 @@ main section article.access-menu a {
     margin-right: 4.5rem;
     margin-left: 4.5rem;
     padding: 10px;
+    opacity: 90%;
 }
 
 /* Footer */

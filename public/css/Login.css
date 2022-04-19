@@ -3,7 +3,7 @@ body {
     padding: 0;
     background: url(/images/img7.jpg) no-repeat center top;
     background-size: cover;
-    font-family: sans-serif;
+    font-family: 'Roboto Slab', serif;
     height: 100vh;
 }
 
@@ -81,7 +81,7 @@ body {
     background: #b80f2342;
     font-size: 1, 2rem;
     border-radius: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Slab', serif;
 
     text-align: center;
 }

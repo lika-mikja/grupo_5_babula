@@ -17,13 +17,13 @@
 /* Menu de la página */
 
 .menu {
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: var(--crema-home);
-    font-size: 20px;
-    margin: auto;
+  display: flex;
+ background-color: var(--crema-home);
+ font-size: 20px;
+ margin: auto;
+ align-items: center;
+ justify-content: space-between;
+    
 }
 
 .name {
@@ -45,6 +45,8 @@
 
 /* Los iconos de ingreso y compra no se pone en el margen superior derecho ¿?*/
 
+/* MENU ANTERIOR 
+
 body header section div.icon-menu {
     display: flex;
     justify-content: flex-end;
@@ -53,6 +55,28 @@ body header section div.icon-menu {
 div.name{
     font-weight: bold;
 }
+
+body header div i.fas {
+    font-size: 30px;
+    margin: 1rem;
+}
+
+*/
+/* MENU PLANTEADO X NATY*/
+
+div.menu-left {
+    display: flex;
+}
+
+div.menu-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-right a {
+    text-decoration: none;
+}
+
 
 body header div i.fas {
     font-size: 30px;
@@ -151,11 +175,14 @@ section.images {
 
 main section article section p {
     color: var(--naranja);
-    
+    font-weight: bold;
     padding: 30px;
     margin: 0;
 }
-
+.recipes-description{
+    text-align: center;
+   
+}
 
 /* Producto 1 */
 
@@ -256,6 +283,8 @@ main section article.access-menu a {
     margin-left: 4.5rem;
     padding: 10px;
     opacity: 90%;
+    text-align: center;
+    text-decoration: none;
 }
 
 /* Footer */

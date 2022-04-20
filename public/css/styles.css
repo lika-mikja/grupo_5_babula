@@ -314,6 +314,27 @@ main section article.access-menu a {
     ;
 }
 
+/* Carrito de compras */
+
+.seccion-compra{
+    display: flex;
+}
+
+.caja-imagen, .caja-texto{
+    margin: 15px;
+}
+
+.alinear-items {
+    display: flex;   
+}
+
+.img-compra{
+    max-width: 20rem;
+    max-width: 20rem;
+    border-radius: 50px;
+    order: 1;
+}
+
 
 
 

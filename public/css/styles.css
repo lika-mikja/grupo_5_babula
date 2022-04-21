@@ -325,12 +325,34 @@ main section article.access-menu a {
 }
 
 .alinear-items {
-    display: flex;   
+    display: flex;  
+    text-align: center; 
+    color: var(--azul-home);
+   margin: auto;
+   padding: auto;
+    
 }
 
+div .alinear-items i {
+
+    color: var(--azul-home);
+    margin: 5px;
+}
+
+div .alinear-items p {
+    color: black;
+    width: 20px; 
+     height: 20px; 
+     border: 3px solid var(--azul-home);
+}
+
+
+.separated{
+    margin-left: 10px;
+}
 .img-compra{
-    max-width: 20rem;
-    max-width: 20rem;
+    max-width: 10rem;
+    max-width: 10rem;
     border-radius: 50px;
     order: 1;
 }

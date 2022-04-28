@@ -362,7 +362,8 @@ div .alinear-items p {
 
 
 /* Como hacer?
-1) que los iconos de la barra de menu vayan del costado izquierdo? No funciona con justify-content:flex-end
-2) Que la descripción del producto no se tire para un costado, mas alla de estar centrada en la caja, el texto deberia estar centrado y con text-aligns no funciona.
-3) Agregar tituto del producto  y que este situado arriba de la descripción.
+
+1) Agregar tituto del producto  y que este situado arriba de la descripción.
+2)  Que el link de localhost  no diga login.html ( cuando linkeemos los demas tampoco)
+
 */

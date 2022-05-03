@@ -2,35 +2,43 @@
     --blanco: white;
     --azul-home: #2449A8;
     --crema-home: #F8E8DA;
-    --naranja: #CA841B;
+    --naranja: #e08c0d;
+    --gris-oscuro: #525252;
 }
 
 * {
     margin: 0;
     font-family: 'Roboto Slab', serif;
     padding: auto;
+}
 
-
+a {
+    text-decoration: none;
 }
 
 
 /* Menu de la página */
 
 .menu {
-  display: flex;
- background-color: var(--crema-home);
- font-size: 20px;
- margin: auto;
- align-items: center;
- justify-content: space-between;
-    
+    overflow: hidden;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    background-color: var(--crema-home);
+    font-size: 26px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgb(100 100 111 / 20%) -1px 5px 4px 0px;
 }
 
 .name {
+    font-size: 22px;
     color: var(--azul-home);
     padding: 7px;
     font-weight: bold;
-
+    line-height: 23px;
 }
 
 .name a {
@@ -62,29 +70,31 @@ body header div i.fas {
 }
 
 */
+
 /* MENU PLANTEADO X NATY*/
 
 div.menu-left {
+    width: 50%;
+    position: relative;
     display: flex;
+    align-items: center;
 }
 
 div.menu-right {
     display: flex;
     align-items: center;
+    margin-right: 14px;
 }
 
 .menu-right a {
     text-decoration: none;
+    padding: 12px;
 }
 
-
-body header div i.fas {
-    font-size: 30px;
-    margin: 1rem;
-}
 
 div.bars {
     background-color: var(--azul-home);
+    padding: 20px;
 }
 
 .fa-bars {
@@ -99,28 +109,48 @@ div.bars {
 
 }
 
-.logo {
+
+
+
+/* Banner con logo */
+
+.banner {
+    width: 90%;
+    margin: auto;
+    padding-top: 82px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-logo {
+    width: 150px;
+    padding: 40px 15px;
     text-align: center;
 }
 
-h1 {
+.banner-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 15px;
     color: var(--azul-home);
-    text-align: center;
 }
 
-h2 {
-    color: var(--azul-home);
-    text-align: center;
-    padding: 1.5rem;
+.banner-text h1 {
+    font-size: 40px;
 }
+
+.banner-text h2 {
+    font-size: 14px;
+}
+
 
 /* Main */
 
 
 h2.recipes {
     font-size: 2rem;
-    ;
-    text-decoration: underline;
+    color: var(--gris-oscuro);
 }
 
 h3 {
@@ -128,6 +158,11 @@ h3 {
     text-align: center;
     padding: 30px;
     font-weight: bold;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
 }
 
 main section article h4 {
@@ -145,12 +180,11 @@ h4 {
     color: white;
     background-color: var(--azul-home);
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 30px;
     margin: auto;
     opacity: 90%;
     text-decoration: none;
-
 }
 
 .fa-star-of-life {
@@ -165,135 +199,91 @@ section.images {
 
 }
 
-/* Seccion Productos */
+/* Productos destacados */
 
-
-.product {
-    display: flex;
-    align-items: center;
+main section article {
+    transition: transform, 600ms;
 }
 
-main section article section p {
+.featured-products {
+    margin-top: 40px;
+}
+
+p.product-name {
     color: var(--naranja);
-    font-weight: bold;
-    padding: 30px;
-    margin: 0;
-}
-.recipes-description{
-    text-align: center;
-    border: solid, 4px, var(--naranja);
-
-}
-
-/* Producto 1 */
-
-img.image1 {
-    max-width: 20rem;
-    max-width: 20rem;
-    border-radius: 50px;
-}
-
-img.image1 {
-    padding: 30px;
-}
-
-
-/* Producto 2 */
-
-img.image2 {
-    max-width: 20rem;
-    max-width: 20rem;
-    border-radius: 50px;
-    order: 1;
-}
-
-img.image2 {
-    padding: 30px;
-
-}
-
-/* Producto 3 */
-
-img.image3 {
-    max-width: 20rem;
-    max-width: 20rem;
-    border-radius: 50px;
-}
-
-img.image3 {
-    padding: 30px;
-
-}
-
-/* Producto 4 */
-
-img.image4 {
-    max-width: 20rem;
-    max-width: 20rem;
-    border-radius: 50px;
-    order: 1;
-}
-
-img.image4 {
-    padding: 30px;
-
-}
-
-/* Producto 5 */
-
-img.image5 {
-    max-width: 20rem;
-    max-width: 20rem;
-    border-radius: 50px;
-}
-
-img.image5 {
-    padding: 30px;
-    text-align: center;
-    ;
-
-}
-
-/* Titulo de productos */
-
-p.name-product{
-    padding: 0.1rem;
     font-size: 25px;
     font-weight: bold;
 }
 
-/* Acceder al menú */
-
-main section article.access-menu {
-    background-color: var(--azul-home);
-    text-align: center;
-    opacity: 90%;
-    padding: 1rem;
-    border-radius: 40px;
-    margin-right: 12rem;
-    margin-left: 12rem;
-    margin-bottom: 2rem;
+.recipes-description {
+    margin: 24px 0;
+    display: flex;
+    border: solid, 4px, var(--naranja);
+    flex-direction: column;
 }
 
-main section article.access-menu a {
-    text-decoration: none;
-    color: white;
+p.product-description {
+    margin: 6px 0 20px;
+    color: var(--gris-oscuro);
+    font-weight: 500;
+    line-height: 1.6em;
+    text-align: justify;
+    hyphens: auto;
 }
 
+.products article {
+    width: 100%;
+    margin: 40px 0;
+    flex-direction: column;
+    align-items: center;
+}
 
-/* Ver más */
+.featured-products .product-image {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    display: flex;
+    border-radius: 30px;
+}
+
+.featured-products img {
+    object-fit: cover;
+    width: 100%;
+}
 
 .see-more {
-    color: white;
+    width: 100px;
     background-color: var(--naranja);
+    border-radius: 15px;
+    padding: 9px;
+}
+
+.see-more p {
     text-align: center;
-    border-radius: 40px;
-    margin-right: 7.5rem;
-    margin-left: 7.5rem;
-    padding: 10px;
-    opacity: 90%;
-    text-align: center;
+    color: white;
     text-decoration: none;
+}
+
+/* Acceder al menú */
+
+section.access-menu {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.clean{
+    width: 100%;
+    background-color: var(--azul-home);
+    border-radius: 15px;
+    margin: auto;
+}
+
+.clean p {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+
+
 }
 
 /* Footer */
@@ -302,44 +292,45 @@ main section article.access-menu a {
     text-align: center;
     color: var(--azul-home);
     background-color: var(--crema-home);
-    padding: 10px;
+    padding: 24px;
+    font-weight: bold;
 }
 
 .fa-twitter,
 .fa-instagram-square {
+    margin: 0 8px;
     font-size: 2rem;
 }
 
 .icons-footer {
-    padding: 10px;
+    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .recipes {
     text-align: center;
-    color: var(--azul-home);
     font-size: 16px;
-    ;
 }
 
 /* Carrito de compras */
 
-.seccion-compra{
+.seccion-compra {
     display: flex;
 }
 
-.caja-imagen, .caja-texto{
+.caja-imagen,
+.caja-texto {
     margin: 15px;
 }
 
 .alinear-items {
-    display: flex;  
-    text-align: center; 
+    display: flex;
+    text-align: center;
     color: var(--azul-home);
-   margin: auto;
-   padding: auto;
-    
+    margin: auto;
+    padding: auto;
+
 }
 
 div .alinear-items i {
@@ -350,25 +341,22 @@ div .alinear-items i {
 
 div .alinear-items p {
     color: black;
-    width: 20px; 
-     height: 20px; 
-     border: 3px solid var(--azul-home);
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--azul-home);
 }
 
 
-.separated{
+.separated {
     margin-left: 10px;
 }
-.img-compra{
+
+.img-compra {
     max-width: 10rem;
     max-width: 10rem;
     border-radius: 50px;
     order: 1;
 }
-
-
-
-
 
 /* Como hacer?
 
@@ -376,3 +364,57 @@ div .alinear-items p {
 2)  Que el link de localhost  no diga login.html ( cuando linkeemos los demas tampoco)
 
 */
+
+@media (min-width: 480px) {
+
+/* Productos destacados */
+
+    .products {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .products article {
+        width: 40%;
+    }
+
+    .recipes-description {
+        margin: 20px 0;
+    }
+
+    .clean{
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+
+/* Productos destacados */
+
+    .box-experience {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .fa-star-of-life {
+        order: 1;
+    }
+
+    .box-experience h4{
+        order: 0;
+    }
+
+    .box-experience p{
+        order: 2;
+    }
+
+    .products article {
+        width: 26%;
+    }

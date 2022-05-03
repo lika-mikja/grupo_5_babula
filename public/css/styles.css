@@ -43,26 +43,7 @@
 
 }
 
-/* Los iconos de ingreso y compra no se pone en el margen superior derecho ¿?*/
-
-/* MENU ANTERIOR 
-
-body header section div.icon-menu {
-    display: flex;
-    justify-content: flex-end;
-}
-
-div.name{
-    font-weight: bold;
-}
-
-body header div i.fas {
-    font-size: 30px;
-    margin: 1rem;
-}
-
-*/
-/* MENU PLANTEADO X NATY*/
+/* Menu header */
 
 div.menu-left {
     display: flex;
@@ -368,11 +349,3 @@ div .alinear-items p {
 
 
 
-
-
-/* Como hacer?
-
-1) Agregar tituto del producto  y que este situado arriba de la descripción.
-2)  Que el link de localhost  no diga login.html ( cuando linkeemos los demas tampoco)
-
-*/

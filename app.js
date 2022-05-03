@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
-// modulo nativo para manejar las rutas de los archivos//
+// Modulo nativo para manejar las rutas de los archivos//
 const path = require("path");
 
-// recursos estaticos //
+// Recursos estaticos //
 app.use(express.static(path.resolve(__dirname, "./public")));
+
+// Que las vistas se vean por ejs
+app.set ("view engine", "ejs");
 
 
 app.listen(4000, () => {

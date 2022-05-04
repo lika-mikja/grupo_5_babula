@@ -313,9 +313,8 @@ section.access-menu {
     font-size: 16px;
 }
 
-/* Carrito de compras */
-
-.seccion-compra {
+/* Carrito de compra */
+/* .seccion-compra {
     display: flex;
 }
 
@@ -356,7 +355,8 @@ div .alinear-items p {
     max-width: 10rem;
     border-radius: 50px;
     order: 1;
-}
+} */
+
 
 /* Como hacer?
 

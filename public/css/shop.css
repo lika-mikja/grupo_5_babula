@@ -1,0 +1,193 @@
+:root {
+    --blanco: white;
+    --azul-home: #2449A8;
+    --crema-home: #F8E8DA;
+    --naranja: #e08c0d;
+    --gris-oscuro: #525252;
+}
+
+* {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    padding: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Menu de la página */
+
+.menu {
+    overflow: hidden;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    background-color: var(--crema-home);
+    font-size: 26px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgb(100 100 111 / 20%) -1px 5px 4px 0px;
+}
+
+.name {
+    font-size: 22px;
+    color: var(--azul-home);
+    padding: 7px;
+    font-weight: bold;
+    line-height: 23px;
+}
+
+.name a {
+    color: var(--azul-home);
+    padding: 7px;
+
+    text-decoration: none;
+}
+
+/* MENU PLANTEADO X NATY*/
+
+div.menu-left {
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+div.menu-right {
+    display: flex;
+    align-items: center;
+    margin-right: 14px;
+}
+
+.menu-right a {
+    text-decoration: none;
+    padding: 12px;
+}
+
+
+div.bars {
+    background-color: var(--azul-home);
+    padding: 20px;
+}
+
+.fa-bars {
+    color: white;
+}
+
+.fa-user-alt,
+.fa-shopping-cart {
+    color: var(--azul-home);
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+
+
+/* Banner con logo */
+
+.banner {
+    width: 90%;
+    margin: auto;
+    padding-top: 82px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-logo {
+    width: 150px;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.banner-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 15px;
+    color: var(--azul-home);
+}
+
+.banner-text h1 {
+    font-size: 40px;
+}
+
+.banner-text h2 {
+    font-size: 14px;
+}
+
+/* Main */
+
+.seccion-compra {
+    display: flex;
+}
+
+.caja-imagen,
+.caja-texto {
+    margin: 15px;
+}
+
+.alinear-items {
+    display: flex;
+    text-align: center;
+    color: var(--azul-home);
+    margin: auto;
+    padding: auto;
+
+}
+
+div .alinear-items i {
+
+    color: var(--azul-home);
+    margin: 5px;
+}
+
+div .alinear-items p {
+    color: black;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--azul-home);
+}
+
+
+.separated {
+    margin-left: 10px;
+}
+
+.img-compra {
+    max-width: 10rem;
+    max-width: 10rem;
+    border-radius: 50px;
+    order: 1;
+}
+
+/* Footer */
+
+.foot {
+    text-align: center;
+    color: var(--azul-home);
+    background-color: var(--crema-home);
+    padding: 24px;
+    font-weight: bold;
+}
+
+.fa-twitter,
+.fa-instagram-square {
+    margin: 0 8px;
+    font-size: 2rem;
+}
+
+.icons-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.recipes {
+    text-align: center;
+    font-size: 16px;
+}

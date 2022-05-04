@@ -1,3 +1,5 @@
+
+//Dependencias
 const express = require('express');
 const app = express();
 // Modulo nativo para manejar las rutas de los archivos//
@@ -6,7 +8,7 @@ const path = require("path");
 // Recursos estaticos //
 app.use(express.static(path.resolve(__dirname, "./public")));
 
-// Que las vistas se vean por ejs
+// Configuración
 app.set ("view engine", "ejs");
 
 
@@ -14,6 +16,7 @@ app.listen(4000, () => {
     console.log('Servidor funcionando en el puerto http://localhost:4000');
 });
 
+// Rutas 
 app.get('/login', (req, res) => { 
     res.sendFile(path.resolve(__dirname , './views/login.html'))
 });

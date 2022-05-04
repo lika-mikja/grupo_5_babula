@@ -8,6 +8,7 @@ app.use(express.static(path.resolve(__dirname, "./public")));
 
 // Que las vistas se vean por ejs
 app.set ("view engine", "ejs");
+app.set("views", "./views/pages"); /* Indica a express donde buscar las vistas */
 
 
 app.listen(4000, () => {

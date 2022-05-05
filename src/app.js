@@ -8,12 +8,15 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Que las vistas se vean por ejs
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views')); /* Indica a express donde buscar las vistas */
+/* Indica a express donde buscar las vistas */
+app.set('views', path.join(__dirname, '/views')); 
 
 
-app.listen(4000, () => {
-    console.log('Servidor funcionando en el puerto http://localhost:4000');
-});
+/* Requerimiento y uso de sistema de Rutas.. ACA HAY UN PROBLEMA!!!*/ 
+/*const mainRouter = require('./routes/mainRouter');
+app.use("/", mainRouter);*/ 
+
+
 
 app.get('/login', (req, res) => { 
     res.render(path.resolve(__dirname , './views/users/login'))
@@ -35,3 +38,8 @@ app.get('/product', (req, res) => {
     res.render(path.resolve(__dirname, './views/products/product'))
 });
 
+
+
+app.listen(4000, () => {
+    console.log('Servidor funcionando en el puerto http://localhost:4000');
+});

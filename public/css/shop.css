@@ -85,9 +85,6 @@ div.bars {
 
 }
 
-
-
-
 /* Banner con logo */
 
 .banner {
@@ -124,16 +121,20 @@ div.bars {
 
 .seccion-compra {
     display: flex;
+    
 }
 
 .caja-imagen,
 .caja-texto {
     margin: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    
 }
 
 .alinear-items {
     display: flex;
-    text-align: center;
     color: var(--azul-home);
     margin: auto;
     padding: auto;
@@ -151,6 +152,7 @@ div .alinear-items p {
     width: 20px;
     height: 20px;
     border: 3px solid var(--azul-home);
+    text-align: center;
 }
 
 
@@ -163,6 +165,23 @@ div .alinear-items p {
     max-width: 10rem;
     border-radius: 50px;
     order: 1;
+}
+
+.buttons_buy{
+    display: flex;
+    flex-direction: column;
+   
+}
+.buttons_buy button {
+    width: 100px;
+    background-color: var(--naranja);
+    border-radius: 15px;
+    padding: 9px;    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 /* Footer */

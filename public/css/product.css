@@ -5,6 +5,7 @@
     --crema-home: #F8E8DA;
     --naranja: #CA841B;
     --negro: black;
+    --gris-oscuro: #525252;
 }
 * {
     margin: 0;
@@ -78,18 +79,20 @@ main section article section p {
     margin-left: 1rem;
 }
 .recipes-description{
-    border: solid, 4px, var(--naranja);
+    border: solid, 4px, var(--gris-oscuro);
   
 }
-
+.product-description{
+    color: var(--gris-oscuro);
+}
 /* Producto 1 */
 
-img.image1 {
+img.product-image {
     max-width: 20rem;
     border-radius: 50px;
 }
 
-img.image1 {
+img.product-image {
     padding: 20px;
     
 }
@@ -97,22 +100,45 @@ img.image1 {
 
 /* Titulo de productos */
 
-p.name-product{
+p.product-name{
     padding: 2rem;
     font-size: 25px;
     font-weight: bold;
     text-align: left;
+    color: var(--naranja);
+}
+.featured-products .product-image {
+width: 100%;
+aspect-ratio: 1;
+overflow: hidden;
+display: flex;
+border-radius: 30px;
+
 }
 /* Precio & Agregar al carrito */
 
 .prince{
-    font-size: 25px;;
+    font-size: 25px;
+    color: var(--naranja);
+    font-weight: bold;
 }
 .prince-sold {
     text-align: right;
     padding: 30px;
+    
 }
 
+/* Color boton agregar al carrito*/
+
+.button-color{
+    background-color: var(--naranja);
+    border-radius: 15px;
+    padding: 8px;
+}
+.button-color a{
+    text-decoration: none;
+    color:  var(--blanco);
+}
 /* Footer */
 
 .foot {
@@ -139,3 +165,19 @@ p.name-product{
     font-size: 16px;
     ;
 }
+
+@media (min-width: 480px) {
+
+    /* Productos destacados !!!consultar!!!*/
+    
+        .product-image .recipes-description {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+    
+    
+        
+    }

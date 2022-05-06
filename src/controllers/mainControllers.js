@@ -41,7 +41,7 @@ const listaPlatos = [
 
 const mainController = {
     index:  (req , res) => {
-        res.render("index", {menu: listaPlatos });
+        res.render("./users/index", {menu: listaPlatos });
     }
 }
 

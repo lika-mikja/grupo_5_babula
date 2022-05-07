@@ -12,9 +12,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views')); 
 
 
-/* Requerimiento y uso de sistema de Rutas.. ACA HAY UN PROBLEMA!!!*/ 
-/*const mainRouter = require('./routes/mainRouter');
-app.use("/", mainRouter);*/ 
+/* Requerimiento y uso de sistema de Rutas..*/ 
+const mainRouter = require('./routes/mainRouter');
+app.use("/", mainRouter);
 
 
 
@@ -39,7 +39,7 @@ app.get('/product', (req, res) => {
 });
 
 
-
+// Servidor
 app.listen(4000, () => {
     console.log('Servidor funcionando en el puerto http://localhost:4000');
 });

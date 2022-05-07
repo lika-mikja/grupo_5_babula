@@ -42,8 +42,11 @@ const listaPlatos = [
 const mainController = {
     index:  (req , res) => {
         res.render("./users/index", {menu: listaPlatos });
-    }
+    },
+    detalle: (req,res) => {
+    let plato = listaPlatos.find(plato => plato.id == req.params.id) 
+    res.render("./products/product", { plato });
 }
-
+}
 
 module.exports= mainController;

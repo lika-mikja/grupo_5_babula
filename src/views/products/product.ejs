@@ -36,18 +36,12 @@
     
     <section class="featured-products">
       <article class="product">
-        <img class="product-image" src="/images/borsch.jpeg" alt="product 1">
+        <img class="product-image" src="/images/<%= plato.img %>" alt="product 1">
         <section class="recipes-description">
-          <p class="product-name">Borsch</p>
-          <p class="product-description"> Es la sopa tradicional de verduras donde la remolacha es la gran
-            protagonista.<br>
-            Este plato incluye cebolla, tomate, repollo, patatas y
-            porotos. <br>
-            La historia de este plato va ligada a
-            la evolución de las recetas de caldos y por extensión a las sopas acompañadas por hierbas o
-            plantas que se van añadiendo al agua para conseguir una combinación agradable y nutritiva. </p>
+          <p class="product-name"> <%= plato.titulo %> </p>
+          <p class="product-description"> <%= plato.descripcion %> </p>
           <section class="prince-sold">
-            <p class="prince">$1.200.-</p>
+            <p class="prince">$<%= plato.precio %> .-</p>
             <button class=" button-color"><a href="/carrito">Agregar al carrito</a></button>
           </section>
           </div>
@@ -57,15 +51,7 @@
     </section>
   </main>
   <footer>
-    <div class="foot">
-      <p>BA BULA</p>
-      <p>SABORES EURO-ASIÁTICOS.</p>
-      <div class="icons-footer">
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram-square"></i>
-      </div>
-    </div>
-  </footer>
+    <%- include("../partials/footer") %>
 </body>
 
 </html>

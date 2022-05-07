@@ -25,5 +25,5 @@ Como impedimento sucedió el no poder avanzar con los partials ya que no levanta
 Las tareas a realizar serian, implementar de forma correcta la media querie de la vista de productos, armado de ruta parametrizada para poder ingresar al detalle de cada producto en la vista de products y organizar sistema de ruteo de dicha vista..
 
 Encuentro 6 de mayo:
-Lika:
-Como impedimento se encontro con que no se puede implementar el partials del head en todas las vistas, ya que cada vista esta linkeada a un css diferente. Como se soluciona esto?
+
+Como impedimento grupal se encontro con que no se puede implementar el partials del head en todas las vistas, ya que cada vista esta linkeada a un css diferente. Como se soluciona esto?

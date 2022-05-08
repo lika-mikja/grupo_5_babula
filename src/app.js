@@ -18,7 +18,7 @@ app.use("/", mainRouter);
  
 /*Importar enrutador*/
 
-const productRouter = require ("./routes/productRouter");
+const productRouter = require ("./routes/productRouter.js");
 
 /* Usando enrutador para carrito de compras */
 

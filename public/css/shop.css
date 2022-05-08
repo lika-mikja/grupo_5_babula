@@ -15,6 +15,13 @@
 a {
     text-decoration: none;
 }
+/* Body */
+
+body {
+    background: url('../images/background-body.jpg');
+    background-repeat-x: repeat;
+    background-size: cover;
+}
 
 /* Menu de la página */
 
@@ -43,7 +50,6 @@ a {
 .name a {
     color: var(--azul-home);
     padding: 7px;
-
     text-decoration: none;
 }
 
@@ -217,3 +223,7 @@ div .alinear-items p {
     font-size: 16px;
 }
 
+@media (min-width: 480px) {}
+
+@media (min-width: 768px) {}
+         

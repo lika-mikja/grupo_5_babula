@@ -15,8 +15,14 @@ app.set('views', path.join(__dirname, '/views'));
 /* Requerimiento y uso de sistema de Rutas..*/ 
 const mainRouter = require('./routes/mainRouter');
 app.use("/", mainRouter);
+ 
+/*Importar enrutador*/
 
+const productRouter = require ("./routes/productRouter");
 
+/* Usando enrutador para carrito de compras */
+
+/* app.use("/products",productRouter); */
 
 app.get('/login', (req, res) => { 
     res.render(path.resolve(__dirname , './views/users/login'))
@@ -41,8 +47,6 @@ app.get('/shop', (req, res) => {
 app.get('/product', (req, res) => {
     res.render(path.resolve(__dirname, './views/products/product'))
 });
-
-
 
 // Servidor
 app.listen(4000, () => {

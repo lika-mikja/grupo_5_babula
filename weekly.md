@@ -12,7 +12,7 @@ Estuvo repasando conceptos de Express para poder armar el orden de carpetas con 
 Como impedimento surgió que al cambiar las extensiones, no levantaba el servidor.
 Como tarea de la semana , debe actualizar el carrito de compras y organizar el sistema de ruteo del mismo.
 
-Adrian:
+Adriano:
 
 Volvió a chequear conceptos y actualizo el diseño de la home, junto con las medias queries. Tambien se realizó una modificaion interna del archivo, como el nobmre de los productos.
 Como impedimento se encontro trabajando en el master. Esto se encuentra solucionado y se esta pusheando en el main. Notó que las rutas estaban mal planteadas y cambió el sendfile por render, esto hizo que le servidor vuelva a levantar correctamente.

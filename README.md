@@ -8,6 +8,8 @@ Alan Arias => Gammer en constante aprendizaje.
 
 Anjelika Grebneva => Chef y amante de la música.
 
+Adriano Carreri => Diseñador gráfico, team perritos.
+
 El servicio que ofreceremos es una carta de comidas tipicas Euro-Asiaticas provenientes de Rusia. Nuestro e-commerce estará destinado a toda persona que quiera experimentar nuevos sabores en su paladar.
 
 **- Sitios de referencia:**

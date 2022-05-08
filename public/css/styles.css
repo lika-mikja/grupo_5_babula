@@ -16,6 +16,14 @@ a {
     text-decoration: none;
 }
 
+/* Body */
+
+body {
+    background: url('../images/background-body.jpg');
+    background-repeat-x: repeat;
+    background-size: cover;
+}
+
 /* Menu de la página */
 
 .menu {
@@ -70,6 +78,13 @@ div.menu-right {
     padding: 12px;
 }
 
+.menu-right i {
+    color: var(--azul-home);
+    display: flex;
+    justify-content: flex-end;
+
+}
+
 
 div.bars {
     background-color: var(--azul-home);
@@ -80,13 +95,6 @@ div.bars {
     color: white;
 }
 
-.fa-user-alt,
-.fa-shopping-cart {
-    color: var(--azul-home);
-    display: flex;
-    justify-content: flex-end;
-
-}
 
 /* Banner con logo */
 
@@ -247,7 +255,7 @@ section.access-menu {
     margin: 30px 0;
 }
 
-.clean{
+.clean {
     width: 100%;
     background-color: var(--azul-home);
     border-radius: 15px;
@@ -260,6 +268,72 @@ section.access-menu {
     text-align: center;
 
 
+}
+
+/*Formulario de creación de producto*/
+
+.product-creator {
+    margin: 50px 0;
+}
+
+.product-detail {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.container-product-creator {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    align-items: center;
+}
+
+.product-creator .title {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.product-creator .formulario {
+    display: flex;
+    margin: 30px 0;
+    flex-direction: column;
+}
+
+.row-product-detail .col-12 {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    display: flex;
+    font-size: 1em;
+    margin: 10px 0;
+    flex-direction: column;
+}
+
+.form-input {
+    margin-bottom: 15px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 1px 1px 4px 0px #0000003b;
+    padding: 10px 15px;
+}
+
+textarea.form-input {
+    min-height: 140px;
+    resize: vertical;
+    padding: 15px;
+}
+
+.send-button {
+    color: white;
+    margin-top: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 15px;
+    background-color: var(--naranja);
 }
 
 /* Footer */
@@ -339,7 +413,7 @@ div .alinear-items p {
 
 @media (min-width: 480px) {
 
-/* Productos destacados */
+    /* Productos destacados */
 
     .products {
         display: flex;
@@ -357,7 +431,7 @@ div .alinear-items p {
         margin: 20px 0;
     }
 
-    .clean{
+    .clean {
         width: 50%;
     }
 }
@@ -366,7 +440,7 @@ div .alinear-items p {
 @media (min-width: 768px) {
 
 
-/* Productos destacados */
+    /* Productos destacados */
 
     .box-experience {
         display: flex;
@@ -379,15 +453,22 @@ div .alinear-items p {
         order: 1;
     }
 
-    .box-experience h4{
+    .box-experience h4 {
         order: 0;
     }
 
-    .box-experience p{
+    .box-experience p {
         order: 2;
     }
 
     .products article {
         width: 26%;
+    }
+
+    .product-creator {
+        max-width: 720px;
+        margin: 40px auto 80px;
+        flex-direction: column;
+        align-items: stretch;
     }
 }

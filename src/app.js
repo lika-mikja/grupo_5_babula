@@ -30,6 +30,10 @@ app.get("/", (req, res) => {
     res.render(path.resolve(__dirname, './views/users/index'))
 });
 
+app.get('/product-create', (req, res) => {
+    res.render(path.resolve(__dirname, './views/users/product-create-form'))
+});
+
 app.get('/shop', (req, res) => {
     res.render(path.resolve(__dirname, './views/products/shop'))
 });
@@ -37,6 +41,7 @@ app.get('/shop', (req, res) => {
 app.get('/product', (req, res) => {
     res.render(path.resolve(__dirname, './views/products/product'))
 });
+
 
 
 // Servidor

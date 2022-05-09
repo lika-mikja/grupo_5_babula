@@ -15,3 +15,11 @@ Lo que creemos que debemos implementar es trabajar más en conjunto.
 
 Fue un avance lento hasta que pudimos coordinar la dinámica de equipo como forma de trabajo.
  
+
+ **RETRO SPRINT 3 ** 
+
+ A la nueva incorporacion de un companiero al grupo, distribuimos bien las tareas y pulimos, modificamos el codigo y corregimos diferentes errores. Mejoramos el trabajo en equipo que era un objetivo propuesto de los anteriores Sprint, aunque todavia queda mejorar. 
+
+Seguimos con algunos problemas de comunicacion a la hora de realizar las tareas en comun lo que llega a una leve desorganizacion, y trabajo de mas que ya esta hecho.
+
+Implementamos las Weekly y una especie de daily cada 3 dias y seguimos mejorando en la adquisicion de conocimiento

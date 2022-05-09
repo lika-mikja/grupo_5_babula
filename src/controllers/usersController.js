@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-let loginAndRegister = {
+let controller = {
 
     login: (req, res) => {
         res.render('./users/login', {

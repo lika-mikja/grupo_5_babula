@@ -21,7 +21,7 @@ a {
 
 body {
     background: url('../images/background-body.jpg');
-    background-repeat-x: repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 
@@ -219,7 +219,7 @@ p.product-description {
 
 .products article {
     width: 100%;
-    margin: 40px 0px;
+    margin: 40px 0;
     flex-direction: column;
     align-items: center;
 }
@@ -373,12 +373,13 @@ textarea.form-input {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
         align-items: flex-start;
+        column-gap: 32px;
+        justify-content: center;
     }
 
     .products article {
-        width: 40%;
+        width: 45%;
     }
 
     .recipes-description {
@@ -416,8 +417,7 @@ textarea.form-input {
     }
 
     .products article {
-    min-width: 250px;
-    max-width: 20%;
+    width: 282px;
     }
 
     .product-creator {

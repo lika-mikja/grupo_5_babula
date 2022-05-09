@@ -1,0 +1,83 @@
+
+:root {
+    --blanco: white;
+    --azul-home: #2449A8;
+    --crema-home: #F8E8DA;
+    --naranja: #CA841B;
+    --negro: black;
+    --gris-oscuro: #525252;
+}
+
+
+/*Lista de productos general*/
+
+.all-products{
+    margin-top: 40px;
+}
+
+.all-products .product-image {
+    width: 30%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    display: flex;
+    border-radius: 20px;
+}
+
+.all-products img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin: 40px 0;
+}
+
+.products-list article{margin-bottom: 30px;display: flex;flex-direction: row;flex-wrap: nowrap;align-items: flex-start;justify-content: space-between;}
+
+.products-list .recipes-description {
+    margin: 0;
+    width: 60%;
+    display: flex;
+    border: solid, 4px, var(--naranja);
+}
+
+.products-list p.product-description {
+    margin: 6px 0 20px;
+    color: var(--gris-oscuro);
+    font-weight: 500;
+    line-height: 1.6em;
+    text-align: justify;
+    hyphens: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 59px;
+}
+
+
+@media (min-width: 480px) {
+
+.products-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: 32px;
+    justify-content: center;
+}
+
+.products-list article {
+    width: 15%;
+}
+
+.products-list.recipes-description {
+    margin: 20px 0;
+}
+
+.clean {
+    width: 50%;
+}
+}

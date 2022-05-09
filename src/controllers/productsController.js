@@ -5,11 +5,11 @@ const productsFile = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
 
 const controller = {
-    index: (req, res) => {
-        res.render('./products/products', {
-            detallePlato
-        })
-    },
+	index: (req, res) => {
+		res.render('./products/products', {
+			products
+		})
+	},
 
     detail: (req, res) => {
         let id = req.params.id

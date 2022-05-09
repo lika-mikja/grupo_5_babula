@@ -14,6 +14,7 @@
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 /* Body */
@@ -118,6 +119,7 @@ div.bars {
     flex-direction: column;
     padding: 40px 15px;
     color: var(--azul-home);
+    text-decoration: none;
 }
 
 .banner-text h1 {
@@ -217,7 +219,7 @@ p.product-description {
 
 .products article {
     width: 100%;
-    margin: 40px 0;
+    margin: 40px 0px;
     flex-direction: column;
     align-items: center;
 }
@@ -462,7 +464,8 @@ div .alinear-items p {
     }
 
     .products article {
-        width: 26%;
+    min-width: 250px;
+    max-width: 20%;
     }
 
     .product-creator {

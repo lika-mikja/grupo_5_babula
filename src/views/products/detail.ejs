@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head-->
+<%- include("../partials/head") %>
+
+  <body>
+    <!--Header-->
+    <%- include("../partials/header") %>
+
+      <main>
+        <section class="main">
+          <section class="featured-products">
+            <div class="products">
+              <article>
+                <img class="product-image" src="/images/<%= plato.img %>" alt="product 1">
+                <section class="recipes-description">
+                  <p class="product-name">
+                    <%= plato.titulo %>
+                  </p>
+                  <p class="product-description">
+                    <%= plato.descripcion %>
+                  </p>
+                </section>
+              </article>
+            </div>
+          </section>
+          <section class="access-menu">
+            <div class="clean">
+              <a href="/product">
+                <p>Acceder al menú</p>
+              </a>
+            </div>
+          </section>
+      </main>
+      <!--Footer-->
+      <%- include("../partials/footer") %>
+        <!--Footer-->
+
+  </body>
+
+</html>

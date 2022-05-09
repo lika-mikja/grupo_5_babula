@@ -1,70 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ba Bula</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab:wght@300;400&display=swap"
-    rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+<!--Head-->
+<%- include("../partials/head") %>
 
-  <link rel="stylesheet" href="/css/shop.css" />
-</head>
-
-<body>
-  <!--Header-->
-  <%- include("../partials/header") %>
-
-    <main>
-      <section class="seccion-compra">
-        <div class="caja-imagen">
-          <img class="img-compra" src="/images/borsch.jpeg" alt="" />
-        </div>
-        <div class="caja-texto">
-          <div class="alinear-items">
-            <i class="fas fa-plus-circle"></i>
-            <p>1</p>
-            <i class="fas fa-minus-circle"></i>
-            <div class="separated">
-              <i class="fas fa-trash"></i>
+  <body>
+    <!--Header-->
+    <%- include("../partials/header") %>
+      <main>
+        <section class="seccion-compra">
+          <div class="caja-imagen">
+            <img class="img-compra" src="/images/borsch.jpeg" alt="" />
+          </div>
+          <div class="caja-texto">
+            <div class="alinear-items">
+              <i class="fas fa-plus-circle"></i>
+              <p>1</p>
+              <i class="fas fa-minus-circle"></i>
+              <div class="separated">
+                <i class="fas fa-trash"></i>
+              </div>
             </div>
           </div>
+        </section>
+        <div class="price">
+          <strong>
+            <p>Sub total:</p>
+          </strong>
+          <p class="chash">$45</p>
         </div>
-      </section>
-      <div class="price">
-        <strong>
-          <p>Sub total:</p>
-        </strong>
-        <p class="chash">$45</p>
-      </div>
-      <div class="price">
-        <strong>
-          <p>Envío:</p>
-        </strong>
-        <p class="chash">$50</p>
-      </div>
-      <div class="price">
-        <strong>
-          <p>Total:</p>
-        </strong>
-        <p class="chash">$95</p>
-      </div>
-      <section class="buttons_buy">
-        <button>
-          <p>Finalizar compra</p>
-        </button>
-        <button>
-          <p>Seguir comprando</p>
-        </button>
-      </section>
-    </main>
-    <!--Footer-->
-    <%- include("../partials/footer") %>
+        <div class="price">
+          <strong>
+            <p>Envío:</p>
+          </strong>
+          <p class="chash">$50</p>
+        </div>
+        <div class="price">
+          <strong>
+            <p>Total:</p>
+          </strong>
+          <p class="chash">$95</p>
+        </div>
+        <section class="buttons_buy">
+          <button>
+            <p>Finalizar compra</p>
+          </button>
+          <button>
+            <p>Seguir comprando</p>
+          </button>
+        </section>
+      </main>
+      <!--Footer-->
+      <%- include("../partials/footer") %>
+        <!--Footer-->
 
-</body>
+  </body>
 
 </html>

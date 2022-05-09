@@ -5,48 +5,22 @@ const path = require("path");
 
 // Recursos estaticos //
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.json()); // Para que se usa??
 
 // Que las vistas se vean por ejs
 app.set('view engine', 'ejs');
 /* Indica a express donde buscar las vistas */
 app.set('views', path.join(__dirname, '/views')); 
 
-
 /* Requerimiento y uso de sistema de Rutas..*/ 
 const mainRouter = require('./routes/mainRouter');
+const productsRouter = require('./routes/productsRouter');
+const usersRouter = require('./routes/usersRouter');
+
 app.use("/", mainRouter);
- 
-/*Importar enrutador*/
+app.use("/products", productsRouter);
+app.use("/users", usersRouter);
 
-const productRouter = require ("./routes/products");
-
-/* Usando enrutador para carrito de compras */
-
-/* app.use("/products",productRouter); */
-
-app.get('/login', (req, res) => { 
-    res.render(path.resolve(__dirname , './views/users/login'))
-});
-
-app.get('/register', (req, res) => {
-    res.render(path.resolve(__dirname, './views/users/register'))
-});
-
-app.get("/", (req, res) => {
-    res.render(path.resolve(__dirname, './views/users/index'))
-});
-
-app.get('/product-create', (req, res) => {
-    res.render(path.resolve(__dirname, './views/users/product-create-form'))
-});
-
-app.get('/shop', (req, res) => {
-    res.render(path.resolve(__dirname, './views/products/shop'))
-});
-
-app.get('/product', (req, res) => {
-    res.render(path.resolve(__dirname, './views/products/product'))
-});
 
 // Servidor
 app.listen(4000, () => {

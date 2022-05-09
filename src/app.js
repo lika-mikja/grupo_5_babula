@@ -10,9 +10,9 @@ app.use(express.json()); // Para que se usa??
 // Que las vistas se vean por ejs
 app.set('view engine', 'ejs');
 /* Indica a express donde buscar las vistas */
-app.set('views', path.join(__dirname, '/views')); 
+app.set('views', path.join(__dirname, '/views'));
 
-/* Requerimiento y uso de sistema de Rutas..*/ 
+/* Requerimiento y uso de sistema de Rutas..*/
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');

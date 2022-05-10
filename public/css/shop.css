@@ -231,5 +231,12 @@ button p {
 
 @media (min-width: 480px) {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    
+    
+    .buttons_buy{
+        flex-direction: row;
+       
+    }
+}
          

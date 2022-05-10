@@ -24,6 +24,11 @@ const controller = {
 
     },
 
+    productEdit: (req, res) => {
+        res.render('./products/product-edit-form');
+
+    },
+
     shop: (req, res) => {
         res.render('./products/shop');
 

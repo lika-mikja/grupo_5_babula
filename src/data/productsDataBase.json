@@ -22,7 +22,6 @@
         "precio": "1.700",
         "img": "pilmeni.jpeg" ,
         "menuDelDia": false
-
     },
     {
         "id": 4,
@@ -39,7 +38,6 @@
         "precio": "1.300",
         "img": "torta-de-miel.jpeg" ,
         "menuDelDia": true 
-
     }
 ]
 

@@ -9,7 +9,7 @@ router.get('/', productsController.index);
 
 /*** Crear y editar un producto***/ 
 router.get('/create', productsController.productCreate); 
-router.get('/create', productsController.productCreate); 
+router.get('/edit', productsController.productEdit); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productsController.detail);

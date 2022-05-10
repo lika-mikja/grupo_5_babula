@@ -187,12 +187,19 @@ div .alinear-items p {
     margin-top: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    border: none;
 }
 
 .price{
     display: flex;
     flex-direction: row;
     margin-left: 10px;
+}
+
+
+button p {
+    color: white;
+    font-size: 1rem;
 }
 
 /* Footer */
@@ -224,5 +231,12 @@ div .alinear-items p {
 
 @media (min-width: 480px) {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    
+    
+    .buttons_buy{
+        flex-direction: row;
+       
+    }
+}
          

@@ -126,17 +126,15 @@ div.bars {
 /* Main */
 
 .seccion-compra {
-    display: flex;
-    
+    display: flex; 
+    justify-content: center;   
 }
 
 .caja-imagen,
 .caja-texto {
     margin: 15px;
     display: flex;
-    flex-direction: row-reverse;
-
-    
+    flex-direction: row-reverse;    
 }
 
 .alinear-items {

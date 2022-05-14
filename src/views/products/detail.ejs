@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!--Head-->
-<%- include("../partials/head") %>
+<%- include("../partials/head" ,{stylesheet:"detail", title:"Detalle de Producto"}) %>
 
   <body>
     <!--Header-->
@@ -14,29 +14,31 @@
             <div class="products">
               <article>
                 <img class="product-image" src="/images/<%= plato.img %>" alt="product 1">
-                <section class="recipes-description">
-                  <p class="product-name">
-                    <%= plato.titulo %>
-                  </p>
-                  <p class="product-description">
-                    <%= plato.descripcion %>
-                  </p>
-                  <p class="product-description">
-                    <%= plato.precio %>
-                  </p>
+                <section class="purchase-product">
+                  <section class="recipes-description">
+                    <p class="product-name">
+                      <%= plato.titulo %>
+                    </p>
+                    <p class="product-description">
+                      <%= plato.descripcioncorta %>
+                    </p>
+                    <p class="product-prince">
+                      $ <%= plato.precio %> .-
+                    </p>
+                  </section>
+                  <section class="buttons-product">
+                    <div class="edit-product">
+                      <a href="/products/edit">
+                        <p>Editar producto</p>
+                      </a>
+                    </div>
+                    <div class="add-to-cart">
+                      <a href="/products/shop">
+                        <p>Agregar al carrito</p>
+                      </a>
+                    </div>
+                  </section>
                 </section>
-              <section class="buttons-product">
-                <div class="edit-product">
-                  <a href="/products/edit">
-                    <p>Editar producto</p>
-                  </a>
-                </div>
-                <div class="add-to-cart">
-                  <a href="/products/shop">
-                    <p>Agregar al carrito</p>
-                  </a>
-                </div>
-              </section>
               </article>
             </div>
           </section>

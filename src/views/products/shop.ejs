@@ -2,53 +2,56 @@
 <html lang="en">
 
 <!--Head-->
-<%- include("../partials/head") %>
+<%- include("../partials/head" ,{stylesheet:"shop", title:"Carrito de compras"}) %>
 
   <body>
     <!--Header-->
-    <%- include("../partials/header") %>
+    <%- include("../partials/header", {stylesheet: "styles"}) %>
       <main>
         <section class="seccion-compra">
           <div class="caja-imagen">
             <img class="img-compra" src="/images/borsch.jpeg" alt="" />
           </div>
-          <div class="caja-texto">
-            <div class="alinear-items">
-              <i class="fas fa-plus-circle"></i>
-              <p>1</p>
-              <i class="fas fa-minus-circle"></i>
-              <div class="separated">
-                <i class="fas fa-trash"></i>
+          <section class="detail-of-buy">
+            <div class="caja-texto">
+              <div class="alinear-items">
+                <i class="fas fa-plus-circle"></i>
+                <p>1</p>
+                <i class="fas fa-minus-circle"></i>
+                <div class="separated">
+                  <i class="fas fa-trash"></i>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-        <div class="price">
-          <strong>
-            <p>Sub total:</p>
-          </strong>
-          <p>$45</p>
-        </div>
-        <div class="price">
-          <strong>
-            <p>Envío:</p>
-          </strong>
-          <p>$50</p>
-        </div>
-        <div class="price">
-          <strong>
-            <p>Total:</p>
-          </strong>
-          <p>$95</p>
-        </div>
-        <section class="buttons_buy">
-          <button>
-            <p>Finalizar compra</p>
-          </button>
-          <button>
-            <p>Seguir comprando</p>
-          </button>
-        </section>
+            <section class="finaly-prince">
+              <div class="price">
+                <strong>
+                  <p>Sub total:</p>
+                </strong>
+                <p class="separated-name-prince">$45</p>
+              </div>
+              <div class="price">
+                <strong>
+                  <p>Envío:</p>
+                </strong>
+                <p class="separated-name-prince">$50</p>
+              </div>
+              <div class="price">
+                <strong>
+                  <p>Total:</p>
+                </strong>
+                <p class=" separated-name-prince">$95</p>
+            </section>
+            </div>
+            <section class="buttons_buy">
+              <button>
+                <p>Finalizar compra</p>
+              </button>
+              <button>
+                <p>Seguir comprando</p>
+              </button>
+            </section>
+          </section>
       </main>
       <!--Footer-->
       <%- include("../partials/footer") %>

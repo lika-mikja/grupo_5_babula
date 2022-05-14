@@ -2,10 +2,10 @@
     --blanco: white;
     --azul-home: #2449A8;
     --crema-home: #F8E8DA;
-    --naranja: #e08c0d;
+    --naranja: #CA841B;
+    --negro: black;
     --gris-oscuro: #525252;
 }
-
 * {
     margin: 0;
     font-family: 'Roboto Slab', serif;
@@ -15,11 +15,17 @@
 a {
     text-decoration: none;
 }
+
+a:visited {
+    text-decoration: none;
+}
+
+
 /* Body */
 
 body {
     background: url('../images/background-body.jpg');
-    background-repeat-x: repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 
@@ -50,10 +56,10 @@ body {
 .name a {
     color: var(--azul-home);
     padding: 7px;
+
     text-decoration: none;
 }
 
-/* MENU PLANTEADO X NATY*/
 
 div.menu-left {
     width: 50%;
@@ -71,6 +77,13 @@ div.menu-right {
 .menu-right a {
     text-decoration: none;
     padding: 12px;
+}
+
+.menu-right i {
+    color: var(--azul-home);
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 p.text-button-menu {
@@ -91,14 +104,6 @@ div.bars {
     color: white;
 }
 
-.fa-user-alt,
-.fa-shopping-cart,
-.fa-cart-plus {
-    color: var(--azul-home);
-    display: flex;
-    justify-content: flex-end;
-
-}
 
 /* Banner con logo */
 
@@ -121,7 +126,7 @@ div.bars {
     justify-content: center;
     flex-direction: column;
     padding: 40px 15px;
-    color: var(--azul-home);
+   
 }
 
 .banner-text h1 {
@@ -135,108 +140,107 @@ div.bars {
 }
 
 
-/* Main */
 
-.seccion-compra {
-    display: flex; 
-    justify-content: center; 
+/*Lista de productos*/
+
+.products {
+    margin-top: 40px;
 }
 
-.caja-imagen,
-.caja-texto {
-    margin: 15px;
+.products .product-image {
+    width: 30%;
+    aspect-ratio: 1;
     display: flex;
-    flex-direction: row-reverse;    
+    border-radius: 20px;
 }
 
-.alinear-items {
-    display: flex;
-    color: var(--azul-home);
-    margin: auto;
-    padding: auto;
-
+.products img {
+    object-fit: cover;
+    width: 100%;
 }
-
-div .alinear-items i {
-
-    color: var(--azul-home);
-    margin: 5px;
-}
-
-div .alinear-items p {
-    color: black;
-    width: 20px;
-    height: 20px;
-    border: 3px solid var(--azul-home);
-    text-align: center;
-}
-
-
-.separated {
-    margin-left: 10px;
-}
-
-.img-compra {
-    max-width: 15rem;
-    border-radius: 50px;
-    order: 1;
-}
-
-.buttons_buy{
+.purchase-product{
     display: flex;
     flex-direction: column;
    
 }
-.buttons_buy button {
+
+
+.products {
+    display: flex;
+    flex-wrap: nowrap;
+   
+}
+
+.products article {
+    margin-bottom: 30px;
+    margin: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.recipes-description{
+    width: 100%;
+    margin: 40px 0;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+
+.recipes-description {
+    display: flex;
+    margin: 0;
+    width: 90%;
+    border: solid, 4px, var(--naranja);
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.products p.product-description {
+    margin: 6px 0 20px;
+    color: var(--gris-oscuro);
+    line-height: 1.6em;
+    text-align: justify;
+  
+}
+
+.product-name{
+    font-size:25px;
+    color: var(--naranja);
+}
+
+.product-prince {
+    text-align: center;
+    font-size: 25px;
+    color: var(--gris-oscuro);
+    font-weight: bold;
+}
+.edit-product , .add-to-cart {
     width: 100px;
     background-color: var(--naranja);
     border-radius: 15px;
-    padding: 9px;    
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: none;
-    margin:1rem;
+    padding: 9px;
 }
 
-.price{
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
+.edit-product p , .add-to-cart p {
     text-align: center;
-    margin:0.5rem;
-    justify-content: space-evenly;
-    font-size: 18px;
-    color: var(--gris-oscuro);
-    
-
-}
-
-
-button p {
     color: white;
-    font-size: 1rem;
+    text-decoration: none;
+}
+    
+.buttons-product {
+    display:flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+   padding: 9px;
+   justify-content: space-evenly;
 }
 
-main {
-  
-    justify-content: center;
-}
 
-.finaly-prince{
-   margin:4rem;
-  
-}
-
-
-.recipes {
-    text-align: center;
-    font-size: 16px;
-}
-
-/* Footer */
+    
+/* Seccion footer*/
 
 .foot {
     text-align: center;
@@ -258,15 +262,9 @@ main {
     justify-content: center;
 }
 
-
-@media (min-width: 480px) {}
-
-@media (min-width: 768px) {
-    
-    
-    .buttons_buy{
-        flex-direction: row;
-       
-    }
+.recipes {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--gris-oscuro);
 }
-         
+

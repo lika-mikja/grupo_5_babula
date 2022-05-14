@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!--Head-->
-<%- include("./partials/head") %>
+<%- include("./partials/head" , {stylesheet:"styles" , title:"Ba Bula"}) %>
 
     <body>
         <!--Header-->
@@ -14,9 +14,15 @@
                         <i class="fas fa-star-of-life"></i>
                         <h4>LA EXPERIENCIA</h4>
                         <p>Ba Bula es un experimento único donde ocurre un acercamiento de la cultura Rusa hacia el
-                            paladar</p>
+                            paladar.</p>
                     </article>
-
+                    <article class="box-experience">
+                        <i class="fas fa-star-of-life"></i>
+                        <h4>NOSOTROS</h4>
+                        <p>Lo que comenzó allá por los años 90' en una cocina a 1.152 km al Oeste de Moscú , </br>
+                            ahora emprende esta comida que nos prepararon nuestras abuelas toda la vida.  
+                          En Ba Bula personas con actividades diferentes como diseñadores, programadores, psicologos y cocineros que se reúnen para celebrar juntos una experiencia gastronómica.</p>
+                    </article>
 
                     <section class="featured-products">
                         <h2 class="recipes">Platos nativos del día</h2>
@@ -29,7 +35,7 @@
                                             <%= plato.titulo %>
                                         </p>
                                         <p class="product-description">
-                                            <%= plato.descripcion %>
+                                            <%= plato.descripcioncorta %>
                                         </p>
                                         <div class="see-more">
                                             <a href="/products/detail/<%= plato.id %>">
@@ -44,7 +50,7 @@
                     <section class="access-menu">
                         <div class="clean">
                             <a href="/products">
-                                <p>Acceder al menú</p>
+                                <p>Todos los menús</p>
                             </a>
                         </div>
                     </section>

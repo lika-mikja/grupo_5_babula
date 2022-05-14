@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!--Head-->
-<%- include("../partials/head") %>
+<%- include("../partials/head" ,{stylesheet:"products",  title:"Productos"}) %>
 
     <body>
         <!--Header-->
@@ -22,11 +22,11 @@
                                             <%= plato.titulo %>
                                         </p>
                                         <p class="product-description">
-                                            <%= plato.descripcion %>
+                                            <%= plato.descripcioncorta %>
                                         </p>
                                         <div class="see-more">
                                             <a href="/products/detail/<%= plato.id %>">
-                                                <p>Ver más</p>
+                                                <p>Ver detalle</p>
                                             </a>
                                         </div>
                                     </section>

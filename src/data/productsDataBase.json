@@ -98,6 +98,10 @@
   "img": "torta-de-miel.jpeg",
   "img2": "",
   "todaysDay": false
+ },
+ {
+  "id": 11,
+  "prince": null,
+  "img": "default-image.jpg"
  }
-
 ]

@@ -3,7 +3,7 @@ const app = express();
 
 /* Habilitar métodos PUT/DELETE */
 const methodOverride = require('method-override');
-app.use(methodOverride(_method));
+app.use(methodOverride('_method')); 
 
 // Modulo nativo para manejar las rutas de los archivos//
 const path = require("path");

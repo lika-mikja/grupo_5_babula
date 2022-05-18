@@ -27,15 +27,15 @@
                     <section class="featured-products">
                         <h2 class="recipes">Platos nativos del día</h2>
                         <div class="products">
-                            <% menuDelDia.forEach(function(plato){ %>
+                            <% todaysDay.forEach(function(plato){ %>
                                 <article>
                                     <img class="product-image" src="/images/<%= plato.img %>" alt="product 1">
                                     <section class="recipes-description">
                                         <p class="product-name">
-                                            <%= plato.titulo %>
+                                            <%= plato.title %>
                                         </p>
                                         <p class="product-description">
-                                            <%= plato.descripcioncorta %>
+                                            <%= plato.description %>
                                         </p>
                                         <div class="see-more">
                                             <a href="/products/detail/<%= plato.id %>">

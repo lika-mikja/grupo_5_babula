@@ -3,6 +3,7 @@
 
 <!--Head-->
 <%- include("../partials/head" ,{stylesheet:"styles", title:"Formulario creación de producto"}) %>
+
 	<body>
 		<!--Header-->
 		<%- include("../partials/header") %>
@@ -49,21 +50,15 @@
 
 								<div class="col-12 col-md-6">
 
-									<form action="" method="post">
-										<input type="file" accept=".jpg, .JPG, .png" onchange="loadFile(event)">
-										<img id="output" />
-										<script>
-											var loadFile = function (event) {
-												var output = document.getElementById('output');
-												output.src = URL.createObjectURL(event.target.files[0]);
-												output.onload = function () {
-													URL.revokeObjectURL(output.src)
-												}
-											};
-										</script>
+									<form action="/" method="POST">
+										<input type="file" name="product-image" accept=".jpg, .JPG, .png">
+
+										<button class="create-buttom" type="submit" name="send-product">Agregar
+											producto</button>
+
 									</form>
 								</div>
-
+						</form>
 				</section>
 			</main>
 			<!--Footer-->

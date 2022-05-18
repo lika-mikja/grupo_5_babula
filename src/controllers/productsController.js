@@ -24,6 +24,23 @@ const controller = {
 
     },
 
+    store: (req, res) => {
+		let nuevoProducto = {
+			id: products[products.length - 1].id + 1,
+			title: req.body.name,
+            desctiption: req.body.description,
+            ingredients: req.body.descripcion_ingredientes ,
+			prince: parseInt(req.body.price),
+			img: req.file ? req.file.filename : "default-image.jpg" ,
+            todaysmenu: req.body.menuDelDia
+		}
+
+		products.push(nuevoProducto);
+		fs.writeFileSync(productsFile, JSON.stringify(products, null, " "));
+
+		res.redirect("/products");
+	},
+
     productEdit: (req, res) => {
         res.render('./products/product-edit-form');
 

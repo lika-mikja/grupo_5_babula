@@ -1,4 +1,4 @@
-**Encuentro 29 de mayo:**
+**Encuentro 29 de mayo**
 
 Nicolas:  
 
@@ -24,11 +24,11 @@ Realizó cambio de idioma, actualizacion de vista de productos. Asimismo, se act
 Como impedimento sucedió el no poder avanzar con los partials ya que no levantaba el servidor a partir de que se cambiaron las extensiones. Resulta que era un problema de como se plantearon las rutas, ya que era necesario indicar que el response sea "render".
 Las tareas a realizar serian, implementar de forma correcta la media querie de la vista de productos, armado de ruta parametrizada para poder ingresar al detalle de cada producto en la vista de products, organizar sistema de ruteo de dicha vista y actualizar archivo de Weekly.
 
-**Encuentro 6 de mayo:**
+**Encuentro 6 de mayo**
 
 Como impedimento grupal se encontro con que no se puede implementar el partials del head en todas las vistas, ya que cada vista esta linkeada a un css diferente. 
 
-**Encuentro 8 de mayo:**
+**Encuentro 8 de mayo**
 
 Nicolas:
 
@@ -53,7 +53,7 @@ Con soporte de Adriano, se creo la carpeta de data y dentro, un backup de produc
 Como impedimento se encontraron que el servidor no levantaba lo realizado, ya que se estaban exportando mal los módulos.
 Como pendiente queda ver las medias queries de la vista de detail de productos para que desde desktop se visualice con flex la foto, el titulo y la descripción de cada plato. Por último, agregar al menos 5 platos más y actualizar la descripción de cada producto, indicando si es apto celiaco, vegano, vegetariano, calorias e ingredientes utilizados.
 
-**Encuentro 14 de mayo:**
+**Encuentro 14 de mayo**
 
 Lika:
 

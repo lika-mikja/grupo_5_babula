@@ -9,8 +9,9 @@ app.use(methodOverride('_method'));
 const path = require("path");
 
 // Recursos estaticos //
+app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.json()); // Para que se usa??
+app.use(express.json()); 
 
 // Que las vistas se vean por ejs
 app.set('view engine', 'ejs');

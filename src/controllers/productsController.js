@@ -27,15 +27,16 @@ const controller = {
     store: (req, res) => {
 		let nuevoProducto = {
 			id: products[products.length - 1].id + 1,
-			title: req.body.name,
-            desctiption: req.body.description,
-            ingredients: req.body.descripcion_ingredientes ,
-			prince: parseInt(req.body.price),
-			img: req.file ? req.file.filename : "default-image.jpg" ,
-            todaysmenu: req.body.menuDelDia
+			title: req.body.title,
+            description: req.body.description,
+            ingredients: req.body.ingredients ,
+			price: parseInt(req.body.price),
+			img: req.body.product_image ? req.body.product_image : "default-image.jpg" ,
+            todaysmenu: req.body.todaysDay
 		}
 
-		products.push(nuevoProducto);
+
+        				products.push(nuevoProducto);
 		fs.writeFileSync(productsFile, JSON.stringify(products, null, " "));
 
 		res.redirect("/products");

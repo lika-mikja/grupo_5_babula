@@ -21,9 +21,9 @@ const upload = multer({storage: storage});
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
 
-/*** Crear y editar un producto***/ 
+/*** Create and edit products ***/ 
 router.get('/create', productsController.productCreate); 
-router.post('/', upload.single("product-image") , productsController.store); 
+router.post('/', upload.single("product_image") , productsController.store); 
 
 router.get('/edit', productsController.productEdit); 
 

@@ -6,7 +6,6 @@
   "ingredients": "",
   "prince": "1.600",
   "img": "borsch.jpeg",
-  "img2": "",
   "todaysDay": true
  },
  {
@@ -16,7 +15,6 @@
   "ingredients": "",
   "prince": "1.800",
   "img": "golupsi3.jpeg",
-  "img2": "",
   "todaysDay": true
  },
  {
@@ -26,7 +24,6 @@
   "ingredients": "",
   "prince": "1.900",
   "img": "pilmeni.jpeg",
-  "img2": "",
   "todaysDay": false
  },
  {
@@ -36,7 +33,6 @@
   "ingredients": "",
   "prince": "2.100",
   "img": "seliodka.jpeg",
-  "img2": "",
   "todaysDay": true
  },
  {
@@ -46,7 +42,6 @@
   "ingredients": "No es más que una empanadilla realizada solo con agua, harina y sal a la que no pondremos levadura, después se hacen las obleas y se rellenan con carne picada de cordero, cebolla  y especias.",
   "prince": "500",
   "img": "chebureki.jpeg",
-  "img2": "",
   "todaysDay": false
  },
  {
@@ -56,7 +51,6 @@
   "ingredients": " Se usa cualquier sobrante de carne hervida de ternera, cerdo, pollo, o pavo, salchichas- o de pescados como bacalao, tenca, esturión, lucioperca. Además de patata, huevo cocido y de las hortalizas -cebolleta, rábano, pepino, zanahoria, hinojo y hierbas aromáticas que se tengan a mano (perejil, eneldo, perifollo, estragón, etc). Se sirve bien fría y tradicionalmente se aderezaba con un poco de mostaza y/o de Smetana (muy similar a la crema agria), A falta de Kvas, hemos mantenido el kéfir y lo hemos mezclado un poquito de agua con gas y un chorrito de zumo de limón",
   "prince": "1.700",
   "img": "okroshka2.jpeg",
-  "img2": "",
   "todaysDay": false
  },
  {
@@ -66,7 +60,6 @@
   "ingredients": "Se trata de una masa elaborada con harina de trigo que lleva su correspondiente relleno y se pliega con forma de media luna. Se pueden encontrar vareniki de carne, a base de repollo y los hay también rellenos de fruta",
   "prince": "1.500",
   "img": "vareniki.jpeg",
-  "img2": "",
   "todaysDay": false
  },
  {
@@ -76,7 +69,6 @@
   "ingredients": "",
   "prince": "1.300",
   "img": "grechka.jpeg",
-  "img2": "",
   "todaysDay": false
  },
  {
@@ -86,7 +78,6 @@
   "ingredients": "",
   "prince": "",
   "img": "ptichiemoloko-2.jpeg",
-  "img2": "",
   "todaysDay": false
  },
  {
@@ -96,8 +87,35 @@
   "ingredients": "",
   "prince": "1.300",
   "img": "torta-de-miel.jpeg",
-  "img2": "",
   "todaysDay": false
+ },
+ {
+  "id": 11,
+  "prince": null,
+  "img": "default-image.jpg"
+ },
+ {
+  "id": 12,
+  "title": "plov",
+  "description": "jajajdka",
+  "ingredients": "harian",
+  "price": 2000,
+  "img": "default-image.jpg"
+ },
+ {
+  "id": 13,
+  "title": "asdadadada",
+  "description": "fadsadadada",
+  "ingredients": "adasdas",
+  "price": 400,
+  "img": "95304617_239759230427042_8405419507018891264_n.jpg"
+ },
+ {
+  "id": 14,
+  "title": "sadadada",
+  "description": "hfhgdgdfgdg",
+  "ingredients": "dfgdfgdfgdfgfd",
+  "price": 500,
+  "img": "106342040_590043645270209_5029625579583135747_n.jpg"
  }
-
 ]

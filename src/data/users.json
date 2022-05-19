@@ -5,7 +5,7 @@
     "surename": " Grebneva",
     "email": "",
     "password": "",
-    "type": "admin",
+    "category": "admin",
     "image": ""
   },
 
@@ -15,7 +15,7 @@
     "surename": "García",
     "email": "",
     "password": "",
-    "type": "admin",
+    "category": "admin",
     "image":""
   },
   {
@@ -24,7 +24,7 @@
     "surename": "Carreri",
     "email": "",
     "password": "",
-    "type": "user",
+    "category": "user",
     "image": ""
   },
   {
@@ -33,7 +33,7 @@
     "surname": "Arias",
     "email": "",
     "password": "",
-    "type": "user",
+    "category": "user",
     "image": ""
   }
 ]

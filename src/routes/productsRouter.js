@@ -26,8 +26,8 @@ router.get('/create', productsController.productCreate);
 router.post('/', upload.single("product_image") , productsController.store); 
 
 /*** EDIT ONE PRODUCT ***/ 
-//router.patch('/edit/:id', upload.single("product-image"), productsController.update); 
 router.get('/edit/:id', productsController.productEdit); 
+router.patch('/edit/:id', upload.single("product-image"), productsController.update); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productsController.detail);

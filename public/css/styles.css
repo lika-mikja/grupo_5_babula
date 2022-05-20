@@ -128,15 +128,17 @@ div.bars {
     justify-content: center;
     flex-direction: column;
     padding: 40px 15px;
-    color: var(--azul-home);
+   
 }
 
 .banner-text h1 {
     font-size: 40px;
+    color: var(--azul-home);
 }
 
 .banner-text h2 {
     font-size: 14px;
+     color: var(--azul-home);
 }
 
 
@@ -175,9 +177,9 @@ h4 {
     color: white;
     background-color: var(--azul-home);
     text-align: center;
-    padding: 3rem;
+    padding: 1rem;
     border-radius: 30px;
-    margin: auto;
+    margin: 1rem;
     opacity: 90%;
     text-decoration: none;
 }
@@ -267,15 +269,15 @@ section.access-menu {
 }
 
 .clean {
-    width: 100%;
+    width: 100px;
     background-color: var(--azul-home);
     border-radius: 15px;
     margin: auto;
+    padding: 9px;
 }
 
 .clean p {
     color: white;
-    padding: 1rem;
     text-align: center;
 
 
@@ -347,6 +349,12 @@ textarea.form-input {
     background-color: var(--naranja);
 }
 
+.recipes {
+    text-align: center;
+    font-size: 16px;
+}
+
+
 /* Footer */
 
 .foot {
@@ -368,57 +376,6 @@ textarea.form-input {
     display: flex;
     justify-content: center;
 }
-
-.recipes {
-    text-align: center;
-    font-size: 16px;
-}
-
-/* Carrito de compra */
-/* .seccion-compra {
-    display: flex;
-}
-
-.caja-imagen,
-.caja-texto {
-    margin: 15px;
-}
-
-.alinear-items {
-    display: flex;
-    text-align: center;
-    color: var(--azul-home);
-    margin: auto;
-    padding: auto;
-
-}
-
-div .alinear-items i {
-
-    color: var(--azul-home);
-    margin: 5px;
-}
-
-div .alinear-items p {
-    color: black;
-    width: 20px;
-    height: 20px;
-    border: 3px solid var(--azul-home);
-}
-
-
-.separated {
-    margin-left: 10px;
-}
-
-.img-compra {
-    max-width: 10rem;
-    max-width: 10rem;
-    border-radius: 50px;
-    order: 1;
-} */
-
-
 
 
 

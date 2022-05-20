@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "name": "Anjelika",
+    "surename": " Grebneva",
+    "email": "",
+    "password": "",
+    "category": "admin",
+    "image": ""
+  },
+
+  {
+    "id": "2",
+    "name": "Nicolás",
+    "surename": "García",
+    "email": "",
+    "password": "",
+    "category": "admin",
+    "image":""
+  },
+  {
+    "id": "3",
+    "name": "Adriano",
+    "surename": "Carreri",
+    "email": "",
+    "password": "",
+    "category": "user",
+    "image": ""
+  },
+  {
+    "id": "4",
+    "name": "Alan",
+    "surname": "Arias",
+    "email": "",
+    "password": "",
+    "category": "user",
+    "image": ""
+  }
+]

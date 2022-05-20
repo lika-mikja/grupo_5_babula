@@ -34,8 +34,6 @@ const controller = {
 			img: req.body.product_image ? req.body.product_image : "default-image.jpg" ,
             todaysmenu: req.body.todaysDay
 		}
-
-
         				products.push(nuevoProducto);
 		fs.writeFileSync(productsFile, JSON.stringify(products, null, " "));
 
@@ -43,15 +41,42 @@ const controller = {
 	},
 
     productEdit: (req, res) => {
-        res.render('./products/product-edit-form');
+            let id = req.params.id
+            let plato = products.find(plato => plato.id == id);
+            let productToEdit = products.find(product => product.id == id);
+            res.render('./products/product-edit-form', {plato , productToEdit});
 
-    },
+        },
+        // Update - Method to update
+        update: (req, res) => {
+            const id = req.params.id;
+            let productToEdit = products.find(product => product.id == id);
+            
+            let productToSave = {
+                id: productToEdit.id,
+                name: req.body.name,
+                price: req.body.price,
+                ingredients: req.body.ingredients,
+                category: req.body.category,
+                description: req.body.description,
+                /* ...req.body, */
+                img: req.body.product_image ? req.body.product_image : productToEdit.image
+            }
+    
+            let indice = products.findIndex(product => {
+                return product.id == id
+            })
+            products[indice] = productToSave;
+    
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+            res.redirect("/products")
+        },
 
-    shop: (req, res) => {
+        shop: (req, res) => {
         res.render('./products/shop');
 
-    },
-};
+        }
+}
 
 /* $document.getElementById("file").onchange = function (e) {
     let reader = new FileReader();

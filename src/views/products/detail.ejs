@@ -23,12 +23,12 @@
                       <%= plato.description %>
                     </p>
                     <p class="product-prince">
-                      $ <%= plato.prince %> .-
+                      $ <%= plato.price %> .-
                     </p>
                   </section>
                   <section class="buttons-product">
                     <div class="edit-product">
-                      <a href="/products/edit">
+                      <a href="/products/edit/<%= plato.id %>">
                         <p>Editar producto</p>
                       </a>
                     </div>

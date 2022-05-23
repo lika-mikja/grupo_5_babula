@@ -14,50 +14,50 @@
 						<h2 class="products-title">Editar menú</h2>
 					</div>
 					<div class="formulario">
-						<form action="/products" method="POST">
+						<form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST"
+							enctype="multipart/form-data">
 							<div class="row-product-detail">
 								<div class="col-12 col-md-6">
-									<label for="name" class="form-label">Nombre del plato:</label>
-									<input type="text" id="name" name="name" value="<%= plato.title %>"
+									<label for="title" class="form-label">Nombre del plato:</label>
+									<input type="text" id="title" name="title" value="<%= plato.title %>"
 										class="form-input">
-										
 								</div>
 								<div class="col-12">
 									<label for="description" class="form-label">Descipción</label>
-									<textarea name="description" id="description" class="form-input"> <%= plato.description %></textarea>
+									<textarea name="description" id="description"
+										class="form-input"> <%= plato.description %></textarea>
 								</div>
 								<div class="col-12">
 									<label for="ingredients" class="form-label">Ingredientes</label>
-									<textarea name="ingredients" id="ingredients" class="form-input"><%= plato.ingredients %></textarea>
+									<textarea name="ingredients" id="ingredients"
+										class="form-input"><%= plato.ingredients %></textarea>
 								</div>
 								<div class="col-12 col-md-6">
 									<label for="price" class="form-label">Precio del plato:</label>
-									<input type="number" id="price" name="price" value="<%= plato.price %>"
+									<input step="any" type="number" id="price" name="price" value="<%= plato.price %>"
 										class="form-input">
 								</div>
 								<div class="col-12 col-md-6">
 									<label for="category" class="form-label">Categoría:</label>
 									<select name="category" id="category" class="form-input">
 										<option value="">Elegir</option>
-										<option value="salado" >Salados</option>
+										<option value="salado">Salados</option>
 										<option value="frio">Frios</option>
 										<option value="dulce">Dulces</option>
 									</select>
 								</div>
-								</div>
-								
 								<div class="col-12 col-md-6">
-
-									<form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-										<input type="file" name="product_image" accept=".jpg, .JPG, .png">
-
-										<a href="product/update"><button class="create-buttom" type="submit" name="send-product">Editar
-											producto</button>
-										</a>
-									</form>
-										
-									</form>
+									<label for="img" class="form-label">Imagen:</label>
+									<img src="/images/<%= plato.img %>" width="200px">
+									<input type="file" id="img" name="img" placeholder="Ej: 15"
+										class="form-input" accept=".jpg, .JPG, .png">
 								</div>
+								<div class="col-12">
+									<button type="submit" class="create-buttom">Guardar producto</button>
+								</div>
+							</div>
+						</form>
+					</div>
 
 				</section>
 			</main>

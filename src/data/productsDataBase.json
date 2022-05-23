@@ -1,13 +1,12 @@
 [
  {
   "id": 1,
-  "title": "Borsch",
-  "description": "Es la sopa tradicional de verduras donde la remolacha es la gran protagonista. Este plato incluye cebolla, tomate, repollo, patatas y porotos.   La historia de este plato va ligada a  la evolución de las recetas de caldos y por extensión a las sopas acompañadas por hierbas o plantas que se van añadiendo al agua para conseguir una combinación agradable  y nutritiva",
+  "title": "Borsch 2",
+  "price": "4000",
   "ingredients": "",
-  "price": "1.600",
-  "category": "Frio",
-  "img": "borsch.jpeg",
-  "todaysDay": true
+  "category": "",
+  "description": "   Es la sopa tradicional de verduras donde la remolacha es la gran protagonista. Este plato incluye cebolla, tomate, repollo, patatas y porotos.   La historia de este plato va ligada a  la evolución de las recetas de caldos y por extensión a las sopas acompañadas por hierbas o plantas que se van añadiendo al agua para conseguir una combinación agradable  y nutritiva.",
+  "img": "img1653265758510image.jpg"
  },
  {
   "id": 2,

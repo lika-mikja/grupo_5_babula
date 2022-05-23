@@ -48,19 +48,18 @@ const controller = {
 
         },
         // Update - Method to update
-        update: (req, res) => {
+    update: (req, res) => {
             const id = req.params.id;
             let productToEdit = products.find(product => product.id == id);
             
             let productToSave = {
                 id: productToEdit.id,
-                name: req.body.name,
+                title: req.body.title,
                 price: req.body.price,
                 ingredients: req.body.ingredients,
                 category: req.body.category,
                 description: req.body.description,
-                /* ...req.body, */
-                img: req.body.product_image ? req.body.product_image : productToEdit.image
+                img: req.file ? req.file.filename : productToEdit.img
             }
     
             let indice = products.findIndex(product => {
@@ -68,7 +67,7 @@ const controller = {
             })
             products[indice] = productToSave;
     
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+            fs.writeFileSync(productsFile, JSON.stringify(products, null, " "));
             res.redirect("/products")
         },
 

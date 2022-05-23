@@ -76,7 +76,7 @@ const controller = {
             let finalProducts = products.filter(product => product.id != id);
     
             fs.writeFileSync(productsFile, JSON.stringify(finalProducts, null, ' '));
-            res.redirect("/detail")
+            res.redirect("/products")
         },
 
         shop: (req, res) => {

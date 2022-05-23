@@ -38,12 +38,22 @@
 										class="form-input">
 								</div>
 								<div class="col-12 col-md-6">
+									<label for="todaysDay" class="form-label">Menu del dia</label>
+										<select name="todaysDay" id="todaysDay" class="form-input" required>
+										<option disabled selected>Elegir</option>
+										<option value="true">Si</option>
+										<option value="false">No</option>
+										</select>
+								</div>
+
+								<div class="col-12 col-md-6">
 									<label for="category" class="form-label">Categoría:</label>
 									<select name="category" id="category" class="form-input">
-										<option value="">Elegir</option>
-										<option value="salado">Salados</option>
-										<option value="frio">Frios</option>
-										<option value="dulce">Dulces</option>
+										<option disabled selected>Elegir</option>
+										<option value="Salados">Salados</option>
+										<option value="Dulces">Dulces</option>
+										<option value="Frios">Frios</option>
+										<option value="Calientes">Calientes</option>
 									</select>
 								</div>
 								<div class="col-12 col-md-6">

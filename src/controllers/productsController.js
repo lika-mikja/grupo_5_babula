@@ -71,11 +71,19 @@ const controller = {
             res.redirect("/products")
         },
 
+        destroy : (req, res) => {
+            const id = req.params.id;
+            let finalProducts = products.filter(product => product.id != id);
+    
+            fs.writeFileSync(productsFile, JSON.stringify(finalProducts, null, ' '));
+            res.redirect("/detail")
+        },
+
         shop: (req, res) => {
         res.render('./products/shop');
-
-        }
 }
+
+};
 
 /* $document.getElementById("file").onchange = function (e) {
     let reader = new FileReader();

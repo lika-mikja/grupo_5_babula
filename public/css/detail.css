@@ -217,7 +217,7 @@ div.bars {
     color: var(--gris-oscuro);
     font-weight: bold;
 }
-.edit-product , .add-to-cart {
+.edit-product , .add-to-cart, .delete {
     width: 100px;
     background-color: var(--naranja);
     border-radius: 15px;
@@ -229,7 +229,12 @@ div.bars {
     color: white;
     text-decoration: none;
 }
-    
+
+.button-delete{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
 .buttons-product {
     display:flex;
     margin-left: 2rem;

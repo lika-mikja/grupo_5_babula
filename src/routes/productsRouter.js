@@ -32,6 +32,9 @@ router.patch('/edit/:id', upload.single("img"), productsController.update);
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productsController.detail);
 
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/delete/:id', productsController.destroy);
+
 /*** GET ONE PRODUCT ***/ 
 router.get('/shop', productsController.shop);
 

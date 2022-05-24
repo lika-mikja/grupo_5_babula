@@ -31,8 +31,9 @@ const controller = {
             description: req.body.description,
             ingredients: req.body.ingredients ,
 			price: parseInt(req.body.price),
-			img: req.body.product_image ? req.body.product_image : "default-image.jpg" ,
-            todaysmenu: req.body.todaysDay
+            category: req.body.category,
+			img: req.file ? req.file.filename: "default-image.jpg" ,
+            todaysDay: Boolean(req.body.todaysDay)
 		}
         				products.push(nuevoProducto);
 		fs.writeFileSync(productsFile, JSON.stringify(products, null, " "));
@@ -51,15 +52,15 @@ const controller = {
     update: (req, res) => {
             const id = req.params.id;
             let productToEdit = products.find(product => product.id == id);
-            
             let productToSave = {
                 id: productToEdit.id,
                 title: req.body.title,
-                price: req.body.price,
+                price: parseInt(req.body.price),
                 ingredients: req.body.ingredients,
                 category: req.body.category,
                 description: req.body.description,
-                img: req.file ? req.file.filename : productToEdit.img
+                img: req.file ? req.file.filename : productToEdit.img,
+                todaysDay: Boolean(req.body.todaysDay)
             }
     
             let indice = products.findIndex(product => {
@@ -85,17 +86,5 @@ const controller = {
 
 };
 
-/* $document.getElementById("file").onchange = function (e) {
-    let reader = new FileReader();
-    reader.readAsDataURL(e.target.files[0]);
-    reader.onload = function () {
-        let preview = document.getElementById("preview");
-        image = document.createElement("img");
-        image.src = reader.result;
-        images.style.width = "150px";
-        preview.innerHTML = ";"
-        preview.append(imagen);
-    }
-} */
 
 module.exports = controller;

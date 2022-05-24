@@ -2,10 +2,11 @@
     --blanco: white;
     --azul-home: #2449A8;
     --crema-home: #F8E8DA;
-    --naranja: #CA841B;
+    --naranja: #e08c0d;
     --negro: black;
     --gris-oscuro: #525252;
 }
+
 * {
     margin: 0;
     font-family: 'Roboto Slab', serif;
@@ -20,6 +21,25 @@ a:visited {
     text-decoration: none;
 }
 
+
+
+button {
+    display: unset;
+    border: none;
+    padding: unset;
+    margin: unset;
+    text-decoration: none;
+    background: unset;
+    color: unset;
+    font-family: unset;
+    font-size: unset;
+    text-align: unset;
+    transition: unset;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    pointer-events: visible;
+    cursor: pointer
+}
 
 /* Body */
 
@@ -126,7 +146,7 @@ div.bars {
     justify-content: center;
     flex-direction: column;
     padding: 40px 15px;
-   
+
 }
 
 .banner-text h1 {
@@ -158,17 +178,18 @@ div.bars {
     object-fit: cover;
     width: 100%;
 }
-.purchase-product{
+
+.purchase-product {
     display: flex;
     flex-direction: column;
-   
+
 }
 
 
 .products {
     display: flex;
     flex-wrap: nowrap;
-   
+
 }
 
 .products article {
@@ -181,7 +202,7 @@ div.bars {
     justify-content: space-between;
 }
 
-.recipes-description{
+.recipes-description {
     width: 100%;
     margin: 40px 0;
     flex-direction: column;
@@ -203,11 +224,11 @@ div.bars {
     color: var(--gris-oscuro);
     line-height: 1.6em;
     text-align: justify;
-  
+
 }
 
-.product-name{
-    font-size:25px;
+.product-name {
+    font-size: 25px;
     color: var(--naranja);
 }
 
@@ -217,34 +238,36 @@ div.bars {
     color: var(--gris-oscuro);
     font-weight: bold;
 }
-.edit-product , .add-to-cart, .delete {
+
+.detail-button {
     width: 100px;
     background-color: var(--naranja);
     border-radius: 15px;
     padding: 9px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.edit-product p , .add-to-cart p {
+.detail-button p,
+.detail-button button {
     text-align: center;
     color: white;
     text-decoration: none;
+    vertical-align: text-bottom;
 }
 
-.button-delete{
-    text-align: center;
-    color: white;
-    text-decoration: none;
-}
 .buttons-product {
-    display:flex;
+    display: flex;
     margin-left: 2rem;
     margin-right: 2rem;
-   padding: 9px;
-   justify-content: space-evenly;
+    padding: 9px;
+    justify-content: space-evenly;
 }
 
 
-    
+
 /* Seccion footer*/
 
 .foot {
@@ -272,4 +295,3 @@ div.bars {
     font-size: 2rem;
     color: var(--gris-oscuro);
 }
-

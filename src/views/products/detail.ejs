@@ -22,27 +22,26 @@
                     <p class="product-description">
                       <%= plato.description %>
                     </p>
-                   <h4>INGREDIENTES</h4> 
-                   <p class="product-description">
-                      <%= plato.ingredients %>
-                    </p>
                     <p class="product-prince">
                       $ <%= plato.price %> .-
                     </p>
                   </section>
                   <section class="buttons-product">
-                    <div class="edit-product">
+                    <div class="detail-button">
                       <a href="/products/edit/<%= plato.id %>">
                         <p>Editar producto</p>
                       </a>
                     </div>
-                    <div class="add-to-cart">
+                    <div class="detail-button">
                       <a href="/products/shop">
                         <p>Agregar al carrito</p>
                       </a>
                     </div>
-                    <form action="/products/delete/<%= plato.id %>?_method=DELETE" method="POST" class="delete"><button
-                        type="submit" class="button-delete">ELIMINAR</button></form>
+                    <div class="detail-button">
+                      <form action="/products/delete/<%= plato.id %>?_method=DELETE" method="POST" class="delete">
+                        <button type="submit">Eliminar</button>
+                      </form>
+                    </div>
                   </section>
                 </section>
               </article>

@@ -1,4 +1,4 @@
-**Encuentro 29 de mayo**
+**Encuentro 29 de abril**
 
 Nicolas:  
 
@@ -68,4 +68,25 @@ No repercutia el css en la vista del carrito de compras.
 Con ayuda de Alan, Nicolas y Adriano se solucionaron estos impedimentos en la weekly.
 Se repartieron actividades del Sprint 4 y quedamos en juntarnos el Miercoles 18 de Mayo para trabajar en conjunto para dicho Sprint.
 
+**Encuentro 12 de Mayo**
 
+En este encuentro  se repartieron las tres tareas de planificacion y el punto 1 y 2 sobre el armado de los JSON.
+En esta ocasión contamos con la ventaja de tener finalizado el punto 1 , el cual entregamos para el Sprint anterior.
+Con respecto a la tarea  numero 3 sobre la implementacion de CRUD de productos, habiamos entregado las primeras tres rutas para el Sprint anterior. 
+Definimos un próximo encuentro para el 18 de Mayo, en el cual debemos tener todo preparado para comenzar a utilizar el método pair programming.
+
+**Encuentro 18 de Mayo**
+
+Avanzamos en la implementación de las rutas indicadas para el sprint IV y en esta ocasión, implementamos rutas para create. Si bien avanazamos, encontramos problemas para incorporar los datos de ingreso en el JSON. A diferencia de otros sprints no realizamos división de tareas. Lika compartía pantalla y fuimos desarrollando el proyecto utilizamos la lógica del pair programing.
+Tuvimos dos bloqueantes. El primero fuue tener en español toda la informacion en el prouctsDataBase. EL segundo bloqueante fue con las imagenes que agregabamos en el formulario, las mismas no quedaban guardadas en el proyecto y no se reflejaba en la vista de detail de productos.
+
+**Encuentro 20 de Mayo**
+
+Comenzamos a armar la lógica de la ruta a donde se envia el formulario de edicion de productos y realizamos actualizaciones tanto en el formulario de creacion como de edicion de productos para que ambos contengan el mismo orden e idioma que el plasmado en el JSON de productsDataBase.
+También agregamos tags de ejs dentro del formulario de edicion de productos para que cuando el administrador quiera editar un producto, la información del mismo aparezca automaticamente en el formulario al cliekar en editar producto.
+Se pacto otro encuentro para enfocarnos en arrglar los bloqueantes que venimos teniendo en ambas rutas de formularios y finalizar con el armado de la ruta de delete.
+
+**Encuentro 22 de Mayo**
+
+En equipo resolvimos lo que no nos permitia que las fotos no se guarden e impacten en el detail de los productos. Encontramos como bloqueante la implementacion del menu del dia en la edicion y creacion de formulario, ya que cuando agregabamos o editabamos un producto y lo sacabamos o agrgabamos al menu del dia, no aparecia en la home ya que no impactaba el booleano del true/ false. Lo pudimos resolver de manera rápida y eficaz.
+Por último, trabajamos en el armado de la ruta de delete. 

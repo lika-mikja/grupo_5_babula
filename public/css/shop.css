@@ -18,7 +18,7 @@ a {
 /* Body */
 
 body {
-    background: url('../images/background-body.jpg');
+    background: url('../images/site/background-body.jpg');
     background-repeat-x: repeat;
     background-size: cover;
 }

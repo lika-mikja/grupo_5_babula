@@ -1,14 +1,6 @@
-//const { create } = require('domain'); //
-const fs = require('fs');
-const path = require('path');
-
-/*Encriptador de password*/
 const bcryptjs = require('bcryptjs');
+const {	validationResult} = require('express-validator');
 
-/*Express Validator*/
-const {	validationResult } = require('express-validator');
-
-/*Modelo User*/
 const User = require('../models/User');
 
 const controller = {
@@ -53,19 +45,19 @@ const controller = {
 	},
 	loginProcess: (req, res) => {
 		let userToLogin = User.findByField('email', req.body.email);
-
-		if (userToLogin) {
+		
+		if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 
-				if (req.body.remember_user) {
+				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
 				return res.redirect('/user/profile');
-			}
+			} 
 			return res.render('./users/userLoginForm', {
 				errors: {
 					email: {
@@ -84,7 +76,7 @@ const controller = {
 		});
 	},
 	profile: (req, res) => {
-		return res.render('./users/userProfile', {
+		return res.render('userProfile', {
 			user: req.session.userLogged
 		});
 	},

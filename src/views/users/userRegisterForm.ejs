@@ -19,54 +19,56 @@
 							<div class="row-product-detail">
 								<div class="col-12 col-md-6">
 									<label class="form-label">Nombre completo</label>
-									<input type="text" name="fullName"
-										class="form-notification" <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
-										value="<%= locals.oldData ? oldData.fullName : null %>">
-									<% if (locals.errors && errors.fullName) { %>
-										<div class="text-danger">
-											<%= errors.fullName.msg %>
-										</div>
-										<% } %>
+									<input type="text" name="fullName" class="form-notification" <%=locals.errors &&
+										errors.fullName ? 'is-invalid' : null %>"
+									value="<%= locals.oldData ? oldData.fullName : null %>">
+										<% if (locals.errors && errors.fullName) { %>
+											<div class="text-danger">
+												<%= errors.fullName.msg %>
+											</div>
+											<% } %>
 								</div>
 
 								<div class="col-12">
 									<label class="form-label">Correo electronico</label>
-									<input type="text" name="email"
-										class="form-notification" <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-										value="<%= locals.oldData ? oldData.email : null %>">
-									<% if (locals.errors && errors.email) { %>
-										<div class="text-danger">
-											<%= errors.email.msg %>
-										</div>
-										<% } %>
-											<div class="col-12 col-md-6">
-												<label class="form-label">Password</label>
-												<input type="password" name="password"
-													class="form-notification" <%= locals.errors && errors.password ? 'is-invalid' : null %>">
-												<% if (locals.errors && errors.password) { %>
-													<div class="text-danger">
-														<%= errors.password.msg %>
-													</div>
-													<% } %>
+									<input type="text" name="email" class="form-notification" <%=locals.errors &&
+										errors.email ? 'is-invalid' : null %>"
+									value="<%= locals.oldData ? oldData.email : null %>">
+										<% if (locals.errors && errors.email) { %>
+											<div class="text-danger">
+												<%= errors.email.msg %>
 											</div>
+											<% } %>
+												<div class="col-12 col-md-6">
+													<label class="form-label">Password</label>
+													<input type="password" name="password" class="form-notification"
+														<%=locals.errors && errors.password ? 'is-invalid' : null %>">
+													<% if (locals.errors && errors.password) { %>
+														<div class="text-danger">
+															<%= errors.password.msg %>
+														</div>
+														<% } %>
+												</div>
 
-											<div class="col-12 col-md-6">
-												<label class="form-label">Imagen de perfil:</label>
-												<input type="file" name="avatar"
-													class="form-notification" <%= locals.errors && errors.avatar ? 'is-invalid' : null %>">
-												<% if (locals.errors && errors.avatar) { %>
-													<div class="text-danger">
-														<%= errors.avatar.msg %>
-													</div>
-													<% } %>
-											</div>
-											<div class="sumbit-container">
-												<button type="submit" class="btn btn-primary"><p>Registrarse</p></button>
-											</div>
-											  </div>
+												<div class="col-12 col-md-6">
+													<label class="form-label">Imagen de perfil:</label>
+													<input type="file" name="avatar" class="form-notification"
+														<%=locals.errors && errors.avatar ? 'is-invalid' : null %>">
+													<% if (locals.errors && errors.avatar) { %>
+														<div class="text-danger">
+															<%= errors.avatar.msg %>
+														</div>
+														<% } %>
+												</div>
+												<div class="sumbit-container">
+													<button type="submit" class="btn btn-primary">
+														<p>Registrarse</p>
+													</button>
+												</div>
 								</div>
 							</div>
-						</form>
+					</div>
+					</form>
 				</section>
 			</main>
 			<!--Footer-->

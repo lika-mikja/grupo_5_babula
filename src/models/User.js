@@ -1,3 +1,4 @@
+const { Console } = require('console');
 const fs = require('fs');
 
 const User = {
@@ -26,6 +27,7 @@ const User = {
 		return userFound;
 	},
 /* */
+
 	findByField: function (field, text) {
 		let allUsers = this.findAll();
 		let userFound = allUsers.find(oneUser => oneUser[field] === text);
@@ -51,5 +53,5 @@ const User = {
 		return true;
 		}*/
 }
-
+console.log(User.findAll());
 module.exports = User;

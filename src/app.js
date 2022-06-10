@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
 
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+
 /* Habilitar métodos PUT/DELETE */
 const methodOverride = require('method-override');
 app.use(methodOverride('_method')); 
@@ -11,7 +17,19 @@ const path = require("path");
 // Recursos estaticos //
 app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.json()); 
+app.use(express.json());
+
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+//Operador de cookies
+app.use(cookies());
+
+//Indica usuario logueado
+app.use(userLoggedMiddleware);
 
 // Que las vistas se vean por ejs
 app.set('view engine', 'ejs');

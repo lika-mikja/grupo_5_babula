@@ -147,7 +147,7 @@ div.bars {
     justify-content: center;
     flex-direction: column;
     padding: 40px 15px;
-   
+
 }
 
 .banner-text h1 {
@@ -157,7 +157,7 @@ div.bars {
 
 .banner-text h2 {
     font-size: 14px;
-     color: var(--azul-home);
+    color: var(--azul-home);
 }
 
 
@@ -267,14 +267,17 @@ p.product-description {
     width: 100%;
 }
 
-.see-more {
+.see-more,
+.sumbit-container {
     width: 100px;
     background-color: var(--naranja);
     border-radius: 15px;
     padding: 9px;
+    text-align: center;margin-top: 24px
 }
 
-.see-more p {
+.see-more p,
+.sumbit-container p {
     text-align: center;
     color: white;
     text-decoration: none;
@@ -302,7 +305,7 @@ section.access-menu {
 
 }
 
-/*Formulario de creación de producto*/
+/*Formulario de creación de producto/usuario*/
 
 .product-creator {
     margin: 50px 0;
@@ -339,7 +342,7 @@ section.access-menu {
 .form-label {
     display: flex;
     font-size: 1em;
-    margin: 10px 0;
+    margin: 20px 0 8px;
     flex-direction: column;
 }
 
@@ -368,8 +371,10 @@ textarea.form-input {
     background-color: var(--naranja);
 }
 
-.detail-button {
-    margin-top: 12px;width: 150px;
+.detail-button,
+.create-button {
+    margin-top: 12px;
+    width: 150px;
     background-color: var(--naranja);
     border-radius: 15px;
     padding: 10px;
@@ -387,9 +392,9 @@ textarea.form-input {
     vertical-align: text-bottom;
 }
 
-.img-product-to-edit{
+.img-product-to-edit {
     margin-bottom: 20px;
-    border-radius: 10px;  
+    border-radius: 10px;
 }
 
 .recipes {
@@ -398,15 +403,19 @@ textarea.form-input {
 }
 
 .create-buttom {
-display:flex;
-
-}
-.create-buttom {
-    
+    display: flex;
     border-radius: 15px;
-    
     text-align: center;
     text-decoration: none;
+}
+
+.text-danger {
+    font-size: 0.8em;
+    color: var(--naranja)
+;margin-top: 4px;}
+
+.form-notification {
+    padding: 0, 12px;
 }
 
 /* Footer */

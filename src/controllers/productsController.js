@@ -20,7 +20,7 @@ const controller = {
     },
 
     productCreate: (req, res) => {
-        res.render('./products/product-create-form');
+        res.render('./products/productCreateForm');
 
     },
 
@@ -45,7 +45,7 @@ const controller = {
             let id = req.params.id
             let plato = products.find(plato => plato.id == id);
             let productToEdit = products.find(product => product.id == id);
-            res.render('./products/product-edit-form', {plato , productToEdit});
+            res.render('./products/productEditForm', {plato , productToEdit});
 
         },
         // Update - Method to update

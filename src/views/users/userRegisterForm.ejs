@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head-->
+<%- include("../partials/head" ,{stylesheet:"styles", title:"Formulario creación de producto"}) %>
+
+	<body>
+		<!--Header-->
+		<%- include("../partials/header") %>
+			<!-- /Header -->
+			<main>
+				<section class="product-creator">
+					<div class="title">
+						<h2 class="products-title">Registrarse
+						</h2>
+					</div>
+					<div class="formulario">
+						<form action="/user/register" method="POST" enctype="multipart/form-data">
+							<div class="row-product-detail">
+								<div class="col-12 col-md-6">
+									<label class="form-label">Nombre completo</label>
+									<input type="text" name="fullName"
+										class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
+										value="<%= locals.oldData ? oldData.fullName : null %>">
+									<% if (locals.errors && errors.fullName) { %>
+										<div class="text-danger">
+											<%= errors.fullName.msg %>
+										</div>
+										<% } %>
+								</div>
+
+								<div class="col-12">
+									<label class="form-label">Correo electronico</label>
+									<input type="text" name="email"
+										class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+										value="<%= locals.oldData ? oldData.email : null %>">
+									<% if (locals.errors && errors.email) { %>
+										<div class="text-danger">
+											<%= errors.email.msg %>
+										</div>
+										<% } %>
+											<div class="col-12 col-md-6">
+												<label class="form-label">Password</label>
+												<input type="password" name="password"
+													class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
+												<% if (locals.errors && errors.password) { %>
+													<div class="text-danger">
+														<%= errors.password.msg %>
+													</div>
+													<% } %>
+											</div>
+
+											<div class="col-12 col-md-6">
+												<label class="form-label">Imagen de perfil:</label>
+												<input type="file" name="avatar"
+													class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>">
+												<% if (locals.errors && errors.avatar) { %>
+													<div class="text-danger">
+														<%= errors.avatar.msg %>
+													</div>
+													<% } %>
+											</div>
+											<div class="create-buttom">
+												<button type="submit" class="btn btn-primary">Registrarse</button>
+											</div>
+								</div>
+							</div>
+						</form>
+				</section>
+			</main>
+			<!--Footer-->
+			<%- include("../partials/footer") %>
+				<!--Footer-->
+	</body>
+
+</html>

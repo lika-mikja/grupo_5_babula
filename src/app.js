@@ -25,7 +25,7 @@ const usersRouter = require('./routes/usersRouter');
 
 app.use("/", mainRouter);
 app.use("/products", productsRouter);
-app.use("/users", usersRouter);
+app.use("/user", usersRouter);
 
 
 // Servidor

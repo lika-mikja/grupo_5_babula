@@ -1,10 +1,10 @@
-Encuentro 4 de mayo:
+**Encuentro 29 de abril**
 
 Nicolas:  
 
-Comenzó a realizar la creacion y edición de productos.
+Comenzó a diseñar la creacion y edición de productos.
 No encontró ningun impedimento.
-Con soporte de Andrian , faltaria terminar la creacion y edicion de productos, organizar el sistema de ruteo de las mismas y armar la retro del sprint 2.
+Con soporte de Andriano , faltaria terminar la creacion y edicion de productos, organizar el sistema de ruteo de las mismas y armar la retro del sprint 2.
 
 Alan:
 
@@ -20,10 +20,72 @@ La tarea de la semana será armar la creacion y edicion de productos junto con N
 
 Lika:
 
-Se realizo cambio de idioma, actualizacion de vista de productos. Asimismo, se actualizo el mainController con los productos y se organizo el sistema de ruteo del index.
-Como impedimento sucedió el no poder avanzar con los partials ya que no levantaba el servidor a partir de que se cambiaron las extensiones. Resulta que era un problema de como habiamos planteado las rutas, ya que era necesario indicar que el response sea "render".
-Las tareas a realizar serian, implementar de forma correcta la media querie de la vista de productos, armado de ruta parametrizada para poder ingresar al detalle de cada producto en la vista de products y organizar sistema de ruteo de dicha vista..
+Realizó cambio de idioma, actualizacion de vista de productos. Asimismo, se actualizo el mainController con los productos y se organizo el sistema de ruteo del index.
+Como impedimento sucedió el no poder avanzar con los partials ya que no levantaba el servidor a partir de que se cambiaron las extensiones. Resulta que era un problema de como se plantearon las rutas, ya que era necesario indicar que el response sea "render".
+Las tareas a realizar serian, implementar de forma correcta la media querie de la vista de productos, armado de ruta parametrizada para poder ingresar al detalle de cada producto en la vista de products, organizar sistema de ruteo de dicha vista y actualizar archivo de Weekly.
 
-Encuentro 6 de mayo:
+**Encuentro 6 de mayo**
 
-Como impedimento grupal se encontro con que no se puede implementar el partials del head en todas las vistas, ya que cada vista esta linkeada a un css diferente. Como se soluciona esto?
+Como impedimento grupal se encontro con que no se puede implementar el partials del head en todas las vistas, ya que cada vista esta linkeada a un css diferente. 
+
+**Encuentro 8 de mayo**
+
+Nicolas:
+
+Se realizó creacion de formulario de edicion y creación de productos. Como impedimento hubo falta de comunicacion con Adrian ya que lo iban a realizar en conjunto. Se realizo un check de los cuatro formularios que se crearon y se seleccionó dos de ellos.
+Como tarea del dia será temrinar de pulir la creacion de edicion de productos, hacer las rutas de login y register y actualizar la retro del sprint II.
+Adicional: que se vea una vista parcial de las imagenes subidas en los formularios de creacion de productos.
+
+Alan: 
+
+Actualizo el css del carrito de compras y como bloqueante encontró que no funcionaba la ruta de productos en app.js. Como tarea del dia se lleva la  actualización de rutas de productos.
+
+Adriano: 
+
+Con acompañamiento de Nicolas, armar diseño y armado de vistas de creacion y edicion de productos junto con sus rutas. Asimismo,  creo una vista de detail de productos.  Como impedimento y por falta de comunicación, se crearon 2 formularios de edicion y dos formularios de creacion de productos. En conjunto a Nico, se pusieron de acuerdo y optaron por 2 de ellos.
+De forma adicional, dio soporte a Lika con la ruta parametrizadas de los productos, del backup de productosDataBase.json e implementacion de tags dentro de archivos de index y detail de productos, como también el armado de rutas para que funcione todo.
+En este caso un impedimento que se encontró es que el servidor no levantaba lo realizado, ya que se estaban exportando mal los módulos.
+Se lleva la creación del la vista de productos.
+
+Lika:
+
+Con soporte de Adriano, se creo la carpeta de data y dentro, un backup de productos los cuales se implementaron con tags en la vista del index y del detail de productos. Tambien se implementó lo necesario en productsController, como tambien armado de código en las rutas de los productos para que dichos tags funcionen de manera correcta.
+Como impedimento se encontraron que el servidor no levantaba lo realizado, ya que se estaban exportando mal los módulos.
+Como pendiente queda ver las medias queries de la vista de detail de productos para que desde desktop se visualice con flex la foto, el titulo y la descripción de cada plato. Por último, agregar al menos 5 platos más y actualizar la descripción de cada producto, indicando si es apto celiaco, vegano, vegetariano, calorias e ingredientes utilizados.
+
+**Encuentro 14 de mayo**
+
+Lika:
+
+Se realizan modificaciones en el partials del head, implementando etiquetas de ejs para linkear los css en las vistas que correspondan, como taambien, que cada vista tenga el titulo que le corresponda.
+Tambien se agrega al home una caja en el header con una descripción llamada "NOSOTROS" donde hay una breve historia.
+Al carrito de compras se le hace una pequeña modificacion visual.
+Por último, se agregan 5 productos al archivo de productsDataBase.
+Con todos estos cambios aparecieron nuevos impedimentos tales como:
+La vista del formulario de creacion de productos tiraba error al cargarla en el servidor.
+No repercutia el css en la vista del carrito de compras.
+
+Con ayuda de Alan, Nicolas y Adriano se solucionaron estos impedimentos en la weekly.
+
+Sprint 4:
+Se repartieron las tres tareas de planificacion y el punto 1 y 2 sobre el armado de los JSON.
+En esta ocasión contamos con la ventaja de tener finalizado el punto 1 , el cual entregamos para el Sprint anterior.
+Con respecto a la tarea  numero 3 sobre la implementacion de CRUD de productos, habiamos entregado las primeras tres rutas para el Sprint anterior. 
+Definimos un próximo encuentro para el 18 de Mayo, en el cual debemos tener finalizadas las tareas repartidas para comenzar a utilizar el método pair programming.
+
+
+**Encuentro 18 de Mayo**
+
+Avanzamos en la implementación de las rutas indicadas para el sprint IV y en esta ocasión, implementamos rutas para create. Si bien avanazamos, encontramos problemas para incorporar los datos de ingreso en el JSON. A diferencia de otros sprints no realizamos división de tareas. Lika compartía pantalla y fuimos desarrollando el proyecto utilizamos la lógica del pair programing.
+Tuvimos dos bloqueantes. El primero fue tener en español toda la informacion en el prouctsDataBase. El segundo bloqueante fue con las imagenes que agregabamos en el formulario, las mismas no quedaban guardadas en el proyecto y no se reflejaba en la vista de detail de productos.
+
+**Encuentro 20 de Mayo**
+
+Comenzamos a armar la lógica de la ruta a donde se envia el formulario de edicion de productos y realizamos actualizaciones tanto en el formulario de creacion como de edicion de productos para que ambos contengan el mismo orden e idioma que el plasmado en el JSON de productsDataBase.
+También agregamos tags de ejs dentro del formulario de edicion de productos para que cuando el administrador quiera editar un producto, la información del mismo aparezca automaticamente en el formulario al clikear en editar producto.
+Se pacto otro encuentro para enfocarnos en arreglar los bloqueantes que venimos teniendo en ambas rutas de formularios y finalizar con el armado de la ruta de delete.
+
+**Encuentro 22 de Mayo**
+
+En equipo resolvimos lo que no nos permitia que las fotos no se guarden e impacten en el detail de los productos. Encontramos como bloqueante la implementacion del menu del dia en la edicion y creacion de formulario, ya que cuando agregabamos o editabamos un producto y lo sacabamos o agrgabamos al menu del dia, no aparecia en la home dado que no impactaba el booleano del true/ false. Lo pudimos resolver de manera rápida y eficaz.
+Por último, trabajamos en el armado de la ruta de delete. 

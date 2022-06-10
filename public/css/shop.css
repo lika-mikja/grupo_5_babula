@@ -18,7 +18,7 @@ a {
 /* Body */
 
 body {
-    background: url('../images/background-body.jpg');
+    background: url('../images/site/background-body.jpg');
     background-repeat-x: repeat;
     background-size: cover;
 }
@@ -73,6 +73,14 @@ div.menu-right {
     padding: 12px;
 }
 
+p.text-button-menu {
+    background: var(--azul-home);
+    font-size: 0.5em;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
 
 div.bars {
     background-color: var(--azul-home);
@@ -84,7 +92,8 @@ div.bars {
 }
 
 .fa-user-alt,
-.fa-shopping-cart {
+.fa-shopping-cart,
+.fa-cart-plus {
     color: var(--azul-home);
     display: flex;
     justify-content: flex-end;
@@ -117,26 +126,27 @@ div.bars {
 
 .banner-text h1 {
     font-size: 40px;
+    color: var(--azul-home);
 }
 
 .banner-text h2 {
     font-size: 14px;
+    color: var(--azul-home);
 }
+
 
 /* Main */
 
 .seccion-compra {
-    display: flex;
-    
+    display: flex; 
+    justify-content: center; 
 }
 
 .caja-imagen,
 .caja-texto {
     margin: 15px;
     display: flex;
-    flex-direction: row-reverse;
-
-    
+    flex-direction: row-reverse;    
 }
 
 .alinear-items {
@@ -187,12 +197,43 @@ div .alinear-items p {
     margin-top: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    border: none;
+    margin:1rem;
 }
 
 .price{
     display: flex;
     flex-direction: row;
-    margin-left: 10px;
+    margin-left: 20px;
+    text-align: center;
+    margin:0.5rem;
+    justify-content: space-evenly;
+    font-size: 18px;
+    color: var(--gris-oscuro);
+    
+
+}
+
+
+button p {
+    color: white;
+    font-size: 1rem;
+}
+
+main {
+  
+    justify-content: center;
+}
+
+.finaly-prince{
+   margin:4rem;
+  
+}
+
+
+.recipes {
+    text-align: center;
+    font-size: 16px;
 }
 
 /* Footer */
@@ -217,12 +258,15 @@ div .alinear-items p {
     justify-content: center;
 }
 
-.recipes {
-    text-align: center;
-    font-size: 16px;
-}
 
 @media (min-width: 480px) {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    
+    
+    .buttons_buy{
+        flex-direction: row;
+       
+    }
+}
          

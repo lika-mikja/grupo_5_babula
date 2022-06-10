@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
+
+/* Habilitar métodos PUT/DELETE */
+const methodOverride = require('method-override');
+app.use(methodOverride('_method')); 
+
 // Modulo nativo para manejar las rutas de los archivos//
 const path = require("path");
 
 // Recursos estaticos //
+app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.json()); // Para que se usa??
+app.use(express.json()); 
 
 // Que las vistas se vean por ejs
 app.set('view engine', 'ejs');
@@ -19,11 +25,10 @@ const usersRouter = require('./routes/usersRouter');
 
 app.use("/", mainRouter);
 app.use("/products", productsRouter);
-app.use("/users", usersRouter);
+app.use("/user", usersRouter);
 
 
 // Servidor
 app.listen(4000, () => {
     console.log('Servidor funcionando en el puerto http://localhost:4000');
 });
-

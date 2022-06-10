@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!--Head-->
-<%- include("../partials/head") %>
+<%- include("../partials/head" ,{stylesheet:"detail", title:"Detalle de Producto"}) %>
 
   <body>
     <!--Header-->
@@ -13,23 +13,38 @@
           <section class="featured-products">
             <div class="products">
               <article>
-                <img class="product-image" src="/images/<%= plato.img %>" alt="product 1">
-                <section class="recipes-description">
-                  <p class="product-name">
-                    <%= plato.titulo %>
-                  </p>
-                  <p class="product-description">
-                    <%= plato.descripcion %>
-                  </p>
+                <img class="product-image" src="/images/products/<%= plato.img %>" alt="product 1">
+                <section class="purchase-product">
+                  <section class="recipes-description">
+                    <p class="product-name">
+                      <%= plato.title %>
+                    </p>
+                    <p class="product-description">
+                      <%= plato.description %>
+                    </p>
+                    <p class="product-prince">
+                      $ <%= plato.price %> .-
+                    </p>
+                  </section>
+                  <section class="buttons-product">
+                    <div class="detail-button">
+                      <a href="/products/edit/<%= plato.id %>">
+                        <p>Editar producto</p>
+                      </a>
+                    </div>
+                    <div class="detail-button">
+                      <a href="/products/shop">
+                        <p>Agregar al carrito</p>
+                      </a>
+                    </div>
+                    <div class="detail-button">
+                      <form action="/products/delete/<%= plato.id %>?_method=DELETE" method="POST" class="delete">
+                        <button type="submit">Eliminar</button>
+                      </form>
+                    </div>
+                  </section>
                 </section>
               </article>
-            </div>
-          </section>
-          <section class="access-menu">
-            <div class="clean">
-              <a href="/product">
-                <p>Acceder al menú</p>
-              </a>
             </div>
           </section>
       </main>

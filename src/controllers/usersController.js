@@ -45,7 +45,6 @@ const controller = {
 	},
 	loginProcess: (req, res) => {
 		let userToLogin = User.findByField('email', req.body.email);
-		
 		if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if (isOkThePassword) {
@@ -56,9 +55,9 @@ const controller = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('/user/profile');
+				return res.redirect('./users/index');
 			} 
-			return res.render('./users/userLoginForm', {
+		     return res.render('userLoginForm', {
 				errors: {
 					email: {
 						msg: 'Las credenciales son inválidas'
@@ -66,21 +65,19 @@ const controller = {
 				}
 			});
 		}
-
-		return res.render('./users/userLoginForm', {
+		/* return res.render('./users/userLoginForm', {
 			errors: {
 				email: {
 					msg: 'No se encuentra este email en nuestra base de datos'
 				}
 			}
-		});
+		}); */
 	},
 	profile: (req, res) => {
 		return res.render('userProfile', {
 			user: req.session.userLogged
 		});
 	},
-
 	logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();

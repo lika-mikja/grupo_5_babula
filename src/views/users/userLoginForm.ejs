@@ -15,9 +15,14 @@
       <div class="login-box">
         <a href="/"><img class="Grandma" src="/images/site/logo-babula.svg" alt="Logo ba bula"></a>
         <!--username-->
-        <div class="field"><!-- <span class="fa fa-user"></span> --><input type="text" placeholder="Email / Usuario"></div>
+        <div class="field"><input type="text" name="email" placeholder="Email"></div>
         <!--Password-->
-        <div class="field"><!-- <span class="fa fa-lock"></span> --><input type="password" placeholder="Contraseña"></div>
+        <div class="field"><input type="password" name="password" placeholder="Contraseña"></div>
+        <% if (locals.errors && errors.email) { %>
+          <div class="text-danger">
+            <%= errors.email.msg %>
+          </div>
+        <% } %>
         <input type="submit" class="submit" value="Ingresar">
         <label> <input type="checkbox" checked="checked" id="remember"> Recordarme </label> <br>
         <a href="#">¿Olvidaste la contraseña?</a> <br>

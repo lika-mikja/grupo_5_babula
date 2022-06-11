@@ -18,13 +18,24 @@
 						<form action="/user/register" method="POST" enctype="multipart/form-data">
 							<div class="row-product-detail">
 								<div class="col-12 col-md-6">
-									<label class="form-label">Nombre completo</label>
-									<input type="text" name="fullName" class="form-notification" <%=locals.errors &&
+									<label class="form-label">Nombre</label>
+									<input type="text" name="firstName" class="form-notification" <%=locals.errors &&
 										errors.fullName ? 'is-invalid' : null %>"
-									value="<%= locals.oldData ? oldData.fullName : null %>">
-										<% if (locals.errors && errors.fullName) { %>
+									value="<%= locals.oldData ? oldData.firstName : null %>">
+										<% if (locals.errors && errors.firstName) { %>
 											<div class="text-danger">
-												<%= errors.fullName.msg %>
+												<%= errors.firstName.msg %>
+											</div>
+											<% } %>
+								</div>
+								<div class="col-12 col-md-6">
+									<label class="form-label">Apellido</label>
+									<input type="text" name="lastName" class="form-notification" <%=locals.errors &&
+										errors.lastName ? 'is-invalid' : null %>"
+									value="<%= locals.oldData ? oldData.lastName : null %>">
+										<% if (locals.errors && errors.lastName) { %>
+											<div class="text-danger">
+												<%= errors.lastName.msg %>
 											</div>
 											<% } %>
 								</div>
@@ -49,7 +60,30 @@
 														</div>
 														<% } %>
 												</div>
-
+								
+													<div class="col-12 col-md-6">
+														<label class="form-label">Categoría</label>
+														<select 
+															name="category" 
+															class="form-notification <%= locals.errors && errors.category ? 'is-invalid' : null %>"
+														>
+															<option value="">Tipo</option>
+															<%  
+																let category = ['Admin', 'User'];
+															%>
+															<% for (const oneCategory of category) { %>
+																<option 
+																	value="<%= oneCategory %>"
+																	<%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %> 
+																> <%= oneCategory %> </option>
+															<% } %>
+														</select>
+														<% if (locals.errors && errors.category) { %>
+															<div class="text-danger">
+																<%= errors.category.msg%>
+															</div>
+														<% } %>
+					
 												<div class="col-12 col-md-6">
 													<label class="form-label">Imagen de perfil:</label>
 													<input type="file" name="avatar" class="form-notification"

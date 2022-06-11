@@ -1,9 +1,11 @@
 [
  {
   "id": 1,
-  "fullName": "Nicolas Cage",
-  "email": "nicolas@gmail.com",
-  "password": "$2a$10$JuXyoQSiKO5Ipcy3bO30WeYCctU5yaHKXdvOnzxqwQeuknzY3C8fu",
-  "avatar": "1654899350112_img.jpg"
+  "firstName": "Alan",
+  "lastName": "Arias",
+  "email": "alan.arias486@gmail.com",
+  "password": "$2a$10$/wdhB9kGplyOevYEyyelPeAKGsudyFXej0jK0sPjk44K7CO7aebTi",
+  "category": "User",
+  "avatar": "1654925606934_img.png"
  }
 ]

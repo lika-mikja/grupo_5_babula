@@ -9,7 +9,6 @@
 * {
     margin: 0;
     font-family: 'Roboto Slab', serif;
-    padding: auto;
 }
 
 a {
@@ -273,7 +272,8 @@ p.product-description {
     background-color: var(--naranja);
     border-radius: 15px;
     padding: 9px;
-    text-align: center;margin-top: 24px
+    text-align: center;
+    margin-top: 24px
 }
 
 .see-more p,
@@ -411,11 +411,18 @@ textarea.form-input {
 
 .text-danger {
     font-size: 0.8em;
-    color: var(--naranja)
-;margin-top: 4px;}
+    color: var(--naranja);
+    margin-top: 4px;
+}
 
-.form-notification {
-    padding: 0, 12px;
+.form-notification,
+.form-check,
+.form-check-label {
+    padding: 16px 0;
+}
+
+input.form-check-input {
+    margin-right: 10px;
 }
 
 /* Footer */

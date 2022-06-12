@@ -57,7 +57,7 @@ const controller = {
 
 				return res.redirect('/');
 			} 
-		     return res.render('userLoginForm', {
+		     return res.render('./users/userLoginForm', {
 				errors: {
 					email: {
 						msg: 'Las credenciales son inválidas'

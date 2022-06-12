@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
 
 app.use(session({
-	secret: "Shhh, It's a secret",
+	secret: "Veo, veo... ¿qué ves?",
 	resave: false,
 	saveUninitialized: false,
 }));
@@ -33,6 +33,7 @@ app.use(userLoggedMiddleware);
 
 // Que las vistas se vean por ejs
 app.set('view engine', 'ejs');
+
 /* Indica a express donde buscar las vistas */
 app.set('views', path.join(__dirname, '/views'));
 

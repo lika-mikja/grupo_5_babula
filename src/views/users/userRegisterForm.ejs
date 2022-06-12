@@ -11,98 +11,90 @@
 			<main>
 				<section class="product-creator">
 					<div class="title">
-						<h2 class="products-title">Registrarse
-						</h2>
+						<h2 class="products-title">Registrarse</h2>
 					</div>
 					<div class="formulario">
 						<form action="/user/register" method="POST" enctype="multipart/form-data">
 							<div class="row-product-detail">
 								<div class="col-12 col-md-6">
 									<label class="form-label">Nombre</label>
-									<input type="text" name="firstName" class="form-notification" <%=locals.errors &&
-										errors.fullName ? 'is-invalid' : null %>"
-									value="<%= locals.oldData ? oldData.firstName : null %>">
-										<% if (locals.errors && errors.firstName) { %>
-											<div class="text-danger">
-												<%= errors.firstName.msg %>
-											</div>
-											<% } %>
+									<input type="text" name="firstName" class="form-notification <%=locals.errors &&
+										errors.fullName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.firstName : null %>">
+									<% if (locals.errors && errors.firstName) { %>
+										<div class="text-danger">
+											<%= errors.firstName.msg %>
+										</div>
+										<% } %>
 								</div>
 								<div class="col-12 col-md-6">
 									<label class="form-label">Apellido</label>
-									<input type="text" name="lastName" class="form-notification" <%=locals.errors &&
-										errors.lastName ? 'is-invalid' : null %>"
-									value="<%= locals.oldData ? oldData.lastName : null %>">
-										<% if (locals.errors && errors.lastName) { %>
-											<div class="text-danger">
-												<%= errors.lastName.msg %>
-											</div>
-											<% } %>
+									<input type="text" name="lastName" class="form-notification <%=locals.errors &&
+										errors.lastName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.lastName : null %>">
+									<% if (locals.errors && errors.lastName) { %>
+										<div class="text-danger">
+											<%= errors.lastName.msg %>
+										</div>
+										<% } %>
 								</div>
 
 								<div class="col-12">
 									<label class="form-label">Correo electronico</label>
-									<input type="text" name="email" class="form-notification" <%=locals.errors &&
-										errors.email ? 'is-invalid' : null %>"
-									value="<%= locals.oldData ? oldData.email : null %>">
-										<% if (locals.errors && errors.email) { %>
-											<div class="text-danger">
-												<%= errors.email.msg %>
-											</div>
-											<% } %>
-												<div class="col-12 col-md-6">
-													<label class="form-label">Password</label>
-													<input type="password" name="password" class="form-notification"
+									<input type="text" name="email" class="form-notification <%=locals.errors &&
+										errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+									<% if (locals.errors && errors.email) { %>
+										<div class="text-danger">
+											<%= errors.email.msg %>
+										</div>
+										<% } %>
+											<div class="col-12 col-md-6">
+												<label class="form-label">Password</label>
+												<input type="password" name="password" class="form-notification
 														<%=locals.errors && errors.password ? 'is-invalid' : null %>">
-													<% if (locals.errors && errors.password) { %>
-														<div class="text-danger">
-															<%= errors.password.msg %>
-														</div>
-														<% } %>
-												</div>
-								
-													<div class="col-12 col-md-6">
-														<label class="form-label">Categoría</label>
-														<select 
-															name="category" 
-															class="form-notification <%= locals.errors && errors.category ? 'is-invalid' : null %>"
-														>
-															<option value="">Tipo</option>
-															<%  
-																let category = ['Admin', 'User'];
-															%>
-															<% for (const oneCategory of category) { %>
-																<option 
-																	value="<%= oneCategory %>"
-																	<%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %> 
-																> <%= oneCategory %> </option>
-															<% } %>
-														</select>
-														<% if (locals.errors && errors.category) { %>
-															<div class="text-danger">
-																<%= errors.category.msg%>
-															</div>
-														<% } %>
-					
-												<div class="col-12 col-md-6">
-													<label class="form-label">Imagen de perfil:</label>
-													<input type="file" name="avatar" class="form-notification"
-														<%=locals.errors && errors.avatar ? 'is-invalid' : null %>">
-													<% if (locals.errors && errors.avatar) { %>
-														<div class="text-danger">
-															<%= errors.avatar.msg %>
-														</div>
-														<% } %>
-												</div>
-												<div class="sumbit-container">
-													<button type="submit" class="btn btn-primary">
-														<p>Registrarse</p>
-													</button>
-												</div>
+												<% if (locals.errors && errors.password) { %>
+													<div class="text-danger">
+														<%= errors.password.msg %>
+													</div>
+													<% } %>
+											</div>
+								</div>
+								<div class="col-12 col-md-6">
+									<label class="form-label">Categoría</label>
+									<select name="category"
+										class="form-notification <%= locals.errors && errors.category ? 'is-invalid' : null %>">
+										<option value="">Tipo</option>
+										<% let category=['Admin', 'User' ]; %>
+											<% for (const oneCategory of category) { %>
+												<option value="<%= oneCategory %>" <%=locals.oldData &&
+													(oneCategory===oldData.category) ? 'selected' : null %>
+													> <%= oneCategory %>
+												</option>
+												<% } %>
+									</select>
+									<% if (locals.errors && errors.category) { %>
+										<div class="text-danger">
+											<%= errors.category.msg%>
+										</div>
+										<% } %>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<label class="form-label">Imagen de perfil:</label>
+									<input type="file" name="avatar" class="form-notification <%=locals.errors &&
+																	errors.avatar ? 'is-invalid' : null %>">
+									<% if (locals.errors && errors.avatar) { %>
+										<div class="text-danger">
+											<%= errors.avatar.msg %>
+										</div>
+										<% } %>
+								</div>
+								<div class="sumbit-container">
+									<button type="submit" class="btn btn-primary">
+										<p>Registrarse</p>
+									</button>
 								</div>
 							</div>
+						</form>
 					</div>
-					</form>
 				</section>
 			</main>
 			<!--Footer-->

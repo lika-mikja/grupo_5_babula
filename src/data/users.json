@@ -7,5 +7,14 @@
   "password": "$2a$10$.JuhFzuQN1kayFJiSSd57.ktVLCkmcJ3lRTcotm7BTVrhKxel0mUq",
   "category": "Admin",
   "avatar": "1655064489097_img.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Adriano",
+  "lastName": "Carrieri",
+  "email": "adrianocarrieri.dg@gmail.com",
+  "password": "$2a$10$sOQ3N4BfCfgM77xdxazPXOJkbHUbwCG8x/gZ/BSOBoXGECYb6mc3G",
+  "category": "Admin",
+  "avatar": "1655069052971_img.jpg"
  }
 ]

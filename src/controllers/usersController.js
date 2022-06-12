@@ -55,7 +55,7 @@ const controller = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('./users/index');
+				return res.redirect('/');
 			} 
 		     return res.render('userLoginForm', {
 				errors: {
@@ -65,13 +65,13 @@ const controller = {
 				}
 			});
 		}
-		/* return res.render('./users/userLoginForm', {
+	 	return res.render('./users/userLoginForm', {
 			errors: {
 				email: {
 					msg: 'No se encuentra este email en nuestra base de datos'
 				}
 			}
-		}); */
+		});
 	},
 	profile: (req, res) => {
 		return res.render('userProfile', {

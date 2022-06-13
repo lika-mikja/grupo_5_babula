@@ -10,29 +10,24 @@
             </div>
         </div>
         <div class="menu-right">
-            <a href="/user/login"><i class="fas fa-user-alt"></i></a>
-            <a href="/products/shop"><i class="fas fa-shopping-cart"></i></a>
-            <a href="/products/create"><i class="fas fa-cart-plus"></i></a>
-            <a href="/products"><p class = text-button-menu>Todos los menús</p></a>
-        </div>
-        <ul class="navbar-nav align-items-center">
+            <a href="/products">
+                <p class=text-button-menu>Todos los menús</p>
+            </a>
+            <a href="/products/shop" span title="Carrito"><i class="fas fa-shopping-cart"></i></a>
+
+            <a href="/products/create" span title="Crear producto"><i class="fas fa-cart-plus"></i></a>
+
             <% if (locals.isLogged) { %>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
-                        Hi <%= locals.userLogged.fullName %> 
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/user/profile">My profile</a>
-                        <li><hr class="dropdown-divider"></li>
-                        <a class="dropdown-item" href="/user/logout">Logout</a>
-                    </ul>
-                </li>
-            <% } else { %>
-                <li class="nav-item"><a class="nav-link" href="/user/register">Register</a></li>
-                <li class="nav-item"><a class="nav-link" href="/user/login">Login</a></li>
-            <% } %>
-        </ul>
+                <a class="avatar&text" href="/user/profile"><img src="/images/users/<%= locals.userLogged.avatar %>"
+                        width="40" style="border-radius: 100%;">
+                    <%= locals.userLogged.firstName%>
+                </a>
+                <a href="/user/logout">Cerrar sesión</a>
+                <% } else { %>
+                    <a class="nav-link" href="/user/register">Registrarse</a>
+                    <a class="nav-link" href="/user/login">Ingresar</a>
+                    <% } %>
+        </div>
     </section>
     </div>
     </section>
@@ -45,5 +40,5 @@
                 <h2>SABORES EURO-ASIÁTICOS</h2>
             </a>
         </div>
-       </section>
-   </header>
+    </section>
+</header>

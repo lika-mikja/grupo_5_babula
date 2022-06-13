@@ -13,8 +13,8 @@
   "firstName": "Adriano",
   "lastName": "Carrieri",
   "email": "adrianocarrieri.dg@gmail.com",
-  "password": "$2a$10$sOQ3N4BfCfgM77xdxazPXOJkbHUbwCG8x/gZ/BSOBoXGECYb6mc3G",
-  "category": "Admin",
-  "avatar": "1655069052971_img.jpg"
+  "password": "$2a$10$BIZOxwyg/MSxVi3glKOItey8SEH2jQQ6Rsx4mWZFPhdHbS/9OWhjq",
+  "category": "User",
+  "avatar": "1655080947608_img.jpg"
  }
 ]

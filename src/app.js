@@ -25,7 +25,7 @@ app.use(session({
 	saveUninitialized: false,
 }));
 
-//Operador de cookies
+//Operador de cookies (global)
 app.use(cookies());
 
 //Indica usuario logueado

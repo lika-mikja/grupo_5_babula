@@ -4,6 +4,10 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 
+// Middlewares
+const authMiddleware = require('../middlewares/authMiddleware');
+
+
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
 
@@ -23,7 +27,7 @@ const upload = multer({storage: storage});
 router.get('/', productsController.index); 
 
 /*** Create and edit products ***/ 
-router.get('/create', productsController.productCreate); 
+router.get('/create', authMiddleware, productsController.productCreate); 
 router.post('/', upload.single("product_image") , productsController.store); 
 
 /*** EDIT ONE PRODUCT ***/ 

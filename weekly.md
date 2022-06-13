@@ -89,3 +89,12 @@ Se pacto otro encuentro para enfocarnos en arreglar los bloqueantes que venimos 
 
 En equipo resolvimos lo que no nos permitia que las fotos no se guarden e impacten en el detail de los productos. Encontramos como bloqueante la implementacion del menu del dia en la edicion y creacion de formulario, ya que cuando agregabamos o editabamos un producto y lo sacabamos o agrgabamos al menu del dia, no aparecia en la home dado que no impactaba el booleano del true/ false. Lo pudimos resolver de manera rápida y eficaz.
 Por último, trabajamos en el armado de la ruta de delete. 
+
+**Encuentro 6 de junio**
+
+En reunión de equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos división de tareas para el resto de los puntos. Adriando y Lika resuelven el punto 6. Alan y Nicolás resuelven el punto 5. En grupo se resolverá el punto 8.
+
+
+**Encuentro 10 de junio**
+
+Nicolas y Adriando lograron destrabar el problema de validación de formulario y envío al archivo json de usuarios. Resuelto el bloqueante ( era necesario tener resuelto lo de validaciones del punto 5 para hacer el 6), en equipo se avanzó en el punto 6 y el 8  siguiendo la lógica del peer programming.

@@ -102,17 +102,18 @@ En equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos divisi�
 
 **Encuentro 9 de junio**
 
-Realizando peer programming , Adriano y Lika comenzaron a impleementar los requerimientos del punto 6 sobre el armado de login. En el armado del código se tuvo que hacer parte de los requerimientos del punto 5, en el cual solicitan implementar el registro de usuarios, para que el proyecto funcione ya que las validaciones aún no se encontraban hechas.
-Como bloqueante la terminal quedó crasheada y el servidor  no levantaba las rutas get/post del formulario de login, por lo cual, no quedaban guardados los usuarios en el json.
+Realizando peer programming , Adriano y Lika comenzaron a impleementar los requerimientos del punto 6 sobre el armado de login. En el armado del código se tuvo que hacer parte de los requerimientos del punto 5, en el cual solicitan implementar el registro de usuarios, para que el proyecto funcione ya que las validaciones aún no se encontraban hechas. Tambien se realizaron cambios del diseño en el formulario de login y se realizó la implementacion de los middlewares.
+Como bloqueante la terminal quedó crasheada y el servidor  no levantaba las rutas get/post del formulario de login por lo cual, no se guardaban los usuarios en el json.
 
 **Encuentro 10 de junio**
 
 Nicolas y Adriando lograron destrabar el problema de validación de formulario con el envío de la información al archivo json de usuarios. Era necesario tener resueltos las validaciones del punto 5 para hacer el punto 6. 
-En equipo avanzó en el punto 6 y el 8  siguiendo la lógica del peer programming.
+En equipo se avanzó sobre el punto 6 y 8  siguiendo la lógica del peer programming.
 
 **Encuentro 12 de junio**
 
-
+Se cambia el formulario de register guiandose por el diseño nuevo del formulario de login. La ruta get no levantaba el servidor cuando se registraba un usuario. Como punto a favor, se logró destrabar este bloqueante. 
+De bonus, se resolvió el punto 7 y por último, las rutas de huespedes y usuarios se implementaron con un solo bloqueante el cual fué sobre ¿Cuál es la visualización de vistas para usuarios "Admin" y "User"?
 
 **Encuentro 13 de junio - Clase de práctica**
 

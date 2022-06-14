@@ -95,10 +95,10 @@ Por último, trabajamos en el armado de la ruta de delete.
 En equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos división de tareas para el resto de los puntos. 
 - La actualizacion del tablero de tareas se lo lleva Lika.
 - Nicolas deberá hacer la retro del Sprint 4.
-- Las weeklyes se iran actualizando por los participantes de las mismas ya que para esta ocasión, los siguientes puntos se resolveran en grupos de a 2
+- Las weeklyes se iran actualizando por los participantes de las mismas ya que, para esta ocasión, los puntos 5 y 6 se resolveran en grupos de a 2
 - Adriando y Lika resuelven el punto 6. 
 - Alan y Nicolás resuelven el punto 5. 
-- En grupo se resolverá el punto 8.
+- Entre todos se resolverá el punto 8.
 
 **Encuentro 9 de junio**
 

@@ -92,9 +92,20 @@ Por último, trabajamos en el armado de la ruta de delete.
 
 **Encuentro 6 de junio**
 
-En reunión de equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos división de tareas para el resto de los puntos. Adriando y Lika resuelven el punto 6. Alan y Nicolás resuelven el punto 5. En grupo se resolverá el punto 8.
+En equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos división de tareas para el resto de los puntos. 
+- La actualizacion del tablero de tareas se lo lleva Lika.
+- Nicolas deberá hacer la retro del Sprint 4.
+- Las weeklyes se iran actualizando por los participantes de las mismas ya que para esta ocasión, los siguientes puntos se resolveran en grupos de a 2
+- Adriando y Lika resuelven el punto 6. 
+- Alan y Nicolás resuelven el punto 5. 
+- En grupo se resolverá el punto 8.
 
+**Encuentro 9 de junio**
+
+Realizando peer programming , Adriano y Lika comenzaron a impleementar los requerimientos del punto 6 sobre el armado de login. En el armado del código se tuvo que hacer parte de los requerimientos del punto 5, en el cual solicitan implementar el registro de usuarios, para que el proyecto funcione ya que las validaciones aún no se encontraban hechas.
+Como bloqueante la terminal quedó crasheada y el servidor  no levantaba las rutas get/post del formulario de login, por lo cual, no quedaban guardados los usuarios en el json.
 
 **Encuentro 10 de junio**
 
-Nicolas y Adriando lograron destrabar el problema de validación de formulario y envío al archivo json de usuarios. Resuelto el bloqueante ( era necesario tener resuelto lo de validaciones del punto 5 para hacer el 6), en equipo se avanzó en el punto 6 y el 8  siguiendo la lógica del peer programming.
+Nicolas y Adriando lograron destrabar el problema de validación de formulario con el envío de la información al archivo json de usuarios. Era necesario tener resueltos las validaciones del punto 5 para hacer el punto 6. 
+En equipo se avanzó en el punto 6 y el 8  siguiendo la lógica del peer programming.

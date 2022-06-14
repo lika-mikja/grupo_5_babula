@@ -32,7 +32,7 @@ Como impedimento grupal se encontro con que no se puede implementar el partials 
 
 Nicolas:
 
-Se realizó creacion de formulario de edicion y creación de productos. Como impedimento hubo falta de comunicacion con Adrian ya que lo iban a realizar en conjunto. Se realizo un check de los cuatro formularios que se crearon y se seleccionó dos de ellos.
+Se realizó creacion de formulario de edicion y creación de productos. Como impedimento hubo falta de comunicacion con Adriano ya que lo iban a realizar en conjunto. Se realizo un check de los cuatro formularios que se crearon y se seleccionó dos de ellos.
 Como tarea del dia será temrinar de pulir la creacion de edicion de productos, hacer las rutas de login y register y actualizar la retro del sprint II.
 Adicional: que se vea una vista parcial de las imagenes subidas en los formularios de creacion de productos.
 
@@ -108,4 +108,13 @@ Como bloqueante la terminal quedó crasheada y el servidor  no levantaba las rut
 **Encuentro 10 de junio**
 
 Nicolas y Adriando lograron destrabar el problema de validación de formulario con el envío de la información al archivo json de usuarios. Era necesario tener resueltos las validaciones del punto 5 para hacer el punto 6. 
-En equipo se avanzó en el punto 6 y el 8  siguiendo la lógica del peer programming.
+En equipo avanzó en el punto 6 y el 8  siguiendo la lógica del peer programming.
+
+**Encuentro 12 de junio**
+
+
+
+**Encuentro 13 de junio - Clase de práctica**
+
+Aprovechando la clase en vivo práctica del curso, se pudo desbloquear el problema que se arrastraba del anterior encuentro sobre las vistas que ven los usuarios "Admin" y "User" al logearse en la página. Tambien se actualizó el menú en todos los css.
+Por último, se agregó un middleware de productos para tener aún más ordenado el código y las carpetas con vistas de MVC.

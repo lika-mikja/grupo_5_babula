@@ -1,6 +1,8 @@
 const path = require('path');
 const multer = require('multer');
 
+// ************ Multer config ************
+
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, './public/images/users');

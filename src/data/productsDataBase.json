@@ -88,23 +88,5 @@
   "category": "Dulce",
   "img": "torta-de-miel.jpeg",
   "todaysDay": false
- },
- {
-  "id": 11,
-  "price": null,
-  "img": "default-image.jpg",
-  "todaysDay": false
- },
- {
-  "id": 12,
-  "price": null,
-  "img": "default-image.jpg",
-  "todaysDay": false
- },
- {
-  "id": 13,
-  "price": null,
-  "img": "default-image.jpg",
-  "todaysDay": false
  }
 ]

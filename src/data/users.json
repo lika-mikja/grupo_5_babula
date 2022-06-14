@@ -16,5 +16,14 @@
   "password": "$2a$10$BIZOxwyg/MSxVi3glKOItey8SEH2jQQ6Rsx4mWZFPhdHbS/9OWhjq",
   "category": "User",
   "avatar": "1655080947608_img.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Lika",
+  "lastName": "G.",
+  "email": "likainffo@gmail.com",
+  "password": "$2a$10$cqRgsewc.yOBP3ymcVyCROvnxTNyNE4nayLtLutWeXzz0CRgmrXbG",
+  "category": "Admin",
+  "avatar": "1655162677906_img.jpg"
  }
 ]

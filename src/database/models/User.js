@@ -1,37 +1,34 @@
 
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Product";
+    let alias = "User";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        title: {
+        firstName: {
             type: dataTypes.STRING
         },
-        prince: {
-            type: dataTypes.INTEGER
-        },
-        ingredients: {
+        lastName: {
             type: dataTypes.STRING
         },
-        img: {
+        email: {
             type: dataTypes.STRING
         },
-        description: {
-            type: dataTypes.STRING,
+        password: {
+            type: dataTypes.STRING
         },
-        categoryId: {
+        roleID: {
             type: dataTypes.INTEGER,
-            primaryKey: true
+            foreignKey: true
         }
     };
     let config = {
-        tableName: "products",
+        tableName: "users",
         timestamps: false
     }
 
-    const Product = sequelize.define(alias, cols, config);
-    return Product;
+    const User = sequelize.define(alias, cols, config);
+    return User;
 }

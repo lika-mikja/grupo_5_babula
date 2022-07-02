@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require ("../database/models")
+const sequelize = db.sequelize;
 
 const productsFile = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
@@ -9,7 +10,7 @@ const controller = {
     index: (req, res) => {
         db.Product.findAll()
         .then(products => {
-            res.send(products)
+            res.render("./products/products", {products})
         })
         },
 	//index: (req, res) => {

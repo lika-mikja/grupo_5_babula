@@ -27,7 +27,7 @@
   "price": "1.900",
   "category": "Caliente",
   "img": "pilmeni.jpeg",
-  "todaysDay": true
+  "todaysDay": false
  },
  {
   "id": 5,

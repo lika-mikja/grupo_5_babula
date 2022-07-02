@@ -1,4 +1,3 @@
-/* const { Console } = require('console'); */
 const fs = require('fs');
 const path = require('path');
 
@@ -53,5 +52,5 @@ const User = {
 		return true;
 		}
 }
-console.log(User.findAll());
+
 module.exports = User;

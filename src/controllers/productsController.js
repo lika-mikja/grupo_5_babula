@@ -1,15 +1,22 @@
 const fs = require('fs');
 const path = require('path');
+const db = require ("../database/models")
 
 const productsFile = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
 
 const controller = {
-	index: (req, res) => {
-		res.render('./products/products', {
-			products
-		})
-	},
+    index: (req, res) => {
+        db.Product.findAll()
+        .then(products => {
+            res.send(products)
+        })
+        },
+	//index: (req, res) => {
+	//	res.render('./products/products', {
+	//		products
+	//	})
+	// },
 
     detail: (req, res) => {
         let id = req.params.id
@@ -35,7 +42,7 @@ const controller = {
 			img: req.file ? req.file.filename: "default-image.jpg" ,
             todaysDay: Boolean(req.body.todaysDay)
 		}
-        				products.push(nuevoProducto);
+        products.push(nuevoProducto);
 		fs.writeFileSync(productsFile, JSON.stringify(products, null, " "));
 
 		res.redirect("/products");

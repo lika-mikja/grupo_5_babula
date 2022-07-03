@@ -25,6 +25,9 @@ module.exports = (sequelize, dataTypes) => {
         categoryId: {
             type: dataTypes.INTEGER,
             primaryKey: true
+        },
+        todaysDay:{
+            type: dataTypes.BOOLEAN,
         }
     };
     let config = {

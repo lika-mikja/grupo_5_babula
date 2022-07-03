@@ -8,7 +8,7 @@ const validateRegister =  [
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
 	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-	body('category').notEmpty().withMessage('Tienes que elegir un categoría'),
+	body('roleId').notEmpty().withMessage('Tienes que elegir un categoría'),
 	body('avatar').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif'];

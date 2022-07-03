@@ -59,20 +59,20 @@
 								</div>
 								<div class="col-12 col-md-6">
 									<label class="form-label">Categoría</label>
-									<select name="category"
-										class="form-notification <%= locals.errors && errors.category ? 'is-invalid' : null %>">
+									<select name="roleId"
+										class="form-notification <%= locals.errors && errors.roleId ? 'is-invalid' : null %>">
 										<option value="">Tipo</option>
-										<% let category=['Admin', 'User' ]; %>
-											<% for (const oneCategory of category) { %>
-												<option value="<%= oneCategory %>" <%=locals.oldData &&
-													(oneCategory===oldData.category) ? 'selected' : null %>
-													> <%= oneCategory %>
+										<% let roleId=['Admin', 'User' ]; %>
+											<% for (const oneRoleId of roleId) { %>
+												<option value="<%= oneRoleId %>" <%=locals.oldData &&
+													(oneRoleId===oldData.roleId) ? 'selected' : null %>
+													> <%= oneRoleId %>
 												</option>
 												<% } %>
 									</select>
-									<% if (locals.errors && errors.category) { %>
+									<% if (locals.errors && errors.roleId) { %>
 										<div class="text-danger">
-											<%= errors.category.msg%>
+											<%= errors.roleId.msg%>
 										</div>
 										<% } %>
 								</div>

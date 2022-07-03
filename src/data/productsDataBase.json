@@ -30,7 +30,7 @@
   "todaysDay": false
  },
  {
-  "id": 5,
+  "id": 4,
   "title": "Chebureki",
   "description": "Durante la época soviética el cheburek fue muy popular, sobre todo después de 1989, cuando se emitió un decreto que permitía a los tártaros de Crimea establecerse libremente en cualquier lugar de la URSS. Ellos llevaron consigo su delicia favorita: una empanada frita rellena de carne picada sazonada o finamente picada, y frita en aceite vegetal o grasa animal. ",
   "ingredients": "No es más que una empanadilla realizada solo con agua, harina y sal a la que no pondremos levadura, después se hacen las obleas y se rellenan con carne picada de cordero, cebolla  y especias.",
@@ -40,7 +40,7 @@
   "todaysDay": false
  },
  {
-  "id": 6,
+  "id": 5,
   "title": "Akroshka",
   "description": "Es una sopa fría, de verano . Su nombre proviene del verbo kroshit, que significa picar fino, y su base es de Kvas, una bebida fermentada de origen eslavo y báltico, hecha de pan de centeno seco, de sabor dulce-ácido, con solo 1% de alcohol y un puntito de gas.",
   "ingredients": " Se usa cualquier sobrante de carne hervida de ternera, cerdo, pollo, o pavo, salchichas- o de pescados como bacalao, tenca, esturión, lucioperca. Además de patata, huevo cocido y de las hortalizas -cebolleta, rábano, pepino, zanahoria, hinojo y hierbas aromáticas que se tengan a mano (perejil, eneldo, perifollo, estragón, etc). Se sirve bien fría y tradicionalmente se aderezaba con un poco de mostaza y/o de Smetana (muy similar a la crema agria), A falta de Kvas, hemos mantenido el kéfir y lo hemos mezclado un poquito de agua con gas y un chorrito de zumo de limón",
@@ -50,7 +50,7 @@
   "todaysDay": false
  },
  {
-  "id": 7,
+  "id": 6,
   "title": "Vareniki",
   "description": "Son un plato nacional popular en Rusia.  Por analogía, los sabios ucranianos equipararon los varenyky a una luna joven por su forma semicircular. se usaron como parte de rituales paganos y de sacrificio. Según algunas creencias, los vareniki traían abundancia y cosechas fructíferas",
   "ingredients": "Se trata de una masa elaborada con harina de trigo que lleva su correspondiente relleno y se pliega con forma de media luna. Se pueden encontrar vareniki de carne, a base de repollo y los hay también rellenos de fruta",
@@ -60,7 +60,7 @@
   "todaysDay": false
  },
  {
-  "id": 8,
+  "id": 7,
   "title": "Grechka",
   "description": "La reina de la proteína vegetal en Rusia se sirve mucho como guarnición, no contiene gluten y tiene la cualidad de ser energético y nutritivo, ideal para el frío.",
   "ingredients": "",
@@ -70,7 +70,7 @@
   "todaysDay": false
  },
  {
-  "id": 9,
+  "id": 8,
   "title": "Ptichie molokó",
   "description": "La receta fue ideada por un grupo de confiteros dirigidos por Vladímir Guralnik, jefe del departamento de pastelería del restaurante moscovita Praga, y se convirtió en una continuación directa del “zefir francés” con algunas modificaciones en la receta. Sin embargo, algunos ingredientes se mantuvieron en el tiempo, tales como, cacao amargo , leche, mantequilla y huevos.",
   "ingredients": "",
@@ -80,12 +80,11 @@
   "todaysDay": false
  },
  {
-  "id": 10,
+  "id": 9,
   "title": "Medovik",
-  "description": "Conocida tambien como Torta de Miel, fue creada en la década de 1820 por un Chef personal del Zar ruso Alejandro I.  Este auténtico pastel de miel se elabora con bizcocho y un relleno de crema.  Los ingredientes que se pueden encontrar en el relleno es la leche condensada cocinada durante muchas horas. Además también es habitual que contenga nueces.",
+  "price": 1,
   "ingredients": "",
-  "price": "1.300",
-  "category": "Postre",
+  "description": " Conocida tambien como Torta de Miel, fue creada en la década de 1820 por un Chef personal del Zar ruso Alejandro I.  Este auténtico pastel de miel se elabora con bizcocho y un relleno de crema.  Los ingredientes que se pueden encontrar en el relleno es la leche condensada cocinada durante muchas horas. Además también es habitual que contenga nueces.",
   "img": "torta-de-miel.jpeg",
   "todaysDay": false
  }

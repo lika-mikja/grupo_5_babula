@@ -92,28 +92,30 @@ div.menu-right {
     display: flex;
     align-items: center;
     margin-right: 14px;
+    gap: 22px;
+    justify-content: space-evenly;
 }
 
 .menu-right a {
+    font-size: 0.6em;
     text-decoration: none;
-    padding: 12px;
+    color: var(--azul-home);
+    font-weight: bold;
 }
+
 
 .menu-right i {
     color: var(--azul-home);
     display: flex;
     justify-content: flex-end;
-
+    font-size: 1.5em;
 }
 
-p.text-button-menu {
-    background: var(--azul-home);
-    font-size: 0.5em;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 10px;
+.menu-right i:hover,
+.menu-right a:hover {
+    text-decoration: none;
+    color: var(--naranja);
 }
-
 
 div.bars {
     background-color: var(--azul-home);
@@ -124,6 +126,11 @@ div.bars {
     color: white;
 }
 
+a.avatar\&text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
 /* Banner con logo */
 

@@ -4,35 +4,24 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 
-// Middlewares
-const authMiddleware = require('../middlewares/authMiddleware');
-
-
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
 
-// ************ Multer config ************
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, "./public/images/products");
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + Date.now() + "image" + path.extname(file.originalname));
-    }
-});
+// Middlewares
+const authMiddleware = require('../middlewares/authMiddleware');
+const uploadFile = require('../middlewares/multerProductMiddleware');
 
-const upload = multer({storage: storage});
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
 
 /*** Create and edit products ***/ 
 router.get('/create', authMiddleware, productsController.productCreate); 
-router.post('/', upload.single("product_image") , productsController.store); 
+router.post('/', uploadFile.single("product_image") , productsController.store); 
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsController.productEdit); 
-router.patch('/edit/:id', upload.single("img"), productsController.update); 
+router.patch('/edit/:id', uploadFile.single("img"), productsController.update); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productsController.detail);

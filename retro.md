@@ -33,3 +33,9 @@ Mejoramos el trabajo en equipo que era un objetivo propuesto de los anteriores S
 Seguimos con algunos problemas de comunicacion a la hora de realizar las tareas en comun lo que llega a una leve desorganizacion, y trabajo de mas que ya esta hecho.
 
 Implementamos una especie de Weekly cada 4 dias y seguimos mejorando en la adquisicion de conocimiento.
+
+SPRINT 4
+
+Este Sprint, estuvo tranquilo, ya que habiamos adelantado y anticipado ciertos puntos en el sprint anterior, logrando asi aprovechar este tiempo extra, para poder reforzar nuesro conocimiento y adquirir nuevas herramientas, como para tambien distrubuir de mejor maneras las tareas del grupo y mejorar la comunicacion del mismo.
+
+Seguimos con la dinamica de una Weekly para despejar dudas y ver como estuvimos funcionando en la semana 

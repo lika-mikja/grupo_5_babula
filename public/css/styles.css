@@ -78,9 +78,6 @@ body {
 }
 
 
-
-/* MENU */
-
 div.menu-left {
     width: 50%;
     position: relative;
@@ -425,8 +422,9 @@ textarea.form-input {
 .form-notification,
 .form-check,
 .form-check-label {
-    padding: 16px 0;
+    padding: 10px 16px;
 }
+
 
 input.form-check-input {
     margin-right: 10px;

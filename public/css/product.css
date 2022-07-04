@@ -189,7 +189,7 @@ p.product-name {
 
 @media (min-width: 480px) {
 
-    /* Productos destacados !!!consultar!!!*/
+    /* Productos destacados */
 
     .product-image .recipes-description {
         display: flex;

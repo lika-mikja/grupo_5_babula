@@ -32,7 +32,7 @@ Como impedimento grupal se encontro con que no se puede implementar el partials 
 
 Nicolas:
 
-Se realizó creacion de formulario de edicion y creación de productos. Como impedimento hubo falta de comunicacion con Adrian ya que lo iban a realizar en conjunto. Se realizo un check de los cuatro formularios que se crearon y se seleccionó dos de ellos.
+Se realizó creacion de formulario de edicion y creación de productos. Como impedimento hubo falta de comunicacion con Adriano ya que lo iban a realizar en conjunto. Se realizo un check de los cuatro formularios que se crearon y se seleccionó dos de ellos.
 Como tarea del dia será temrinar de pulir la creacion de edicion de productos, hacer las rutas de login y register y actualizar la retro del sprint II.
 Adicional: que se vea una vista parcial de las imagenes subidas en los formularios de creacion de productos.
 
@@ -92,9 +92,35 @@ Por último, trabajamos en el armado de la ruta de delete.
 
 **Encuentro 6 de junio**
 
+<<<<<<< HEAD
 En reunión de equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos división de tareas para el resto de los puntos. Adriano y Lika resuelven el punto 6. Alan y Nicolás resuelven el punto 5. En grupo se resolverá el punto 8.
+=======
+En equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos división de tareas para el resto de los puntos. 
+- La actualizacion del tablero de tareas se lo lleva Lika.
+- Nicolas deberá hacer la retro del Sprint 4.
+- Las weeklyes se iran actualizando por los participantes de las mismas ya que, para esta ocasión, los puntos 5 y 6 se resolveran en grupos de a 2
+- Adriando y Lika resuelven el punto 6. 
+- Alan y Nicolás resuelven el punto 5. 
+- Entre todos se resolverá el punto 8.
+>>>>>>> b309882edfe17d8aa79680a7afb26b9430d34ead
 
+**Encuentro 9 de junio**
+
+Realizando peer programming , Adriano y Lika comenzaron a impleementar los requerimientos del punto 6 sobre el armado de login. En el armado del código se tuvo que hacer parte de los requerimientos del punto 5, en el cual solicitan implementar el registro de usuarios, para que el proyecto funcione ya que las validaciones aún no se encontraban hechas. Tambien se realizaron cambios del diseño en el formulario de login y se realizó la implementacion de los middlewares.
+Como bloqueante la terminal quedó crasheada y el servidor  no levantaba las rutas get/post del formulario de login por lo cual, no se guardaban los usuarios en el json.
 
 **Encuentro 10 de junio**
 
-Nicolas y Adriando lograron destrabar el problema de validación de formulario y envío al archivo json de usuarios. Resuelto el bloqueante ( era necesario tener resuelto lo de validaciones del punto 5 para hacer el 6), en equipo se avanzó en el punto 6 y el 8  siguiendo la lógica del peer programming.
+Nicolas y Adriando lograron destrabar el problema de validación de formulario con el envío de la información al archivo json de usuarios. Era necesario tener resueltos las validaciones del punto 5 para hacer el punto 6. 
+En equipo se avanzó sobre el punto 6 y 8  siguiendo la lógica del peer programming.
+
+**Encuentro 12 de junio**
+
+Se cambia el formulario de register guiandose por el diseño nuevo del formulario de login. La ruta get no levantaba el servidor cuando se registraba un usuario. Como punto a favor, se logró destrabar este bloqueante. 
+De bonus, se resolvió el punto 7 y por último, las rutas de huespedes y usuarios se implementaron con un solo bloqueante el cual fué sobre ¿Cuál es la visualización de vistas para usuarios "Admin" y "User"?
+
+**Encuentro 13 de junio - Clase de práctica**
+
+Aprovechando la clase en vivo práctica del curso, se pudo desbloquear el problema que se arrastraba del anterior encuentro sobre las vistas que ven los usuarios "Admin" y "User" al logearse en la página. Tambien se actualizó el menú en todos los css.
+Por último, se agregó un middleware de productos para tener aún más ordenado el código y las carpetas con vistas de MVC.
+

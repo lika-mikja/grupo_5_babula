@@ -5,7 +5,7 @@
   "lastName": "Arias",
   "email": "alan.arias486@gmail.com",
   "password": "$2a$10$.JuhFzuQN1kayFJiSSd57.ktVLCkmcJ3lRTcotm7BTVrhKxel0mUq",
-  "category": "Admin",
+  "roleId": "Admin",
   "avatar": "1655064489097_img.jpg"
  },
  {
@@ -14,7 +14,26 @@
   "lastName": "Carrieri",
   "email": "adrianocarrieri.dg@gmail.com",
   "password": "$2a$10$BIZOxwyg/MSxVi3glKOItey8SEH2jQQ6Rsx4mWZFPhdHbS/9OWhjq",
-  "category": "User",
+  "roleId": "User",
   "avatar": "1655080947608_img.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Lika",
+  "lastName": "G.",
+  "email": "likainffo@gmail.com",
+  "password": "$2a$10$cqRgsewc.yOBP3ymcVyCROvnxTNyNE4nayLtLutWeXzz0CRgmrXbG",
+  "roleId": "Admin",
+  "avatar": "1655162677906_img.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Administrador",
+  "lastName": "Babula",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$3SHflrXisS6Mvy/GuFW1JOyGGKno5qRl6VEV76Jj5ngKtMEAGoxHe",
+  "roleId": "Admin",
+  "avatar": "1656821735512_img.jpg"
  }
+ 
 ]

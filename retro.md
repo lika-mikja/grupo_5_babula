@@ -34,8 +34,17 @@ Seguimos con algunos problemas de comunicacion a la hora de realizar las tareas 
 
 Implementamos una especie de Weekly cada 4 dias y seguimos mejorando en la adquisicion de conocimiento.
 
-SPRINT 4
+ **SPRINT 4** 
 
 Este Sprint, estuvo tranquilo, ya que habiamos adelantado y anticipado ciertos puntos en el sprint anterior, logrando asi aprovechar este tiempo extra, para poder reforzar nuesro conocimiento y adquirir nuevas herramientas, como para tambien distrubuir de mejor maneras las tareas del grupo y mejorar la comunicacion del mismo.
 
 Seguimos con la dinamica de una Weekly para despejar dudas y ver como estuvimos funcionando en la semana 
+
+
+ **SPRINT 5**
+Para este Sprint, trabajamos principalmente mediante peer programming.
+En los primeros encuentros realizamos ajustes en el diseño de los formularios mejorando la experiencia de usuario.
+En cuanto a lo funcional, se implementaron los middlewares para registro de usuarios y productos, entre ellos el express validator, multer (con posibilidad de subir imágenes de perfil) y manejo de cookies.
+Implementamos el login por parte de usuarios, utilizando los campos creados anteriormente en el formulario de usuario (nombre, email, password, foto de perfil).
+Por otro lado, Introdujimos las rutas para cada tipo usuario, como links en el header y restricciones en acciones, por ejemplo, el hecho de poder crear un producto por parte de un "administrador". Para ello, implementamos el uso del middleware "userLoggedMiddleware" y la aplicación de bloques de código javascript dentro de cada archivo .ejs que lo amerite.
+Por último aplicamos CRUD para poder editar, borrar y actualizar información de usuario y productos en los .json para cada caso.

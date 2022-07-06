@@ -40,8 +40,10 @@ module.exports = (sequelize, dataTypes) => {
     /* Product.associate = function (models) {
         Product.belongsToMany(models.Category, {
             as: "product",
-            foreignKey: 'id',
-            
+            through: '?',
+            foreignKey: 'actor_id',
+            otherKey: 'movie_id',
+            timestamps: false
         })
     } */
     return Product;

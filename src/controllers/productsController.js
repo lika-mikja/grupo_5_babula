@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const db = require("../database/models")
+const db = require ("../database/models")
 const sequelize = db.sequelize;
 
 /*const productsFile = path.join(__dirname, '../data/productsDataBase.json');
@@ -157,6 +157,7 @@ store: (req, res) => {
     }
 
 };
+
 
 
 module.exports = controller;

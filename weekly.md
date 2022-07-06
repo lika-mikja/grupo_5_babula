@@ -124,3 +124,26 @@ De bonus, se resolvió el punto 7 y por último, las rutas de huespedes y usuari
 Aprovechando la clase en vivo práctica del curso, se pudo desbloquear el problema que se arrastraba del anterior encuentro sobre las vistas que ven los usuarios "Admin" y "User" al logearse en la página. Tambien se actualizó el menú en todos los css.
 Por último, se agregó un middleware de productos para tener aún más ordenado el código y las carpetas con vistas de MVC.
 
+**Encuentro 24 de junio**
+
+Reunión para definir tareas para empezar el sprint. Utilizamos la herramienta flowchart maker para empezar a hacer los diagramas. Entre todo el equipo empezamos a delinear el esquema. Alan se llevó terminar la propuesta para luego revisar de forma grupal.
+
+
+**Encuentro 27 de junio**
+
+Reunión para concluir el diagrama. Lika, Adriano y Alan se juntaron par finalizar y corregir el esquema de trabajo pautado el 24 de junio.
+
+
+**Encuentro 1 de julio**
+Reunión entre Lika y Adriano, se realizaron nuevos ajustes en el esquema de base de datos, corrigiendo las relaciones entre tablas y claves foráneas.
+Reunión con Guido Maomine, donde aclaramos dudas sobre los cambios aplicados en el esquema de base de datos.
+
+**1 de julio**
+Lika aplicó los ajustes mencionas a los esquemas a través de la plataforma DynoBird obteniendo el script necesario para creación de base de datos a través de Workbench.
+
+
+**Primer encuentro 6 de julio**
+Nueva Reunión para corregir errores que se presentaron en el script mencionado anteriormente, con resultados positivos.
+
+**Segundo encuentro 6 de julio**
+Reunión de todo el equipo para coordinar los últimos pasos para finalizar el sprint.

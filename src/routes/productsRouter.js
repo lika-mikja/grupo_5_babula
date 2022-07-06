@@ -12,7 +12,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const uploadFile = require('../middlewares/multerProductMiddleware');
 
 
-/*** GET ALL PRODUCTS ***/ // ok
+/*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
 
 /*** Create and edit products ***/ 
@@ -23,7 +23,7 @@ router.post('/', uploadFile.single("product_image") , productsController.store);
 router.get('/edit/:id', productsController.productEdit); 
 router.patch('/edit/:id', uploadFile.single("img"), productsController.update); 
 
-/*** GET ONE PRODUCT ***/  // ok
+/*** GET ONE PRODUCT ***/ 
 router.get('/detail/:id', productsController.detail);
 
 /*** DELETE ONE PRODUCT***/ 

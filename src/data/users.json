@@ -34,6 +34,14 @@
   "password": "$2a$10$3SHflrXisS6Mvy/GuFW1JOyGGKno5qRl6VEV76Jj5ngKtMEAGoxHe",
   "roleId": "Admin",
   "avatar": "1656821735512_img.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Lika",
+  "lastName": "G",
+  "email": "mikjaylovka@gmail.com",
+  "password": "$2a$10$Is.r7DsTWdwE/0nNgHt73e3oq5utdN8sKv/d0WIPrJjXPN8RV5P.m",
+  "roleId": "Admin",
+  "avatar": "1657143840143_img.jpg"
  }
- 
 ]

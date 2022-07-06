@@ -21,7 +21,7 @@ const controller = {
      'detail': (req, res) => {
         db.Product.findByPk(req.params.id,
             {
-                include : ['genre']
+                include : ['users'] Esto no se que hace
             })
             .then(products => {
                 res.render('./products:detail', {plato});
@@ -39,7 +39,28 @@ const controller = {
         res.render('./products/productCreateForm');
 
     },
-
+    /* store: function (req,res) {
+        Product.create(
+            {
+            let nuevoProducto = {
+			id: products[products.length - 1].id + 1,
+			title: req.body.title,
+            description: req.body.description,
+            ingredients: req.body.ingredients ,
+			price: parseInt(req.body.price),
+            category: req.body.category,
+			img: req.file ? req.file.filename: "default-image.jpg" ,
+            todaysDay: Boolean(req.body.todaysDay)
+		}
+        products.push(nuevoProducto);
+		fs.writeFileSync(productsFile, JSON.stringify(products, null, " "));
+		.then(()=> {
+            return res.redirect('/products')})            
+        .catch(error => res.send(error))
+	},
+        }
+        )
+        */
     store: (req, res) => {
 		let nuevoProducto = {
 			id: products[products.length - 1].id + 1,
@@ -65,6 +86,28 @@ const controller = {
 
         },
         // Update - Method to update
+
+        /* update: function (req,res) {
+        const id = req.params.id;
+        Product
+        .update(
+            {
+                id: productToEdit.id,
+                title: req.body.title,
+                price: parseInt(req.body.price),
+                ingredients: req.body.ingredients,
+                category: req.body.category,
+                description: req.body.description,
+                img: req.file ? req.file.filename : productToEdit.img,
+                todaysDay: Boolean(req.body.todaysDay)
+            },
+            {
+                where: {id:id}
+            })
+        .then(()=> {
+            return res.redirect('/products')})            
+        .catch(error => res.send(error)) */
+
     update: (req, res) => {
             const id = req.params.id;
             let productToEdit = products.find(product => product.id == id);
@@ -88,6 +131,14 @@ const controller = {
             res.redirect("/products")
         },
 
+        /*delete: function (req,res) {
+        let movieId = req.params.id;
+        Movies
+        .findByPk(movieId)
+        .then(Movie => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'moviesDelete'), {Movie})})
+        .catch(error => res.send(error)) */
+
         destroy : (req, res) => {
             const id = req.params.id;
             let finalProducts = products.filter(product => product.id != id);
@@ -95,6 +146,15 @@ const controller = {
             fs.writeFileSync(productsFile, JSON.stringify(finalProducts, null, ' '));
             res.redirect("/products")
         },
+
+        /* buscar:(req, res) => {
+        fetch('http://www.omdbapi.com/?apikey=d4e35e92&t'+ req.body.titulo)
+        .then(response=>response.json())
+        .then (movie => {
+            res.render('moviesDetailOmdb', {movie})
+        })
+        .catch(error => res.send(error)) 
+    }  */
 
         shop: (req, res) => {
         res.render('./products/shop');

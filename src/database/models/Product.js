@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
         title: {
             type: dataTypes.STRING
         },
-        prince: {
+        price: {
             type: dataTypes.INTEGER
         },
         ingredients: {
@@ -40,10 +40,8 @@ module.exports = (sequelize, dataTypes) => {
     /* Product.associate = function (models) {
         Product.belongsToMany(models.Category, {
             as: "product",
-            through: '?',
-            foreignKey: 'actor_id',
-            otherKey: 'movie_id',
-            timestamps: false
+            foreignKey: 'id',
+            
         })
     } */
     return Product;

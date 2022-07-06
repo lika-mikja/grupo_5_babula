@@ -24,7 +24,7 @@ INSERT INTO babula.categories (id, name) VALUES
 (1, "Entrada"), (2, "Plato principal"), (3, "Postre");
 
 -- roles --
-INSERT INTO babula.roles (id, role) VALUES
+INSERT INTO babula.roles (id, name) VALUES
 (1, "Admin"), (2, "User");
 
 -- products --
@@ -37,13 +37,13 @@ INSERT INTO babula.products (id, title, price, ingredients, img, description, ca
 (6, "Vareniki", 2000, "Portobellos, cebolla, patatas, huevos, harina de trigo orgánica 000, semolín, sal, aceite de oliva" ,"vareniki.jpeg","Se trata de una masa elaborada con harina de trigo que lleva su correspondiente relleno y se pliega con forma de media luna. Se pueden encontrar vareniki de carne, a base de repollo y los hay también rellenos de fruta", 2, "false"), 
 (7, "Grechka", 1400, "Grano de trigo serraceno, sal, azucar, leche y manteca","grechka.jpeg", "La reina de la proteína vegetal en Rusia se sirve mucho como guarnición, no contiene gluten y tiene la cualidad de ser energético y nutritivo, ideal para el frío.", 1 , "false"), 
 (8, "Ptichie molokó", 850, "Leche,  leche condensada, cacao, mantequilla, huevos, queso mascarpone.", "ptichiemoloko-2.jpeg","La receta fue ideada por un grupo de confiteros dirigidos por Vladímir Guralnik, jefe del departamento de pastelería del restaurante moscovita Praga, y se convirtió en una continuación directa del “zefir francés” con algunas modificaciones en la receta. Sin embargo, algunos ingredientes se mantuvieron en el tiempo, tales como, cacao amargo , leche, mantequilla y huevos.", 3 , "false" ), 
-(9, "Medovik", 1300, "Miel, Harina de trigo orgánica 0000, manteca, azucar, nueces, crema de leche, leche.", "torta-de-miel.jpeg", "Conocida tambien como Torta de Miel, fue creada en la década de 1820 por un Chef personal del Zar ruso Alejandro I.  Este auténtico pastel de miel se elabora con bizcocho y un relleno de crema.  Los ingredientes que se pueden encontrar en el relleno es la leche condensada cocinada durante muchas horas. Además también es habitual que contenga nueces.", 3 , "true" ), 
+(9, "Medovik", 1300, "Miel, Harina de trigo orgánica 0000, manteca, azucar, nueces, crema de leche, leche.", "torta-de-miel.jpeg", "Conocida tambien como Torta de Miel, fue creada en la década de 1820 por un Chef personal del Zar ruso Alejandro I.  Este auténtico pastel de miel se elabora con bizcocho y un relleno de crema.  Los ingredientes que se pueden encontrar en el relleno es la leche condensada cocinada durante muchas horas. Además también es habitual que contenga nueces.", 3 , "true" );
 
 
 -- users --
 INSERT INTO babula.users (id, firstName, lastName, email, password, roleId, avatar) VALUES 
 (1, "Alan", "Arias", "alan.arias486@gmail.com", "$2a$10$.JuhFzuQN1kayFJiSSd57.ktVLCkmcJ3lRTcotm7BTVrhKxel0mUq", 1, "1655064489097_img.jpg"),
 (2, "Adriano", "Carrieri", "adrianocarrieri.dg@gmail.com", "$2a$10$BIZOxwyg/MSxVi3glKOItey8SEH2jQQ6Rsx4mWZFPhdHbS/9OWhjq", 2, "1655080947608_img.jpg"),
-(3, "Lika", "G.", "likainffo@gmail.com", "$2a$10$cqRgsewc.yOBP3ymcVyCROvnxTNyNE4nayLtLutWeXzz0CRgmrXbG", 1, "1655162677906_img.jpg"),
+(3, "Lika", "G.", "likainffo@gmail.com", "$2a$10$cqRgsewc.yOBP3ymcVyCROvnxTNyNE4nayLtLutWeXzz0CRgmrXbG", 1, "1655162677906_img.jpg");
 
 

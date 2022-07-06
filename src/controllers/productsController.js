@@ -17,7 +17,16 @@ const controller = {
 	res.render('./products/products', {
 			products
 		}) },
-
+    /*
+     'detail': (req, res) => {
+        db.Product.findByPk(req.params.id,
+            {
+                include : ['genre']
+            })
+            .then(products => {
+                res.render('./products:detail', {plato});
+            });
+    */
     detail: (req, res) => {
         let id = req.params.id
         let plato = products.find(plato => plato.id == id)
@@ -25,7 +34,7 @@ const controller = {
             plato
         })
     },
-
+    
     productCreate: (req, res) => {
         res.render('./products/productCreateForm');
 

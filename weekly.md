@@ -92,6 +92,9 @@ Por último, trabajamos en el armado de la ruta de delete.
 
 **Encuentro 6 de junio**
 
+<<<<<<< HEAD
+En reunión de equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos división de tareas para el resto de los puntos. Adriano y Lika resuelven el punto 6. Alan y Nicolás resuelven el punto 5. En grupo se resolverá el punto 8.
+=======
 En equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos división de tareas para el resto de los puntos. 
 - La actualizacion del tablero de tareas se lo lleva Lika.
 - Nicolas deberá hacer la retro del Sprint 4.
@@ -99,6 +102,7 @@ En equipo resolvimos lo requerido en el punto 4 del Sprint. Establecimos divisi�
 - Adriando y Lika resuelven el punto 6. 
 - Alan y Nicolás resuelven el punto 5. 
 - Entre todos se resolverá el punto 8.
+>>>>>>> b309882edfe17d8aa79680a7afb26b9430d34ead
 
 **Encuentro 9 de junio**
 
@@ -119,3 +123,4 @@ De bonus, se resolvió el punto 7 y por último, las rutas de huespedes y usuari
 
 Aprovechando la clase en vivo práctica del curso, se pudo desbloquear el problema que se arrastraba del anterior encuentro sobre las vistas que ven los usuarios "Admin" y "User" al logearse en la página. Tambien se actualizó el menú en todos los css.
 Por último, se agregó un middleware de productos para tener aún más ordenado el código y las carpetas con vistas de MVC.
+

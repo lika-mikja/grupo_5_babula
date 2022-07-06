@@ -9,13 +9,13 @@ CREATE TABLE `users` (
     `email` VARCHAR(100) NOT NULL,
     `password` VARCHAR(100) NOT NULL,
     `roleId` INT NOT NULL,
+    `avatar` TEXT NOT NULL,
     PRIMARY KEY (`id`)
 );
 
-    CREATE TABLE `roles` (
+CREATE TABLE `roles` (
     `id` INT AUTO_INCREMENT,
     `name` VARCHAR(50) NOT NULL,
-    `description` LONGTEXT NOT NULL,
     PRIMARY KEY (`id`)
 );
 
@@ -27,13 +27,13 @@ CREATE TABLE `products` (
     `img` TEXT NOT NULL,
     `description` LONGTEXT NOT NULL,
     `categoryId` INT NOT NULL,
+    `todaysDay` VARCHAR(10) NOT NULL,
     PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `categories` (
+    CREATE TABLE `categories` (
     `id` INT AUTO_INCREMENT,
     `name` VARCHAR(50) NOT NULL,
-    `description` LONGTEXT NOT NULL,
     PRIMARY KEY (`id`)
     );
 

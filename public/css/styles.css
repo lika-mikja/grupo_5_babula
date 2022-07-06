@@ -298,8 +298,9 @@ section.access-menu {
     width: 100px;
     background-color: var(--azul-home);
     border-radius: 15px;
-    margin: auto;
     padding: 9px;
+    margin: auto;
+    
 }
 
 .clean p {

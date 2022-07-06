@@ -124,3 +124,11 @@ De bonus, se resolvió el punto 7 y por último, las rutas de huespedes y usuari
 Aprovechando la clase en vivo práctica del curso, se pudo desbloquear el problema que se arrastraba del anterior encuentro sobre las vistas que ven los usuarios "Admin" y "User" al logearse en la página. Tambien se actualizó el menú en todos los css.
 Por último, se agregó un middleware de productos para tener aún más ordenado el código y las carpetas con vistas de MVC.
 
+**Encuentro 24 de junio**
+
+Reunión para definir tareas para empezar el sprint. Utilizamos la herramienta flowchart maker para empezar a hacer los diagramas. Entre todo el equipo empezamos a delinear el esquema. Alan se llevó terminar la propuesta para luego revisar de forma grupal.
+
+**Encuentro 27 de junio**
+
+Reunión para concluir el diagrama. Lika, Adriano y Alan se juntaron par finalizar y corregir el esquem de trabajo pautado el 24 de junio. 
+

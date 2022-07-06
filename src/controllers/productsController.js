@@ -18,7 +18,7 @@ const controller = {
 			products
 		}) },
     /*
-     'detail': (req, res) => {
+        'detail': (req, res) => {
         db.Product.findByPk(req.params.id,
             {
                 include : ['users'] Esto no se que hace

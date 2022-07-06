@@ -43,7 +43,7 @@ const controller = {
             title: req.body.title,
             description: req.body.description,
             ingredients: req.body.ingredients,
-            prince: parseInt(req.body.prince),
+            price: parseInt(req.body.price),
             category: req.body.category,
             img: req.file ? req.file.filename : "default-image.jpg",
             todaysDay: Boolean(req.body.todaysDay)

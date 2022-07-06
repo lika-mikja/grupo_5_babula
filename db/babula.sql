@@ -22,7 +22,7 @@ CREATE TABLE `roles` (
 CREATE TABLE `products` (
     `id` INT AUTO_INCREMENT,
     `title` VARCHAR(30) NOT NULL,
-    `prince` DECIMAL NOT NULL,
+    `price` DECIMAL NOT NULL,
     `ingredients` VARCHAR(255) NOT NULL,
     `img` TEXT NOT NULL,
     `description` LONGTEXT NOT NULL,
@@ -31,11 +31,11 @@ CREATE TABLE `products` (
     PRIMARY KEY (`id`)
 );
 
-    CREATE TABLE `categories` (
+CREATE TABLE `categories` (
     `id` INT AUTO_INCREMENT,
     `name` VARCHAR(50) NOT NULL,
     PRIMARY KEY (`id`)
-    );
+);
 
 
 ALTER TABLE `users` ADD CONSTRAINT `FK_3fa5fedc-462c-486c-857f-04080227fb00` FOREIGN KEY (`roleId`) REFERENCES `roles`(`id`)  ;

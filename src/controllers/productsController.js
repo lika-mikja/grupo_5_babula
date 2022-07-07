@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const db = require ("../database/models")
+const db = require("../database/models")
 const sequelize = db.sequelize;
 
 /*const productsFile = path.join(__dirname, '../data/productsDataBase.json');
@@ -43,7 +43,7 @@ const controller = {
             title: req.body.title,
             description: req.body.description,
             ingredients: req.body.ingredients,
-            price: parseInt(req.body.price),
+            prince: parseInt(req.body.prince),
             category: req.body.category,
             img: req.file ? req.file.filename : "default-image.jpg",
             todaysDay: Boolean(req.body.todaysDay)
@@ -157,7 +157,6 @@ store: (req, res) => {
     }
 
 };
-
 
 
 module.exports = controller;

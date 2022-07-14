@@ -26,8 +26,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             primaryKey: true
         },
-        todaysDay:{
-            type: dataTypes.BOOLEAN,
+        todaysDay: {
+            type: dataTypes.STRING,
         }
     };
     let config = {
@@ -36,12 +36,13 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Product = sequelize.define(alias, cols, config);
-    /* Product.associate = function (models) {
+
+    Product.associate = function(models) {
         Product.belongsTo(models.Category, {
-            as: "product",
-            foreignKey: 'id',
-            
+            as: "category",
+            foreignKey: 'categoryId'
         })
-    } */
+    }
+
     return Product;
 }

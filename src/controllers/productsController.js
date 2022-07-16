@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const db = require("../database/models")
+const db = require("../database/models");
 const sequelize = db.sequelize;
 
 const Products = db.Product
-
+const productImageRoute = path.join(__dirname, '..', '..', 'public', 'images', 'products')
 
 const controller = {
     index: (req, res) => {
@@ -15,7 +15,8 @@ const controller = {
     },
 
     detail: (req, res) => {
-        Products.findByPk(req.params.id)
+        let productId = req.params.id
+        Products.findByPk(productId)
             .then(plato => {
                 res.render('./products/detail', { plato });
             });
@@ -59,7 +60,7 @@ const controller = {
             category: req.body.category,
             description: req.body.description,
             img: req.file ? req.file.filename : Products.img,
-            todaysDay: Boolean(req.body.todaysDay)
+            todaysDay: req.body.todaysDay
         }, {
             where: { id: productId }
         })
@@ -70,18 +71,20 @@ const controller = {
 
     destroy: (req, res) => {
         let productId = req.params.id;
-        Products.destroy({
-            where: { id: productId }, force: true
-        })
-            .then(() => {
-                res.redirect('/products')
+        Products.findByPk(productId)
+            .then(productToDestroy => {
+                let productImageDirectory = path.join(productImageRoute, productToDestroy.img)
+                fs.unlinkSync(productImageDirectory)
+                Products.destroy({ where: { id: productId }, force: true })
+                    .then(() => {
+                        res.redirect('/products')
+                    })
             })
     },
 
     shop: (req, res) => {
         res.render('./products/shop');
     }
-
 };
 
 

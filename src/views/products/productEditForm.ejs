@@ -46,14 +46,13 @@
 										</option>
 									</select>
 								</div>
-
 								<div class="col-12 col-md-6">
 									<label for="category" class="form-label">Categoría:</label>
 									<select name="category" id="category" class="form-input">
 										<option value="0" <% if (Plato.categoryId=="0" ) { %> selected <% } %>
 												>Entrada</option>
-										<option value="1" <% if (Plato.categoryId=="1" ) { %> selected <%
-												} %> >Plato principal</option>
+										<option value="1" <% if (Plato.categoryId=="1" ) { %> selected <% } %>
+												>Plato principal</option>
 										<option value="2" <% if (Plato.categoryId=="2" ) { %> selected <% } %>
 												>Postre</option>
 									</select>

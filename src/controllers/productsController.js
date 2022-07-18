@@ -4,7 +4,7 @@ const db = require("../database/models");
 const sequelize = db.sequelize;
 
 const Products = db.Product
-const productImagesRoute = path.join(__dirname, '..', '..', 'public', 'images', 'products')
+const productsImagesRoute = path.join(__dirname, '..', '..', 'public', 'images', 'products')
 
 const controller = {
     index: (req, res) => {
@@ -75,7 +75,7 @@ const controller = {
         let productId = req.params.id;
         Products.findByPk(productId)
             .then(productToDestroy => {
-                let productImageDirectory = path.join(productImagesRoute, productToDestroy.img)
+                let productImageDirectory = path.join(productsImagesRoute, productToDestroy.img)
                 fs.unlinkSync(productImageDirectory)
                 Products.destroy({ where: { id: productId }, force: true })
                     .then(() => {

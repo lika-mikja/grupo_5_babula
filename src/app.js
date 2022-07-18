@@ -31,7 +31,7 @@ app.use(session({
 app.use(cookies());
 
 //Indica usuario logueado
-app.use(userLoggedMiddleware);
+/*app.use(userLoggedMiddleware);*/
 
 // Que las vistas se vean por ejs
 app.set('view engine', 'ejs');

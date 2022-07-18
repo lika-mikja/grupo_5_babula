@@ -1,10 +1,15 @@
-	const User = require('../models/User');
+	/*const User = require('../models/User');*/
+	const db = require("../database/models");
+	const sequelize = db.sequelize;
+	const User = db.User
 
 function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
 
-	let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = User.findByField('email', emailInCookie);
+	let emailInCookie = req.body;
+	console.log("emailCookie", emailInCookie)
+	let userFromCookie = User.findAll({where: { email: "adrianocarrieri.dg@gmail.com" }});
+	
 
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;

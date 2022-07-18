@@ -7,7 +7,7 @@ function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
 
 	let emailInCookie = req.body;
-	console.log("emailCookie", emailInCookie)
+	/*console.log("emailCookie", emailInCookie)*/
 	let userFromCookie = User.findAll({where: { email: "adrianocarrieri.dg@gmail.com" }});
 	
 

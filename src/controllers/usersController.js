@@ -4,7 +4,6 @@ const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require("../database/models")
-const sequelize = db.sequelize;
 /*
 const User = require('../models/User');
 */
@@ -65,9 +64,7 @@ const controller = {
 	},
 	loginProcess: async (req, res) => {
 		let email = req.body.email
-		console.log(email)
-		let userToLogin = await User.findAll({where: {email: req.body.email}})
-		console.log(userToLogin)
+		let userToLogin = await User.findAll({where: {email: email}})
 		if (userToLogin) {
 			let password = req.body.password
 			let isOkThePassword = bcryptjs.compareSync(password, userToLogin[0].password);

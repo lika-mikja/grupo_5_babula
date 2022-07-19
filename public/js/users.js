@@ -72,7 +72,6 @@ window.addEventListener("load", () => {
         };
         
         // Controlamos si hay errores 
-        /* console.log(errors) */
         if (errors.length > 0) {
             e.preventDefault();
             let ulErrors = document.querySelector(".errores");

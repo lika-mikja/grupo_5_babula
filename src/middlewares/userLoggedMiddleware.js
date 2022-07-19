@@ -20,7 +20,6 @@ function userLoggedMiddleware(req, res, next) {
 		}).catch((error) => {
 			console.log(error)
 		})
-		console.log(res.locals.userLogged)
 
 }
 module.exports = userLoggedMiddleware;

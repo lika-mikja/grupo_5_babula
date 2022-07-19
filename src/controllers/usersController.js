@@ -3,9 +3,7 @@ const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require("../database/models")
-/*
-const User = require('../models/User');
-*/
+
 const User = db.User;
 const usersImagesRoute = path.join(__dirname, '..', '..', 'public', 'images', 'users')
 
@@ -30,19 +28,6 @@ const controller = {
 				oldData: req.body
 			});
 		}
-
-		/*let userInDB = User.findAll({where: { email: req.body.email }});
-		if (userInDB) {
-			return res.render('./users/userRegisterForm', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}*/
-
 		await User.create({
 			firstName,
 			lastName,
@@ -61,12 +46,12 @@ const controller = {
 		return res.render('./users/userLoginForm');
 	},
 
-	loginProcess: (req, res) => {
+	processLogin: (req, res) => {
 		let errors = validationResult(req);
 		if (!errors.isEmpty()) {
-			let cssSheets = ["login"];
+			let startSession = ["Proceso de login"];
 			let title = "Inicio de sesión";
-			return res.render("users/login.ejs", { cssSheets, title, errorMessages: errors.mapped() });
+			return res.render("users/userLoginForm.ejs", { startSession, title, errorMessages: errors.mapped() });
 		} else {
 			User.findAll()
 				.then(function (allUsers) {
@@ -78,23 +63,18 @@ const controller = {
 						}
 					}
 					if (usuarioALoguearse == undefined) {
-						let customError = {
-							"password": {
-								"value": "",
-								"msg": "Las credenciales no son válidas",
-								"param": "email",
-								"location": "body"
-							}
-						}
-						let cssSheets = ["login"];
-						let title = "Inicio de sesión";
-						return res.render("users/login.ejs", { cssSheets, title, errorMessages: customError });
-					}
-					delete usuarioALoguearse.password;
+						return res.render("users/userLoginForm.ejs", {
+							errors: [{ msg: "Credenciales incorrectas" }],
+						})
+					}/*
+					let startSession = ["Proceso de login"];
+					let title = "Inicio de sesión";
+					return res.render("users/login.ejs", { startSession, title, errorMessages: customError });
+				}),*/
+						delete usuarioALoguearse.password;
 					req.session.userLogged = usuarioALoguearse;
 					if (req.body.rememberUser) {
-						console.log("Se guarda la cookie")
-						res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 365 })
+						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 					}
 					res.redirect('/');
 				})

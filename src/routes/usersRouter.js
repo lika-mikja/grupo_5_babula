@@ -20,7 +20,7 @@ router.post('/register', uploadFile.single('avatar'), validations, usersControll
 
 // Formulario y proceso login
 router.get('/login', usersController.login);
-router.post('/login', usersController.loginProcess);
+router.post('/login', usersController.processLogin);
 
 // Perfil de Usuario
 router.get('/profile', authMiddleware, usersController.profile);

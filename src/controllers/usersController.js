@@ -1,4 +1,3 @@
-
 const path = require('path');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs');
@@ -17,11 +16,11 @@ const controller = {
 	},
 	processRegister: async (req, res) => {
 		const resultValidation = validationResult(req);
-		const {firstName, lastName, email, password, roleId} = req.body
-		let checkRoleId ;
-		if (roleId == "Admin"){
+		const { firstName, lastName, email, password, roleId } = req.body
+		let checkRoleId;
+		if (roleId == "Admin") {
 			return checkRoleId = 1
-		}else {
+		} else {
 			checkRoleId = 2
 		}
 		const avatar = req.file.filename
@@ -45,7 +44,7 @@ const controller = {
 		}*/
 
 		await User.create({
-			firstName ,
+			firstName,
 			lastName,
 			email,
 			password: bcryptjs.hashSync(password, 10),
@@ -56,44 +55,52 @@ const controller = {
 				res.redirect('/users/login')
 			})
 			.catch(error => res.send(error))
-		
-	} ,
-	
+	},
+
 	login: (req, res) => {
 		return res.render('./users/userLoginForm');
 	},
-	loginProcess: async (req, res) => {
-		let email = req.body.email
-		let userToLogin = await User.findAll({where: {email: email}})
-		if (userToLogin) {
-			let password = req.body.password
-			let isOkThePassword = bcryptjs.compareSync(password, userToLogin[0].password);
 
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-
-				if (req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-				}
-				return res.redirect('/');
-			}
-			return res.render('./users/userLoginForm', {
-				errors: {
-					email: {
-						msg: 'Las credenciales son inválidas'
+	loginProcess: (req, res) => {
+		let errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			let cssSheets = ["login"];
+			let title = "Inicio de sesión";
+			return res.render("users/login.ejs", { cssSheets, title, errorMessages: errors.mapped() });
+		} else {
+			User.findAll()
+				.then(function (allUsers) {
+					let usuarioALoguearse;
+					for (let i = 0; i < allUsers.length; i++) {
+						if (req.body.email == allUsers[i].email && bcryptjs.compareSync(req.body.password, allUsers[i].password)) {
+							usuarioALoguearse = allUsers[i];
+							break;
+						}
 					}
-				}
-			});
+					if (usuarioALoguearse == undefined) {
+						let customError = {
+							"password": {
+								"value": "",
+								"msg": "Las credenciales no son válidas",
+								"param": "email",
+								"location": "body"
+							}
+						}
+						let cssSheets = ["login"];
+						let title = "Inicio de sesión";
+						return res.render("users/login.ejs", { cssSheets, title, errorMessages: customError });
+					}
+					delete usuarioALoguearse.password;
+					req.session.userLogged = usuarioALoguearse;
+					if (req.body.rememberUser) {
+						console.log("Se guarda la cookie")
+						res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 365 })
+					}
+					res.redirect('/');
+				})
 		}
-		return res.render('./users/userLoginForm', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
 	},
+
 	profile: (req, res) => {
 		return res.render('./users/userProfile', {
 			user: req.session.userLogged

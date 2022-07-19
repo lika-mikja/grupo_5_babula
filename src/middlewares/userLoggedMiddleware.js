@@ -1,3 +1,4 @@
+/*const User = require('../models/User');*/
 const db = require("../database/models");
 const User = db.User
 

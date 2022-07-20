@@ -4,6 +4,7 @@ let form = document.querySelector(".form");
 form.email.focus();
 
 /* Aguarda a que los inputs estén completos antes de enviar al servidor */    
+
 form.addEventListener("submit", (e) => {
         
         //* Crea un array vacío donde se van a ir agregando los errores*/

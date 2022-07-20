@@ -16,7 +16,7 @@
 					<ul class="fails">
 					</ul>
 					<div class="formulario">
-						<form action="/products" method="POST" enctype="multipart/form-data">
+						<form action="/products" method="POST" enctype="multipart/form-data" class="form">
 							<div class="row-product-detail">
 								<div class="col-12 col-md-6">
 									<label for="title" class="form-label">Nombre del plato</label>
@@ -72,10 +72,11 @@
 					</form>
 				</section>
 			</main>
-			<script src="/js/productCreate.js"></script>
+			
 			<!--Footer-->
 			<%- include("../partials/footer") %>
 				<!--Footer-->
-	</body>
+				<script src="/js/productCreate.js"></script>
+			</body>
 
 </html>

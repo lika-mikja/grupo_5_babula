@@ -13,6 +13,8 @@
 					<div class="title">
 						<h2 class="products-title">Agregar nuevo menú</h2>
 					</div>
+					<ul class="fails">
+					</ul>
 					<div class="formulario">
 						<form action="/products" method="POST" enctype="multipart/form-data">
 							<div class="row-product-detail">
@@ -58,10 +60,10 @@
 								<div class="col-12 col-md-6">
 									<label for="img" class="form-label">Imagen:</label>
 									<form action="/products" method="POST" enctype="multipart/form-data">
-										<input class="form-input" type="file" name="product_image" accept=".jpg, .JPG, .png">
+										<input class="form-input" type="file" id= "image" name="product_image" accept=".jpg, .JPG, .png">
 								</div>
 								<div class="detail-button">
-									<button type="submit" class="create-buttom" name="send-product">Agregar
+									<button type="submit" class="create-buttom"  name="send-product">Agregar
 										producto</button>
 								</div>
 							</div>
@@ -70,6 +72,7 @@
 					</form>
 				</section>
 			</main>
+			<script src="/js/productCreate.js"></script>
 			<!--Footer-->
 			<%- include("../partials/footer") %>
 				<!--Footer-->

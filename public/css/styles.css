@@ -453,7 +453,22 @@ input.form-check-input {
     justify-content: center;
 }
 
+/* front-validate */
 
+.is-valid {
+    color: #198754;
+}
+
+.is-invalid {
+    color: #842029;
+}
+
+.alert-warning{
+    color:#842029;
+    background-color: #F8D7DA;
+    text-align: center;
+    border-radius: 10px;
+}
 
 @media (min-width: 480px) {
 

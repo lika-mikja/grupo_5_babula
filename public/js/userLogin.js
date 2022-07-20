@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
 
+/* Guarda la clase form e inicia con el cursor en el campo correspondiente */
 let form = document.querySelector(".form");
 form.email.focus();
 
@@ -31,7 +32,7 @@ form.addEventListener("submit", (e) => {
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else if (password.value.length < 8) {
-            fail.push("El campo nombre debe tener al menos 8 caracteres");
+            fail.push("El password debe tener al menos 8 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else {

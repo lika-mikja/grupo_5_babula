@@ -1,7 +1,7 @@
-window.addEventListener("full", () => {
+window.addEventListener("load", () => {
 
-    let form = document.querySelector(".form");
-    form.email.focus();
+let form = document.querySelector(".form");
+form.email.focus();
 
 /* Aguarda a que los inputs estén completos antes de enviar al servidor */    
 form.addEventListener("submit", (e) => {
@@ -11,8 +11,7 @@ form.addEventListener("submit", (e) => {
         /* Crea una variable y almacena con querySelector tomando el id de cada input */
                 let email = document.querySelector("#email");
                 let password = document.querySelector("#password");
-               
-
+                
         // --------- EMAIL------------
         
         let regEmail = /\S+@\S+\.\S+/;
@@ -51,7 +50,7 @@ form.addEventListener("submit", (e) => {
                 ulFails.innerHTML += "<li>" + fail[i] + "</li>";
             };
         } else {
-            res.redirect("/products")
+            alert("La validación fue exitosa")
             form.submit();
         }
     });

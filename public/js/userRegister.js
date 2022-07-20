@@ -72,7 +72,7 @@ form.addEventListener("submit", (e) => {
         } else {
             password.classList.add("is-valid");
             password.classList.remove("is-invalid");
-            form.country.focus();
+            form.category.focus();
         };
 
         // --------- CATEGORY ------------

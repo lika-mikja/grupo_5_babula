@@ -74,7 +74,7 @@ En esta ocasión contamos con la ventaja de tener finalizado el punto 1 , el cua
 Con respecto a la tarea numero 3 sobre la implementacion de CRUD de productos, habiamos entregado las primeras tres rutas para el Sprint anterior.
 Definimos un próximo encuentro para el 18 de Mayo, en el cual debemos tener finalizadas las tareas repartidas para comenzar a utilizar el método pair programming.
 
-**Encuentro 18 de Mayo**
+** Encuentro 18 de Mayo **
 
 Avanzamos en la implementación de las rutas indicadas para el sprint IV y en esta ocasión, implementamos rutas para create. Si bien avanazamos, encontramos problemas para incorporar los datos de ingreso en el JSON. A diferencia de otros sprints no realizamos división de tareas. Lika compartía pantalla y fuimos desarrollando el proyecto utilizamos la lógica del pair programing.
 Tuvimos dos bloqueantes. El primero fue tener en español toda la informacion en el prouctsDataBase. El segundo bloqueante fue con las imagenes que agregabamos en el formulario, las mismas no quedaban guardadas en el proyecto y no se reflejaba en la vista de detail de productos.
@@ -154,18 +154,18 @@ En la división de tareas para el sprint VI, Alan se llevó para realizar valida
 
 Adriano y Lika realizan parte de la implementacion del CRUD de productos utilizando metodo pair programming.
 
-**Encuentro 17 de julio **
+**Encuentro 17 de julio**
 
 Adriano y Lika realizan segunda parte de la implementacion del CRUD de productos utilizando metodo pair programming. Como bloqueante se encontraron conel servidor crasheado al querer continuar con el CRUD de usuarios ya que no reconocia la base de datos.
 
-** Encuentro 18 de julio **
+**Encuentro 18 de julio**
 
 Adriano finaliza con la implementacion del CRUD de productos.
 Lika desbloquea y se lográ la sincronización de usuarios de base de datos al proyecto. El bloqueante era que en el modelo se definia una clave foranea de más por equivocación y creaba una fila "true" que estaba de más.
 
 Adriano y Lika realizan parte de la implementacion del CRUD de usuarios utilizando metodo pair programming. Como bloqueante se encuentra que en el codigo los roles de usuarios son Admin & User pero en la base de datos se realizaron cambios para que se reconociera al Admin con un valor de = 1 y al usuario con un valor de = 2. 
 
-** Encuentro 19 de julio **
+**Encuentro 19 de julio**
 
 Entre Adriano y Lika, se complementa el código de CRUD de usuarios. 
 Se ejecutaron cambios en las vistas para que los Admin puedan crear productos.

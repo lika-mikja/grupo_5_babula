@@ -133,3 +133,14 @@ Nueva Reunión para corregir errores que se presentaron en el script mencionado 
 
 **Segundo encuentro 6 de julio**
 Reunión de todo el equipo para coordinar los últimos pasos para finalizar el sprint.
+<<<<<<< HEAD
+=======
+
+**Encuentro 16 de julio**
+
+En la división de tareas para el sprint VII, Alan se llevó para realizar validaciones desde el front. Nicolás tomó las validaciones desde el back.
+
+**Encuentro 20 de julio**
+
+Se logró realizar validación desde el front del login de usuarios. Se avanzó con el código e implementación de validación para registro de usuarios, creación y edición de productos. Pero al momento hay errores que no permiten que se valide de forma correcta. No hay interacción de los archivos JS correspondientes con la vista.
+>>>>>>> c9e249071c9e64571362dedf392ec661852c2d22

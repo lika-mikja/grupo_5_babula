@@ -1,9 +1,11 @@
-window.addEventListener("full", () => {
+window.addEventListener("load", () => {
 
-    let form = document.querySelector(".form");
-    form.email.focus();
+/* Guarda la clase form e inicia con el cursor en el campo correspondiente */
+let form = document.querySelector(".form");
+form.email.focus();
 
 /* Aguarda a que los inputs estén completos antes de enviar al servidor */    
+
 form.addEventListener("submit", (e) => {
         
         //* Crea un array vacío donde se van a ir agregando los errores*/
@@ -11,8 +13,7 @@ form.addEventListener("submit", (e) => {
         /* Crea una variable y almacena con querySelector tomando el id de cada input */
                 let email = document.querySelector("#email");
                 let password = document.querySelector("#password");
-               
-
+                
         // --------- EMAIL------------
         
         let regEmail = /\S+@\S+\.\S+/;
@@ -31,7 +32,7 @@ form.addEventListener("submit", (e) => {
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else if (password.value.length < 8) {
-            fail.push("El campo nombre debe tener al menos 8 caracteres");
+            fail.push("El password debe tener al menos 8 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else {
@@ -51,7 +52,7 @@ form.addEventListener("submit", (e) => {
                 ulFails.innerHTML += "<li>" + fail[i] + "</li>";
             };
         } else {
-            res.redirect("/products")
+            alert("La validación fue exitosa")
             form.submit();
         }
     });

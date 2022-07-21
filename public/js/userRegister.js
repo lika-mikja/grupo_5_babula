@@ -35,11 +35,11 @@ form.addEventListener("submit", (e) => {
 
         // --------- LASTNAME ------------
         if (lastName.value == "") {
-            fail.push("El campo nombre no puede estar vacío");
+            fail.push("El campo apellido no puede estar vacío");
             lastName.classList.remove("is-valid");
             name.classList.add("is-invalid");
         }else if (name.value.length < 2) {
-            fail.push("El campo nombre debe tener al menos 2 caracteres");
+            fail.push("El campo apellido debe tener al menos 2 caracteres");
             name.classList.remove("is-valid");
             name.classList.add("is-invalid");
          }else {
@@ -66,18 +66,18 @@ form.addEventListener("submit", (e) => {
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else if (password.value.length < 8) {
-            fail.push("El campo nombre debe tener al menos 8 caracteres");
+            fail.push("La constreña debe tener al menos 8 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else {
             password.classList.add("is-valid");
             password.classList.remove("is-invalid");
-            form.country.focus();
+            form.category.focus();
         };
 
         // --------- CATEGORY ------------
         if (category.value == "") {
-            fail.push("Debe elegir un país");
+            fail.push("Debe elegir una categoría");
             category.classList.remove("is-valid");
             category.classList.add("is-invalid");
         } else {
@@ -109,7 +109,7 @@ form.addEventListener("submit", (e) => {
                 ulFails.innerHTML += "<li>" + fail[i] + "</li>";
             };
         } else {
-            res.redirect("/products")
+            alert("La validación fue exitosa")
             form.submit();
         }
     });

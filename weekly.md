@@ -68,6 +68,7 @@ No repercutia el css en la vista del carrito de compras.
 Con ayuda de Alan, Nicolas y Adriano se solucionaron estos impedimentos en la weekly.
 
 Sprint 4:
+
 Se repartieron las tres tareas de planificacion y el punto 1 y 2 sobre el armado de los JSON.
 En esta ocasión contamos con la ventaja de tener finalizado el punto 1 , el cual entregamos para el Sprint anterior.
 Con respecto a la tarea numero 3 sobre la implementacion de CRUD de productos, habiamos entregado las primeras tres rutas para el Sprint anterior.
@@ -113,6 +114,10 @@ De bonus, se resolvió el punto 7 y por último, las rutas de huespedes y usuari
 Aprovechando la clase en vivo práctica del curso, se pudo desbloquear el problema que se arrastraba del anterior encuentro sobre las vistas que ven los usuarios "Admin" y "User" al logearse en la página. Tambien se actualizó el menú en todos los css.
 Por último, se agregó un middleware de productos para tener aún más ordenado el código y las carpetas con vistas de MVC.
 
+
+Sprint 5 :
+
+
 **Encuentro 24 de junio**
 
 Reunión para definir tareas para empezar el sprint. Utilizamos la herramienta flowchart maker para empezar a hacer los diagramas. Entre todo el equipo empezamos a delinear el esquema. Alan se llevó terminar la propuesta para luego revisar de forma grupal.
@@ -122,24 +127,53 @@ Reunión para definir tareas para empezar el sprint. Utilizamos la herramienta f
 Reunión para concluir el diagrama. Lika, Adriano y Alan se juntaron par finalizar y corregir el esquema de trabajo pautado el 24 de junio.
 
 **Encuentro 1 de julio**
+
 Reunión entre Lika y Adriano, se realizaron nuevos ajustes en el esquema de base de datos, corrigiendo las relaciones entre tablas y claves foráneas.
-Reunión con Guido Maomine, donde aclaramos dudas sobre los cambios aplicados en el esquema de base de datos.
+Reunión con Guido Maimone, donde aclaramos dudas sobre los cambios aplicados en el esquema de base de datos.
 
-**1 de julio**
-Lika aplicó los ajustes mencionas a los esquemas a través de la plataforma DynoBird obteniendo el script necesario para creación de base de datos a través de Workbench.
 
-**Primer encuentro 6 de julio**
+Lika 
+
+Se aplican los ajustes mencionados a los esquemas a través de la plataforma DynoBird obteniendo el script necesario para creación de base de datos a través de Workbench. Tambien realiza cracion de carpeta db en VsCode junto al diagrama de base de datos, detalle del script de DynoBird y el archivo populate. Por último avanzó con la implementacion de sequelize, creando el detalle de los cuatro modelos del proyecto.
+
+**Encuentro 6 de julio**
+
 Nueva Reunión para corregir errores que se presentaron en el script mencionado anteriormente, con resultados positivos.
 
 **Segundo encuentro 6 de julio**
-Reunión de todo el equipo para coordinar los últimos pasos para finalizar el sprint.
+
+Reunión de todo el equipo para coordinar los últimos pasos para finalizar el sprint el cual no se llega a entregar a tiempo por problemas ajenos a la organización del grupo. Queda pendiente implementacion de CRUD de productos y usuarios.
+
+
+Sprint 6:
+
 
 **Encuentro 16 de julio**
 
-En la división de tareas para el sprint VII, Alan se llevó para realizar validaciones desde el front. Nicolás tomó las validaciones desde el back.
+En la división de tareas para el sprint VI, Alan se llevó para realizar validaciones desde el front. Nicolás tomó las validaciones desde el back. Adriano y Lika proceden a complentar el faltante del CRUD del Sprint anterior.
+
+Adriano y Lika realizan parte de la implementacion del CRUD de productos utilizando metodo pair programming.
+
+**Encuentro 17 de julio **
+
+Adriano y Lika realizan segunda parte de la implementacion del CRUD de productos utilizando metodo pair programming. Como bloqueante se encontraron conel servidor crasheado al querer continuar con el CRUD de usuarios ya que no reconocia la base de datos.
+
+** Encuentro 18 de julio **
+
+Adriano finaliza con la implementacion del CRUD de productos.
+Lika desbloquea y se lográ la sincronización de usuarios de base de datos al proyecto. El bloqueante era que en el modelo se definia una clave foranea de más por equivocación y creaba una fila "true" que estaba de más.
+
+Adriano y Lika realizan parte de la implementacion del CRUD de usuarios utilizando metodo pair programming. Como bloqueante se encuentra que en el codigo los roles de usuarios son Admin & User pero en la base de datos se realizaron cambios para que se reconociera al Admin con un valor de = 1 y al usuario con un valor de = 2. 
+
+** Encuentro 19 de julio **
+
+Entre Adriano y Lika, se complementa el código de CRUD de usuarios. 
+Se ejecutaron cambios en las vistas para que los Admin puedan crear productos.
+
+Alan genera parte de las validaciones de Front, las cuales son comentadas ya que se crasheaba la terminal.
 
 **Encuentro 20 de julio**
 
-Se logró realizar validación desde el front del login de usuarios. Se avanzó con el código e implementación de validación para registro de usuarios, creación y edición de productos. Pero al momento hay errores que no permiten que se valide de forma correcta. No hay interacción de los archivos JS correspondientes con la vista.
+Alan continua con la validación desde el front del login de usuarios. Se avanzó con el código e implementación de validación para registro de usuarios, creación y edición de productos. Pero al momento hay errores que no permiten que se valide de forma correcta. No hay interacción de los archivos JS correspondientes con la vista.
 
-Nico: Implemetacion de validaciones backEnd, correciones validaciones front y otras correciones de conflictos
+Nicolas realiza implemetacion de validaciones backEnd, correciones validaciones front y otras correciones de conflictos.

@@ -23,7 +23,7 @@ window.addEventListener("full", () => {
             title.classList.remove("is-valid");
             title.classList.add("is-invalid");
         } else if (password.value.length < 5) {
-            fail.push("El campo nombre debe tener al menos 5 caracteres");
+            fail.push("El campo título debe tener al menos 5 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         }else {
@@ -38,7 +38,7 @@ window.addEventListener("full", () => {
             description.classList.remove("is-valid");
             description.classList.add("is-invalid");
         } else if (password.value.length < 20) {
-            fail.push("El campo nombre debe tener al menos 20 caracteres");
+            fail.push("El campo descripción debe tener al menos 20 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         }else {
@@ -114,7 +114,7 @@ window.addEventListener("full", () => {
                 ulFails.innerHTML += "<li>" + fail[i] + "</li>";
             };
         } else {
-            res.redirect("/products")
+            alert("La validación fue exitosa")
             form.submit();
         }
     });

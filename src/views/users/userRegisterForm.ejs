@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!--Head-->
-<%- include("../partials/head" ,{stylesheet:"styles", title:"Formulario creación de producto"}) %>
+<%- include("../partials/head" ,{stylesheet:"styles", title:"Formulario registro de usuario"}) %>
 
 	<body>
 		<!--Header-->
@@ -20,8 +20,8 @@
 							<div class="row-product-detail">
 								<div class="col-12 col-md-6">
 									<label class="form-label">Nombre</label>
-									<input type="text" id="firstName" name="firstName" class="form-notification <%=locals.errors &&
-										errors.firstName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.firstName : null %>">
+									<input type="text" id="firstName" name="firstName" class="form-notification"
+										value="<%= locals.oldData ? oldData.firstName : null %>">
 									<% if (locals.errors && errors.firstName) { %>
 										<div class="text-danger">
 											<%= errors.firstName.msg %>
@@ -30,8 +30,8 @@
 								</div>
 								<div class="col-12 col-md-6">
 									<label class="form-label">Apellido</label>
-									<input type="text" id="lastName" name="lastName" class="form-notification <%=locals.errors &&
-										errors.lastName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.lastName : null %>">
+									<input type="text" id="lastName" name="lastName" class="form-notification"
+										value="<%= locals.oldData ? oldData.lastName : null %>">
 									<% if (locals.errors && errors.lastName) { %>
 										<div class="text-danger">
 											<%= errors.lastName.msg %>
@@ -41,8 +41,8 @@
  
 								<div class="col-12">
 									<label class="form-label">Correo electronico</label>
-									<input type="text" id="email" name="email" class="form-notification <%=locals.errors &&
-										errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+									<input type="text" id="email" name="email" class="form-notification"
+										value="<%= locals.oldData ? oldData.email : null %>">
 									<% if (locals.errors && errors.email) { %>
 										<div class="text-danger">
 											<%= errors.email.msg %>
@@ -50,8 +50,8 @@
 										<% } %>
 											<div class="col-12 col-md-6">
 												<label class="form-label">Password</label>
-												<input type="password" id="password" name="password" class="form-notification
-														<%=locals.errors && errors.password ? 'is-invalid' : null %>">
+												<input type="password" id="password" name="password"
+													class="form-notification">
 												<% if (locals.errors && errors.password) { %>
 													<div class="text-danger">
 														<%= errors.password.msg %>
@@ -62,15 +62,10 @@
 								<div class="col-12 col-md-6">
 									<label class="form-label">Categoría</label>
 									<select name="roleId" id="category"
-										class="form-notification <%= locals.errors && errors.roleId ? 'is-invalid' : null %>">
-										<option value="">Tipo</option>
-										<% let roleId=['Admin', 'User' ]; %>
-											<% for (const oneRoleId of roleId) { %>
-												<option value="<%= oneRoleId %>" <%=locals.oldData &&
-													(oneRoleId===oldData.roleId) ? 'selected' : null %>
-													> <%= oneRoleId %>
-												</option>
-												<% } %>
+										class="form-notification">
+										<option disabled selected>Tipo</option>
+										<option value="1">Admin</option>
+										<option value="2">User</option>
 									</select>
 									<% if (locals.errors && errors.roleId) { %>
 										<div class="text-danger">
@@ -81,8 +76,7 @@
 
 								<div class="col-12 col-md-6">
 									<label class="form-label">Imagen de perfil:</label>
-									<input type="file" id="avatar" name="avatar" class="form-notification <%=locals.errors &&
-																	errors.avatar ? 'is-invalid' : null %>">
+									<input type="file" id="avatar" name="avatar" class="form-notification">
 									<% if (locals.errors && errors.avatar) { %>
 										<div class="text-danger">
 											<%= errors.avatar.msg %>
@@ -99,7 +93,7 @@
 					</div>
 				</section>
 			</main>
-			
+
 			<script src="/js/userRegister.js"></script>
 			<!--Footer-->
 			<%- include("../partials/footer") %>

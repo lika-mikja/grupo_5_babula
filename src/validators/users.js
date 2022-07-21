@@ -4,8 +4,13 @@ const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
 const { application } = require("express");
 const bcryptRounds = 10;
+const path = require("path");
+const { body } = require("express-validator");
+const db = require("../database/models");
 
-router.post("/register", [
+const User = db.User;
+
+const validateRegister = [
   check("firstName")
     .exists() /* devulve un True si existe */
     .isLength({ min: 2 }) /* arregla un largo con un minimo */
@@ -44,4 +49,4 @@ router.post("/register", [
       if (!req.file) throw new Error("Formato no disponible");
       return true;
     }),
-]);
+];

@@ -30,7 +30,7 @@
                     </p>
                   </section>
                   <section class="buttons-product">
-                    <% if (locals.userLogged && locals.userLogged.roleId=="Admin" ) { %>
+                    <% if (locals.userLogged && locals.userLogged.roleId==1) { %>
                       <div class="detail-button">
                         <a href="/products/edit/<%= plato.id %>">
                           <p>Editar producto</p>
@@ -42,7 +42,7 @@
                             <p>Agregar al carrito</p>
                           </a>
                         </div>
-                        <% if (locals.userLogged && locals.userLogged.roleId=="Admin" ) { %>
+                        <% if (locals.userLogged && locals.userLogged.roleId==1 ) { %>
                           <div class="detail-button">
                             <form action="/products/delete/<%= plato.id %>?_method=DELETE" method="POST" class="delete">
                               <button type="submit">Eliminar</button>

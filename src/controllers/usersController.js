@@ -12,34 +12,48 @@ const controller = {
 	register: (req, res) => {
 		return res.render('./users/userRegisterForm');
 	},
-	processRegister: async (req, res) => {
-		const resultValidation = validationResult(req);
-		const { firstName, lastName, email, password, roleId } = req.body
-		let checkRoleId;
-		if (roleId == "Admin") {
-			return checkRoleId = 1
-		} else {
-			checkRoleId = 2
-		}
-		const avatar = req.file.filename
-		if (resultValidation.errors.length > 0) {
-			return res.render('./users/userRegisterForm', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		}
-		await User.create({
-			firstName,
-			lastName,
-			email,
-			password: bcryptjs.hashSync(password, 10),
-			roleId: checkRoleId,
-			avatar,
+
+	processRegister: (req, res) => {
+		db.User.findOne({
+			where: { email: req.body.email }
+		}).then((userInDB) => {
+			if (userInDB) {
+				return res.render('./users/userRegisterForm.ejs', {
+					errors: {
+						"email": {
+							"value": "",
+							"msg": "Ya hay un usuario registrado con este correo electrónico.",
+							"param": "email",
+							"location": "body"
+						}
+					},
+					oldData: req.body
+				});
+			}
+			let errors = validationResult(req);
+			if (!errors.isEmpty()) {
+				if (req.file) {
+					let imageName = req.file.filename;
+					fs.unlinkSync(path.join(usersImagesRoute, imageName));
+				}
+				return res.render('./users/userRegisterForm.ejs', { errors: errors.mapped(), oldData: req.body });
+			} else {
+				db.User.create({
+					...req.body,
+					avatar: req.file.filename,
+					password: bcryptjs.hashSync(req.body.password, 10),
+				})
+					.then(() => {
+						return res.redirect('/user/login');
+					})
+					.catch((error) => {
+						return res.send(error);
+					})
+			};
+
+		}).catch((error) => {
+			console.log(error)
 		})
-			.then(() => {
-				res.redirect('/users/login')
-			})
-			.catch(error => res.send(error))
 	},
 
 	login: (req, res) => {
@@ -49,30 +63,23 @@ const controller = {
 	processLogin: (req, res) => {
 		let errors = validationResult(req);
 		if (!errors.isEmpty()) {
-			let startSession = ["Proceso de login"];
-			let title = "Inicio de sesión";
-			return res.render("users/userLoginForm.ejs", { startSession, title, errorMessages: errors.mapped() });
+			return res.render('./users/userLoginForm.ejs', {errorMessages: errors.mapped() });
 		} else {
 			User.findAll()
 				.then(function (allUsers) {
-					let usuarioALoguearse;
 					for (let i = 0; i < allUsers.length; i++) {
 						if (req.body.email == allUsers[i].email && bcryptjs.compareSync(req.body.password, allUsers[i].password)) {
-							usuarioALoguearse = allUsers[i];
+							userToLogin = allUsers[i];
 							break;
 						}
 					}
-					if (usuarioALoguearse == undefined) {
+					if (userToLogin == undefined) {
 						return res.render("users/userLoginForm.ejs", {
 							errors: [{ msg: "Credenciales incorrectas" }],
 						})
-					}/*
-					let startSession = ["Proceso de login"];
-					let title = "Inicio de sesión";
-					return res.render("users/login.ejs", { startSession, title, errorMessages: customError });
-				}),*/
-						delete usuarioALoguearse.password;
-					req.session.userLogged = usuarioALoguearse;
+					}
+					delete userToLogin.password;
+					req.session.userLogged = userToLogin;
 					if (req.body.rememberUser) {
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 					}

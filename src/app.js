@@ -50,6 +50,6 @@ app.use("/user", usersRouter);
 
 
 // Servidor
-app.listen(4000, () => {
+app.listen(6969, () => {
 	console.log('Servidor funcionando en el puerto http://localhost:4000');
 });

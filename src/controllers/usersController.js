@@ -21,13 +21,13 @@ const controller = {
 		} else {
 			checkRoleId = 2
 		}
-		const avatar = req.file.filename
 		if (resultValidation.errors.length > 0) {
 			return res.render('./users/userRegisterForm', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
+		const avatar = req.file.filename
 		await User.create({
 			firstName,
 			lastName,
@@ -36,9 +36,9 @@ const controller = {
 			roleId: checkRoleId,
 			avatar,
 		})
-			.then(() => {
-				res.redirect('/users/login')
-			})
+		.then(() => {
+			res.redirect('/users/login')
+		})
 			.catch(error => res.send(error))
 	},
 

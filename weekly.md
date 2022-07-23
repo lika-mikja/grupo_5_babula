@@ -1,4 +1,6 @@
-** Sprint 3**
+
+**Sprint 3**
+
 
 **Encuentro 29 de abril**
 
@@ -69,7 +71,10 @@ No repercutia el css en la vista del carrito de compras.
 
 Con ayuda de Alan, Nicolas y Adriano se solucionaron estos impedimentos en la weekly.
 
-**Sprint 5**
+
+**Sprint 4**
+
+
 
 Se repartieron las tres tareas de planificacion y el punto 1 y 2 sobre el armado de los JSON.
 En esta ocasión contamos con la ventaja de tener finalizado el punto 1 , el cual entregamos para el Sprint anterior.

@@ -1,3 +1,5 @@
+** Sprint 3**
+
 **Encuentro 29 de abril**
 
 Nicolas:
@@ -67,14 +69,14 @@ No repercutia el css en la vista del carrito de compras.
 
 Con ayuda de Alan, Nicolas y Adriano se solucionaron estos impedimentos en la weekly.
 
-Sprint 4:
+**Sprint 5**
 
 Se repartieron las tres tareas de planificacion y el punto 1 y 2 sobre el armado de los JSON.
 En esta ocasión contamos con la ventaja de tener finalizado el punto 1 , el cual entregamos para el Sprint anterior.
 Con respecto a la tarea numero 3 sobre la implementacion de CRUD de productos, habiamos entregado las primeras tres rutas para el Sprint anterior.
 Definimos un próximo encuentro para el 18 de Mayo, en el cual debemos tener finalizadas las tareas repartidas para comenzar a utilizar el método pair programming.
 
-** Encuentro 18 de Mayo **
+** Encuentro 18 de Mayo**
 
 Avanzamos en la implementación de las rutas indicadas para el sprint IV y en esta ocasión, implementamos rutas para create. Si bien avanazamos, encontramos problemas para incorporar los datos de ingreso en el JSON. A diferencia de otros sprints no realizamos división de tareas. Lika compartía pantalla y fuimos desarrollando el proyecto utilizamos la lógica del pair programing.
 Tuvimos dos bloqueantes. El primero fue tener en español toda la informacion en el prouctsDataBase. El segundo bloqueante fue con las imagenes que agregabamos en el formulario, las mismas no quedaban guardadas en el proyecto y no se reflejaba en la vista de detail de productos.
@@ -89,6 +91,10 @@ Se pacto otro encuentro para enfocarnos en arreglar los bloqueantes que venimos 
 
 En equipo resolvimos lo que no nos permitia que las fotos no se guarden e impacten en el detail de los productos. Encontramos como bloqueante la implementacion del menu del dia en la edicion y creacion de formulario, ya que cuando agregabamos o editabamos un producto y lo sacabamos o agrgabamos al menu del dia, no aparecia en la home dado que no impactaba el booleano del true/ false. Lo pudimos resolver de manera rápida y eficaz.
 Por último, trabajamos en el armado de la ruta de delete.
+
+
+**Sprint 5**
+
 
 **Encuentro 6 de junio**
 
@@ -115,7 +121,7 @@ Aprovechando la clase en vivo práctica del curso, se pudo desbloquear el proble
 Por último, se agregó un middleware de productos para tener aún más ordenado el código y las carpetas con vistas de MVC.
 
 
-Sprint 5 :
+**Sprint 6**
 
 
 **Encuentro 24 de junio**
@@ -134,7 +140,7 @@ Reunión con Guido Maimone, donde aclaramos dudas sobre los cambios aplicados en
 
 Lika 
 
-Se aplican los ajustes mencionados a los esquemas a través de la plataforma DynoBird obteniendo el script necesario para creación de base de datos a través de Workbench. Tambien realiza cracion de carpeta db en VsCode junto al diagrama de base de datos, detalle del script de DynoBird y el archivo populate. Por último avanzó con la implementacion de sequelize, creando el detalle de los cuatro modelos del proyecto.
+Se aplican los ajustes mencionados a los esquemas a través de la plataforma DynoBird obteniendo el script necesario para creación de base de datos a través de Workbench. Tambien realiza cracion de carpeta db en VsCode junto al diagrama de base de datos, detalle del script de DynoBird y el archivo populate. Por último avanzó con la implementacion de sequelize al proyecto, además de crear el detalle y configuración  de los cuatro modelos >> Products, Category, Role y Users .
 
 **Encuentro 6 de julio**
 
@@ -145,7 +151,7 @@ Nueva Reunión para corregir errores que se presentaron en el script mencionado 
 Reunión de todo el equipo para coordinar los últimos pasos para finalizar el sprint el cual no se llega a entregar a tiempo por problemas ajenos a la organización del grupo. Queda pendiente implementacion de CRUD de productos y usuarios.
 
 
-Sprint 6:
+**Sprint 7**
 
 
 **Encuentro 16 de julio**
@@ -156,12 +162,12 @@ Adriano y Lika realizan parte de la implementacion del CRUD de productos utiliza
 
 **Encuentro 17 de julio**
 
-Adriano y Lika realizan segunda parte de la implementacion del CRUD de productos utilizando metodo pair programming. Como bloqueante se encontraron conel servidor crasheado al querer continuar con el CRUD de usuarios ya que no reconocia la base de datos.
+Adriano y Lika realizan segunda parte de la implementacion del CRUD de productos utilizando metodo pair programming. Como bloqueante se encontraron con el servidor crasheado al querer continuar con el CRUD de usuarios ya que no reconocia la base de datos.
 
 **Encuentro 18 de julio**
 
 Adriano finaliza con la implementacion del CRUD de productos.
-Lika desbloquea y se lográ la sincronización de usuarios de base de datos al proyecto. El bloqueante era que en el modelo se definia una clave foranea de más por equivocación y creaba una fila "true" que estaba de más.
+Se lográ la sincronización de usuarios de base de datos al proyecto. El bloqueante era que en el modelo de Users se definia una clave foranea de más por equivocación y creaba una fila "true" la cual no pertencia a ninguna fila existente en la base de datos.
 
 Adriano y Lika realizan parte de la implementacion del CRUD de usuarios utilizando metodo pair programming. Como bloqueante se encuentra que en el codigo los roles de usuarios son Admin & User pero en la base de datos se realizaron cambios para que se reconociera al Admin con un valor de = 1 y al usuario con un valor de = 2. 
 

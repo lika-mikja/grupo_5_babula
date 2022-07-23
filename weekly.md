@@ -81,7 +81,7 @@ En esta ocasión contamos con la ventaja de tener finalizado el punto 1 , el cua
 Con respecto a la tarea numero 3 sobre la implementacion de CRUD de productos, habiamos entregado las primeras tres rutas para el Sprint anterior.
 Definimos un próximo encuentro para el 18 de Mayo, en el cual debemos tener finalizadas las tareas repartidas para comenzar a utilizar el método pair programming.
 
-** Encuentro 18 de Mayo**
+**Encuentro 18 de Mayo**
 
 Avanzamos en la implementación de las rutas indicadas para el sprint IV y en esta ocasión, implementamos rutas para create. Si bien avanazamos, encontramos problemas para incorporar los datos de ingreso en el JSON. A diferencia de otros sprints no realizamos división de tareas. Lika compartía pantalla y fuimos desarrollando el proyecto utilizamos la lógica del pair programing.
 Tuvimos dos bloqueantes. El primero fue tener en español toda la informacion en el prouctsDataBase. El segundo bloqueante fue con las imagenes que agregabamos en el formulario, las mismas no quedaban guardadas en el proyecto y no se reflejaba en la vista de detail de productos.

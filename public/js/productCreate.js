@@ -3,12 +3,12 @@ window.addEventListener("full", () => {
     let form = document.querySelector(".form");
     form.title.focus();
 
-/* Aguarda a que los inputs estén completos antes de enviar al servidor */    
+    /* Aguarda a que los inputs estén completos antes de enviar al servidor */
     form.addEventListener("submit", (e) => {
-        
-/* Crea un array vacío donde se van a ir agregando los errores*/
+
+        /* Crea un array vacío donde se van a ir agregando los errores*/
         let fail = [];
-/* Crea una variable y almacena con querySelector tomando el id de cada input */
+        /* Crea una variable y almacena con querySelector tomando el id de cada input */
         let title = document.querySelector("#title");
         let description = document.querySelector("#description");
         let ingredients = document.querySelector("#ingredients");
@@ -16,8 +16,8 @@ window.addEventListener("full", () => {
         let todaysDay = document.querySelector("#todaysDay");
         let category = document.querySelector("#category");
         let productImage = document.querySelector("#image");
-     
-       // --------- TITLE ------------
+
+        // --------- TITLE ------------
         if (title.value == "") {
             fail.push("El campo título no puede estar vacío");
             title.classList.remove("is-valid");
@@ -26,7 +26,7 @@ window.addEventListener("full", () => {
             fail.push("El campo título debe tener al menos 5 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
-        }else {
+        } else {
             title.classList.add("is-valid");
             title.classList.remove("is-invalid");
             form.description.focus();
@@ -41,7 +41,7 @@ window.addEventListener("full", () => {
             fail.push("El campo descripción debe tener al menos 20 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
-        }else {
+        } else {
             description.classList.add("is-valid");
             description.classList.remove("is-invalid");
             form.ingredients.focus();
@@ -57,7 +57,7 @@ window.addEventListener("full", () => {
             ingredients.classList.remove("is-invalid");
             form.price.focus();
         };
-        
+
         // --------- PRICE ------------
         if (price.value == "") {
             fail.push("Debe tener un precio");
@@ -91,9 +91,9 @@ window.addEventListener("full", () => {
             form.productImage.focus();
         };
 
-         // --------- PRODUCTO IMAGE ------------
-         let allowedExtension = /(.jpg|.jpeg|.png|.gif)$/i;
-         if (!allowedExtension.exec(image.value)) {
+        // --------- PRODUCTO IMAGE ------------
+        let allowedExtension = /(.jpg|.jpeg|.png|.gif)$/i;
+        if (!allowedExtension.exec(image.value)) {
             fail.push("Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.");
             productImage.classList.remove("is-valid");
             productImage.classList.add("is-invalid");
@@ -102,7 +102,7 @@ window.addEventListener("full", () => {
             productImage.classList.remove("is-invalid");
             form.productImage.focus();
         };
-        
+
         /* Controlador de errores */
 
         if (fail.length > 0) {

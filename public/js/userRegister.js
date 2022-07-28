@@ -4,10 +4,10 @@ window.addEventListener("load", () => {
    
 
     let form = document.querySelector(".form");
-   /*  form.name.focus(); */
-   
-/* Aguarda a que los inputs estén completos antes de enviar al servidor */    
-form.addEventListener("submit", (e) => {
+    form.name.focus();
+
+    /* Aguarda a que los inputs estén completos antes de enviar al servidor */
+    form.addEventListener("submit", (e) => {
 
         //* Crea un array vacío donde se van a ir agregando los errores*/
         let fail = [];
@@ -18,13 +18,12 @@ form.addEventListener("submit", (e) => {
                 let password = document.querySelector("#password");
                 let category = document.querySelector("#category");
                 let userImage = document.querySelector("#avatar");
-console.log(password);
         // --------- NAME ------------
         if (name.value == "") {
             fail.push("El campo nombre no puede estar vacío");
             name.classList.remove("is-valid");
             name.classList.add("is-invalid");
-        }else if (name.value.length < 2) {
+        } else if (name.value.length < 2) {
             fail.push("El campo nombre debe tener al menos 2 caracteres");
             name.classList.remove("is-valid");
             name.classList.add("is-invalid");
@@ -39,18 +38,18 @@ console.log(password);
             fail.push("El campo apellido no puede estar vacío");
             lastName.classList.remove("is-valid");
             name.classList.add("is-invalid");
-        }else if (name.value.length < 2) {
+        } else if (name.value.length < 2) {
             fail.push("El campo apellido debe tener al menos 2 caracteres");
             name.classList.remove("is-valid");
             name.classList.add("is-invalid");
-         }else {
+        } else {
             lastName.classList.add("is-valid");
             lastName.classList.remove("is-invalid");
             form.email.focus();
         };
 
         // --------- EMAIL (regex) ------------
-        
+
         let regEmail = /\S+@\S+\.\S+/;
         if (!regEmail.test(email.value)) {
             fail.push("Debe ingresar un email válido");
@@ -98,7 +97,7 @@ console.log(password);
             userImage.classList.remove("is-invalid");
             form.userImage.focus();
         };
-        
+
         /* Controlador de errores */
 
         if (fail.length > 0) {

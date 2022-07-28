@@ -97,8 +97,7 @@ const controller = {
 
   isEmailInUse: function (email) {
     let allUsers = this.findAll();
-    let email1 = allUsers.filter((oneUser) => oneUser.email == email);
-    return email.length > 0;
+    return allUsers.filter((oneUser) => oneUser.email == email);
   },
 };
 

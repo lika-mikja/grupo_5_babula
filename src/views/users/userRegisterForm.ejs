@@ -43,11 +43,11 @@
 									<label class="form-label">Correo electronico</label>
 									<input type="text" id="email" name="email" class="form-notification"
 										value="<%= locals.oldData ? oldData.email : null %>">
-									<% if (locals.errors && errors.email) { %>
+									<% if (locals.errors && errors.email) {%>
 										<div class="text-danger">
 											<%= errors.email.msg %>
 										</div>
-										<% } %>
+									<% } %>
 											<div class="col-12 col-md-6">
 												<label class="form-label">Password</label>
 												<input type="password" id="password" name="password"
@@ -56,7 +56,7 @@
 													<div class="text-danger">
 														<%= errors.password.msg %>
 													</div>
-													<% } %>
+												<% } %>
 											</div>
 								</div>
 								<div class="col-12 col-md-6">

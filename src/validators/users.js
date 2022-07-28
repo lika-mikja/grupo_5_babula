@@ -7,6 +7,7 @@ const bcryptRounds = 10;
 const path = require("path");
 const { body } = require("express-validator");
 const db = require("../database/models");
+const {isEmailInUse} = require("../controllers/usersController");
 
 const User = db.User;
 
@@ -14,11 +15,11 @@ const validateRegister = [
   check("firstName")
     .exists() /* devulve un True si existe */
     .isLength({ min: 2 }) /* arregla un largo con un minimo */
-    .withMessage("Inserte un Nombre"),
+    .withMessage("Inserte un nombre"),
   check("lastName")
     .exists()
     .isLength({ min: 2 })
-    .withMessage("Inserte un Nombre"),
+    .withMessage("Inserte un apellido"),
   check("password")
     .escape() /* codifica la cadena para que pueda transmitirse por cualquier red que admita ASCII*/
     .exists()

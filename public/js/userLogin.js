@@ -52,7 +52,7 @@ form.addEventListener("submit", (e) => {
                 ulFails.innerHTML += "<li>" + fail[i] + "</li>";
             };
         } else {
-            alert("La validación fue exitosa")
+            alert("La validación de usuario fue exitosa")
             form.submit();
         }
     });

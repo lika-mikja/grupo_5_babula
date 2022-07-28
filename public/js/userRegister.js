@@ -1,23 +1,24 @@
 
 
-window.addEventListener("full", () => {
+window.addEventListener("load", () => {
+   
 
     let form = document.querySelector(".form");
-    form.name.focus();
-
+   /*  form.name.focus(); */
+   
 /* Aguarda a que los inputs estén completos antes de enviar al servidor */    
 form.addEventListener("submit", (e) => {
-        
+
         //* Crea un array vacío donde se van a ir agregando los errores*/
         let fail = [];
         /* Crea una variable y almacena con querySelector tomando el id de cada input */
                 let name = document.querySelector("#firstName");
                 let lastName = document.querySelector("#lastName");
                 let email = document.querySelector("#email");
-                let password = document.querySelector("#passwprd");
+                let password = document.querySelector("#password");
                 let category = document.querySelector("#category");
                 let userImage = document.querySelector("#avatar");
-
+console.log(password);
         // --------- NAME ------------
         if (name.value == "") {
             fail.push("El campo nombre no puede estar vacío");
@@ -83,15 +84,15 @@ form.addEventListener("submit", (e) => {
         } else {
             category.classList.add("is-valid");
             category.classList.remove("is-invalid");
-            form.userImage.focus();
+           /*  form.userImage.focus(); */
         };
 
          // --------- USER IMAGE ------------
          let allowedExtension = /(.jpg|.jpeg|.png|.gif)$/i;
-         if (!allowedExtension.exec(image.value)) {
+         if (!allowedExtension.exec(userImage.value)) {
             fail.push("Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.");
             userImage.classList.remove("is-valid");
-            productImage.classList.add("is-invalid");
+            userImage.classList.add("is-invalid");
         } else {
             userImage.classList.add("is-valid");
             userImage.classList.remove("is-invalid");
@@ -109,8 +110,8 @@ form.addEventListener("submit", (e) => {
                 ulFails.innerHTML += "<li>" + fail[i] + "</li>";
             };
         } else {
-            alert("La validación fue exitosa")
-            form.submit();
+            alert("El registro fue exitoso")
+           /*  form.submit(); */
         }
     });
 })

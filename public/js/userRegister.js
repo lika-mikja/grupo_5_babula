@@ -2,9 +2,8 @@
 
 window.addEventListener("load", () => {
    
-
     let form = document.querySelector(".form");
-    form.name.focus();
+   form.firstName.focus();
 
     /* Aguarda a que los inputs estén completos antes de enviar al servidor */
     form.addEventListener("submit", (e) => {
@@ -66,7 +65,7 @@ window.addEventListener("load", () => {
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else if (password.value.length < 8) {
-            fail.push("La constreña debe tener al menos 8 caracteres");
+            fail.push("La contraseña debe tener al menos 8 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else {
@@ -76,7 +75,7 @@ window.addEventListener("load", () => {
         };
 
         // --------- CATEGORY ------------
-        if (category.value == "") {
+        if (category.value == "Tipo") {
             fail.push("Debe elegir una categoría");
             category.classList.remove("is-valid");
             category.classList.add("is-invalid");

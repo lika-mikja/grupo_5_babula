@@ -39,8 +39,8 @@ window.addEventListener("full", () => {
             description.classList.add("is-invalid");
         } else if (password.value.length < 20) {
             fail.push("El campo descripción debe tener al menos 20 caracteres");
-            password.classList.remove("is-valid");
-            password.classList.add("is-invalid");
+            description.classList.remove("is-valid");
+            description.classList.add("is-invalid");
         }else {
             description.classList.add("is-valid");
             description.classList.remove("is-invalid");
@@ -93,7 +93,7 @@ window.addEventListener("full", () => {
 
          // --------- PRODUCTO IMAGE ------------
          let allowedExtension = /(.jpg|.jpeg|.png|.gif)$/i;
-         if (!allowedExtension.exec(image.value)) {
+         if (!allowedExtension.exec(productImage.value)) {
             fail.push("Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.");
             productImage.classList.remove("is-valid");
             productImage.classList.add("is-invalid");

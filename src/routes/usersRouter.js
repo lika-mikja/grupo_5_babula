@@ -13,7 +13,8 @@ const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 
 // Formulario y proceso de registro
-router.get("/register", guestMiddleware, usersController.register);
+/* router.get("/register", guestMiddleware, usersController.register); */
+router.get("/register", usersController.register);
 router.post(
   "/register",
   uploadFile.single("avatar"),

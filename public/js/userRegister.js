@@ -1,9 +1,9 @@
 
 
-window.addEventListener("full", () => {
-
+window.addEventListener("load", () => {
+   
     let form = document.querySelector(".form");
-    form.name.focus();
+   form.firstName.focus();
 
     /* Aguarda a que los inputs estén completos antes de enviar al servidor */
     form.addEventListener("submit", (e) => {
@@ -11,13 +11,12 @@ window.addEventListener("full", () => {
         //* Crea un array vacío donde se van a ir agregando los errores*/
         let fail = [];
         /* Crea una variable y almacena con querySelector tomando el id de cada input */
-        let name = document.querySelector("#firstName");
-        let lastName = document.querySelector("#lastName");
-        let email = document.querySelector("#email");
-        let password = document.querySelector("#passwprd");
-        let category = document.querySelector("#category");
-        let userImage = document.querySelector("#avatar");
-
+                let name = document.querySelector("#firstName");
+                let lastName = document.querySelector("#lastName");
+                let email = document.querySelector("#email");
+                let password = document.querySelector("#password");
+                let category = document.querySelector("#category");
+                let userImage = document.querySelector("#avatar");
         // --------- NAME ------------
         if (name.value == "") {
             fail.push("El campo nombre no puede estar vacío");
@@ -66,7 +65,7 @@ window.addEventListener("full", () => {
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else if (password.value.length < 8) {
-            fail.push("La constreña debe tener al menos 8 caracteres");
+            fail.push("La contraseña debe tener al menos 8 caracteres");
             password.classList.remove("is-valid");
             password.classList.add("is-invalid");
         } else {
@@ -76,22 +75,22 @@ window.addEventListener("full", () => {
         };
 
         // --------- CATEGORY ------------
-        if (category.value == "") {
+        if (category.value == "Tipo") {
             fail.push("Debe elegir una categoría");
             category.classList.remove("is-valid");
             category.classList.add("is-invalid");
         } else {
             category.classList.add("is-valid");
             category.classList.remove("is-invalid");
-            form.userImage.focus();
+           /*  form.userImage.focus(); */
         };
 
-        // --------- USER IMAGE ------------
-        let allowedExtension = /(.jpg|.jpeg|.png|.gif)$/i;
-        if (!allowedExtension.exec(image.value)) {
+         // --------- USER IMAGE ------------
+         let allowedExtension = /(.jpg|.jpeg|.png|.gif)$/i;
+         if (!allowedExtension.exec(userImage.value)) {
             fail.push("Extensión no permitida. Utiliza: .jpeg/.jpg/.png/.gif.");
             userImage.classList.remove("is-valid");
-            productImage.classList.add("is-invalid");
+            userImage.classList.add("is-invalid");
         } else {
             userImage.classList.add("is-valid");
             userImage.classList.remove("is-invalid");
@@ -109,8 +108,8 @@ window.addEventListener("full", () => {
                 ulFails.innerHTML += "<li>" + fail[i] + "</li>";
             };
         } else {
-            alert("La validación fue exitosa")
-            form.submit();
+            alert("El registro fue exitoso")
+           /*  form.submit(); */
         }
     });
 })

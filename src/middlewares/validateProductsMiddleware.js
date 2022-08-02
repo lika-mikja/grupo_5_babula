@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
-const bcrypt = require("bcrypt");
+
 const { application } = require("express");
 const { body } = require("express-validator");
-const bcryptRounds = 10;
+
 const db = require("../database/models");
 
 const User = db.User;

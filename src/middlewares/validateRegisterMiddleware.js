@@ -17,10 +17,8 @@ const validateRegister = [
     .bail()
     .isLength({ min: 2 })
     .withMessage("Ingrese un nombre con mas de 2 carateres"),
-  body("email")
-    .notEmpty()
-    .withMessage("Tienes que escribir un correo electrónico")
-    .bail()
+  body("email", "Email Invalido")
+    .exists()
     .isEmail()
     .withMessage("Debes escribir un formato de correo válido")
     .custom((userEmail) => {

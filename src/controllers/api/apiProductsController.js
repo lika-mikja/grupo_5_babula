@@ -4,24 +4,24 @@ const path = require('path');
 const db = require("../../database/models");
 const sequelize = db.sequelize;
 
-const productInDb = db.User;
+const productInDb = db.Product;
 
 const productsController = {
     allData: (req, res) => {
         productInDb.findAll()
             .then(products => {
+                products.forEach((product, i) => {
+                    product.dataValues.detail= "http://localhost:4000/api/products/" + product.dataValues.id
+                });
                 let respuesta = {
                     count: {
                         total: products.length,
                     },
                     countByCategory: {
+                        
                     },
-                    products: {
-
-                    },
-                    detail: {
-
-                    }
+                    products: products ,
+                    
                 }
                 res.json(respuesta)
             })
@@ -31,10 +31,11 @@ const productsController = {
         productInDb.findByPk(productId)
             .then(plato => {
                 let respuesta = {
-                    
+                plato: plato 
                 }
+                res.json(respuesta);
             })
-            res.json(respuesta);
+            
     },
 
     /*

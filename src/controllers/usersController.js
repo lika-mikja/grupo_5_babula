@@ -22,7 +22,7 @@ const controller = {
     const resultValidation = validationResult(req);
     const { firstName, lastName, email, password, roleId } = req.body;
     let checkRoleId;
-    if (roleId == "Admin") {
+    if (roleId === 1 ) {
       return (checkRoleId = 1);
     } else {
       checkRoleId = 2;
@@ -43,7 +43,7 @@ const controller = {
       avatar,
     })
       .then(() => {
-        res.redirect("/users/login");
+        res.redirect("/user/login");
       })
       .catch((error) => res.send(error));
   },
@@ -60,6 +60,7 @@ const controller = {
       });
     } else {
       User.findAll().then(function (allUsers) {
+        let userToLogin ;
         for (let i = 0; i < allUsers.length; i++) {
           if (
             req.body.email == allUsers[i].email &&
@@ -95,11 +96,11 @@ const controller = {
     return res.redirect("/");
   },
 
-  isEmailInUse: function (email) {
+/*  isEmailInUse: function (email) {
     let allUsers = this.findAll();
     let email1 = allUsers.filter((oneUser) => oneUser.email == email);
     return email.length > 0;
-  },
+  },*/
 };
 
 module.exports = controller;

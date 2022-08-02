@@ -9,7 +9,7 @@ const productsController = require("../controllers/productsController");
 
 // Middlewares
 const authMiddleware = require("../middlewares/authMiddleware");
-// const validations1 = requiere("../middlewares/validateProductsMiddleware"); /* no anda nose porque, me dice require no defined */
+const validations1 = require("../middlewares/validateProductsMiddleware"); /* no anda nose porque, me dice require no defined */
 const uploadFile = require("../middlewares/multerProductMiddleware");
 
 /*** GET ALL PRODUCTS ***/
@@ -21,7 +21,7 @@ router.get("/create", authMiddleware, productsController.productCreate);
 router.post(
   "/",
   uploadFile.single("product_image"),
-  // validations1,
+  validations1,
   productsController.store
 );
 

@@ -43,7 +43,7 @@ const controller = {
       avatar,
     })
       .then(() => {
-        res.redirect("/users/login");
+        res.redirect("/user/login");
       })
       .catch((error) => res.send(error));
   },
@@ -60,6 +60,7 @@ const controller = {
       });
     } else {
       User.findAll().then(function (allUsers) {
+        let userToLogin;
         for (let i = 0; i < allUsers.length; i++) {
           if (
             req.body.email == allUsers[i].email &&

@@ -17,18 +17,21 @@ const validateRegister = [
     .bail()
     .isLength({ min: 2 })
     .withMessage("Ingrese un nombre con mas de 2 carateres"),
-  body("email")
-    .notEmpty()
-    .withMessage("Tienes que escribir un correo electrónico")
-    .bail()
+  body("email", "Email Invalido")
+    .exists()
     .isEmail()
-    .withMessage("Debes escribir un formato de correo válido")
-    .custom((email) => {
-      /* Chequea que el mail sea unico */ /* No anda , creo que lo estoy invocando mal a la funcion*/
-      const value = User.isEmailInUse(email);
-      if (value) {
-        throw new Error("Este email ya se encuentra registrado");
-      }
+    .trim()
+    .escape()
+    .custom((userEmail) => {
+      return new Promise((resolve, reject) => {
+        User.findOne({ where: { email: userEmail } }).then((emailExist) => {
+          if (emailExist !== null) {
+            reject(new Error("El email ya se encuentra registrado"));
+          } else {
+            resolve(true);
+          }
+        });
+      });
     }),
   body("password")
     .notEmpty()

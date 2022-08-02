@@ -22,7 +22,7 @@ const controller = {
     const resultValidation = validationResult(req);
     const { firstName, lastName, email, password, roleId } = req.body;
     let checkRoleId;
-    if (roleId === 1 ) {
+    if (roleId == 1 ) {
       return (checkRoleId = 1);
     } else {
       checkRoleId = 2;
@@ -94,13 +94,7 @@ const controller = {
     res.clearCookie("userEmail");
     req.session.destroy();
     return res.redirect("/");
-  },
-
-/*  isEmailInUse: function (email) {
-    let allUsers = this.findAll();
-    let email1 = allUsers.filter((oneUser) => oneUser.email == email);
-    return email.length > 0;
-  },*/
+  }
 };
 
 module.exports = controller;

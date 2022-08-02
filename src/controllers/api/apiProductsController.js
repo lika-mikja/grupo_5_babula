@@ -11,17 +11,17 @@ const productsController = {
         productInDb.findAll()
             .then(products => {
                 products.forEach((product, i) => {
-                    product.dataValues.detail= "http://localhost:4000/api/products/" + product.dataValues.id
+                    product.dataValues.detail = "http://localhost:4000/api/products/" + product.dataValues.id
                 });
                 let respuesta = {
                     count: {
                         total: products.length,
                     },
                     countByCategory: {
-                        
+
                     },
-                    products: products ,
-                    
+                    products: products,
+
                 }
                 res.json(respuesta)
             })
@@ -31,11 +31,17 @@ const productsController = {
         productInDb.findByPk(productId)
             .then(plato => {
                 let respuesta = {
-                plato: plato 
+                    plato: {
+                        id: plato.id,
+                        name: plato.title,
+                        description: plato.description,
+                        img: "http://localhost:4000/images/products/" + plato.img,
+                        dbRelations: ["sizeId", "categoryId"],
+                    }
                 }
                 res.json(respuesta);
             })
-            
+
     },
 
     /*
@@ -60,4 +66,4 @@ const productsController = {
     
     */
 }
-    module.exports = productsController;
+module.exports = productsController;

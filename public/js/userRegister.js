@@ -1,6 +1,4 @@
-
-
-window.addEventListener("load", () => {
+window.onload = function () {
    
     let form = document.querySelector(".form");
    form.firstName.focus();
@@ -17,6 +15,7 @@ window.addEventListener("load", () => {
                 let password = document.querySelector("#password");
                 let category = document.querySelector("#category");
                 let userImage = document.querySelector("#avatar");
+
         // --------- NAME ------------
         if (name.value == "") {
             fail.push("El campo nombre no puede estar vacío");
@@ -29,8 +28,8 @@ window.addEventListener("load", () => {
         } else {
             name.classList.add("is-valid");
             name.classList.remove("is-invalid");
-            form.lastName.focus();
-        };
+/*             form.lastName.focus();
+ */        };
 
         // --------- LASTNAME ------------
         if (lastName.value == "") {
@@ -44,8 +43,8 @@ window.addEventListener("load", () => {
         } else {
             lastName.classList.add("is-valid");
             lastName.classList.remove("is-invalid");
-            form.email.focus();
-        };
+/*             form.email.focus();
+ */        };
 
         // --------- EMAIL (regex) ------------
 
@@ -56,8 +55,8 @@ window.addEventListener("load", () => {
         } else {
             email.classList.add("is-valid");
             email.classList.remove("is-invalid");
-            form.password.focus();
-        };
+/*             form.password.focus();
+ */        };
 
         // --------- PASSWORD ------------
         if (password.value == "") {
@@ -71,8 +70,8 @@ window.addEventListener("load", () => {
         } else {
             password.classList.add("is-valid");
             password.classList.remove("is-invalid");
-            form.category.focus();
-        };
+/*             form.category.focus();
+ */        };
 
         // --------- CATEGORY ------------
         if (category.value == "Tipo") {
@@ -94,7 +93,7 @@ window.addEventListener("load", () => {
         } else {
             userImage.classList.add("is-valid");
             userImage.classList.remove("is-invalid");
-            form.userImage.focus();
+            /* form.userImage.focus(); */
         };
 
         /* Controlador de errores */
@@ -112,4 +111,4 @@ window.addEventListener("load", () => {
            /*  form.submit(); */
         }
     });
-})
+}

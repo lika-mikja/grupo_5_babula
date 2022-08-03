@@ -107,7 +107,7 @@ window.onload = function () {
                 ulFails.innerHTML += "<li>" + fail[i] + "</li>";
             };
         } else {
-            alert("El registro fue exitoso")
+          //  alert("El registro fue exitoso")
            /*  form.submit(); */
         }
     });

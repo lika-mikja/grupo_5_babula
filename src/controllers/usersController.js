@@ -20,20 +20,24 @@ const controller = {
   },
   processRegister: async (req, res) => {
     const resultValidation = validationResult(req);
-    const { firstName, lastName, email, password, roleId } = req.body;
-    let checkRoleId;
-    if (roleId == 1 ) {
-      return (checkRoleId = 1);
-    } else {
-      checkRoleId = 2;
-    }
+
     if (resultValidation.errors.length > 0) {
       return res.render("./users/userRegisterForm", {
         errors: resultValidation.mapped(),
         oldData: req.body,
       });
     }
+    //console.log(req.body)
+    const { firstName, lastName, email, password, roleId } = req.body;
+    let checkRoleId;
+    if (Number(roleId) === 1 ) {
+    checkRoleId = 1;
+    } else {
+      checkRoleId = 2;
+    }
+
     const avatar = req.file.filename;
+    console.log(req.file)
     await User.create({
       firstName,
       lastName,

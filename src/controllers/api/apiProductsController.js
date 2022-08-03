@@ -7,61 +7,51 @@ const sequelize = db.sequelize;
 const productInDb = db.Product;
 
 const productsController = {
-    allData: (req, res) => {
+    list: (req, res) => {
         productInDb.findAll()
             .then(products => {
-                products.forEach((product, i) => {
-                    product.dataValues.detail = "http://localhost:4000/api/products/" + product.dataValues.id
-                });
-                let respuesta = {
-                    count: {
-                        total: products.length,
-                    },
-                    countByCategory: {
-
-                    },
-                    products: products
-
+                if (products.length) {
+                    let response = {
+                        count: {
+                            status: 200,
+                            count: products.length
+                        },
+                        products: []
+                    }
+                    products.forEach(product => {
+                        response.products.push({
+                            id: product.id,
+                            name: product.title,
+                            description: product.description,
+                            dbRelations: ["categoryId"],
+                            detail: "http://localhost:4000/api/products/" + product.id
+                        })
+                    });
+                    return res.json(response);
                 }
-                res.json(respuesta)
-            }) .catch(error => res.send(error))
+                else {
+                    return res.status(404).json({ error: 'No se encontraron resultados' });
+                }
+            })
+            .catch(error => {
+                return res.status(500).json({ error: 'No se puede conectar a la base de datos' });;
+            })
     },
+
     detail: (req, res) => {
         let productId = req.params.id
         productInDb.findByPk(productId)
             .then(plato => {
                 let respuesta = {
                     data: {
-                        product: plato ,
+                        product: plato,
                         imgURL: "http://localhost:4000/images/products/" + plato.img,
                         dbRelations: ["categoryId"],
                     }
                 }
                 res.json(respuesta);
-            }) .catch(error => res.send(error))
+            }).catch(error => res.send(error))
 
     },
-
-    /*
-        store: function (req, res) {
-            Products.create({
-                title: req.body.title,
-                price: parseInt(req.body.price),
-                ingredients: req.body.ingredients,
-                img: req.file ? req.file.filename : "default-image.jpg",
-                description: req.body.description,
-                categoryId: req.body.category,
-                todaysDay: req.body.todaysDay
-            })
-    
-                .then(() => {
-                    res.redirect('/products')
-                })
-                .catch(error => res.send(error))
-        },
-    
-    };
-    
-    */
 }
 module.exports = productsController;

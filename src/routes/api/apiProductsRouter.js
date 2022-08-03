@@ -8,7 +8,7 @@ const apiProductsController = require("../../controllers/api/apiProductsControll
 
 
 /*** GET ALL PRODUCTS ***/
-router.get("/", apiProductsController.allData);
+router.get("/", apiProductsController.list);
 router.get("/:id", apiProductsController.detail);
 
 

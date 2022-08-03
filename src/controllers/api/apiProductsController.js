@@ -20,27 +20,25 @@ const productsController = {
                     countByCategory: {
 
                     },
-                    products: products,
+                    products: products
 
                 }
                 res.json(respuesta)
-            })
+            }) .catch(error => res.send(error))
     },
     detail: (req, res) => {
         let productId = req.params.id
         productInDb.findByPk(productId)
             .then(plato => {
                 let respuesta = {
-                    plato: {
-                        id: plato.id,
-                        name: plato.title,
-                        description: plato.description,
-                        img: "http://localhost:4000/images/products/" + plato.img,
-                        dbRelations: ["sizeId", "categoryId"],
+                    data: {
+                        product: plato ,
+                        imgURL: "http://localhost:4000/images/products/" + plato.img,
+                        dbRelations: ["categoryId"],
                     }
                 }
                 res.json(respuesta);
-            })
+            }) .catch(error => res.send(error))
 
     },
 

@@ -47,7 +47,7 @@ const userController = {
           data: {
             user: user,
             imgURL: "http://localhost:4000/images/users/" + user.avatar,
-            dbRelations: ["roleId"],
+            dbRelations: ["roles"],
           }
 
         }

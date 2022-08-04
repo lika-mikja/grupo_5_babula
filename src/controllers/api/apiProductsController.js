@@ -23,7 +23,7 @@ const productsController = {
                             id: product.id,
                             name: product.title,
                             description: product.description,
-                            dbRelations: ["categoryId"],
+                            dbRelations: ["categories"],
                             detail: "http://localhost:4000/api/products/" + product.id
                         })
                     });
@@ -46,7 +46,7 @@ const productsController = {
                     data: {
                         product: plato,
                         imgURL: "http://localhost:4000/images/products/" + plato.img,
-                        dbRelations: ["categoryId"],
+                        dbRelations: ["categories"],
                     }
                 }
                 res.json(respuesta);

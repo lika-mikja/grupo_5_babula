@@ -43,15 +43,17 @@ const userController = {
   detail: (req, res) => {
     userInDb.findByPk(req.params.id)
       .then(user => {
-        let respuesta = {
+        let response = {
           data: {
-            user: user,
+            id: user.id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
             imgURL: "http://localhost:4000/images/users/" + user.avatar,
             dbRelations: ["roles"],
           }
-
         }
-        res.json(respuesta);
+        res.json(response);
       }).catch(error => res.send(error))
 
   }

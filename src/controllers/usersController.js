@@ -30,8 +30,8 @@ const controller = {
     //console.log(req.body)
     const { firstName, lastName, email, password, roleId } = req.body;
     let checkRoleId;
-    if (Number(roleId) === 1 ) {
-    checkRoleId = 1;
+    if (Number(roleId) === 1) {
+      checkRoleId = 1;
     } else {
       checkRoleId = 2;
     }
@@ -58,34 +58,35 @@ const controller = {
 
   processLogin: (req, res) => {
     let errors = validationResult(req);
+    let oldData = req.body;
     if (!errors.isEmpty()) {
-      return res.render("./users/userLoginForm.ejs", {
-        errorMessages: errors.mapped(),
-      });
+      return res.render("./users/userLoginForm.ejs", { errorMessages: errors.mapped(), oldData });
     } else {
-      User.findAll().then(function (allUsers) {
-        let userToLogin ;
-        for (let i = 0; i < allUsers.length; i++) {
-          if (
-            req.body.email == allUsers[i].email &&
-            bcryptjs.compareSync(req.body.password, allUsers[i].password)
-          ) {
-            userToLogin = allUsers[i];
-            break;
+      User.findAll()
+        .then (allUsers => {
+          let userToLogin;
+          for (let i = 0; i < allUsers.length; i++) {
+            if (req.body.email == allUsers[i].email && bcryptjs.compareSync(req.body.password, allUsers[i].password)) {
+              userToLogin = allUsers[i];
+              break;
+            }
           }
-        }
-        if (userToLogin == undefined) {
-          return res.render("users/userLoginForm.ejs", {
-            errors: [{ msg: "Credenciales incorrectas" }],
-          });
-        }
-        delete userToLogin.password;
-        req.session.userLogged = userToLogin;
-        if (req.body.rememberUser) {
-          res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
-        }
-        res.redirect("/");
-      });
+          if (userToLogin == undefined) {
+            let customError = {
+              "password": {
+                "msg": "Las credenciales no son válidas",
+              }
+            }
+            return res.render ("./users/userLoginForm.ejs", {errorMessages: customError, oldData});
+
+          }
+          delete userToLogin.password;
+          req.session.userLogged = userToLogin;
+          if (req.body.rememberUser) {
+            res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
+          }
+          res.redirect("/");
+        });
     }
   },
 

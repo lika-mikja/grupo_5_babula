@@ -196,7 +196,6 @@ a.avatar\&text {
 .products {
     display: flex;
     flex-wrap: nowrap;
-
 }
 
 .products article {
@@ -278,6 +277,7 @@ a.avatar\&text {
 /* Seccion footer*/
 
 .foot {
+    width: 100%;
     text-align: center;
     color: var(--azul-home);
     background-color: var(--crema-home);

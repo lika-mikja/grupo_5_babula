@@ -20,10 +20,14 @@
               <div class="row-product-detail">
                 <div class="col-12 col-md-6">
                   <label class="form-label">Correo electrónico:</label>
-                  <input type="text" name="email" id="email" class="form-notification">
-                  <% if (locals.errors && errors.email) { %>
+                  <input type="text" name="email" id="email" class="form-notification"
+                  <% if (locals.oldData && oldData.email) { %>
+                    value="<%= oldData.email %>" 
+                <% } %>
+                >
+                  <% if (locals.errorMessages && errorMessages.email) { %>
                     <div class="text-danger">
-                      <%= errors.email.msg %>
+                      <%= errorMessages.email.msg %>
                     </div>
                     <% } %>
                 </div>
@@ -32,11 +36,14 @@
                   <input type="password" name="password" id="password" class="form-notification">
                   <div class="invalid-feedback">
                   </div>
+                  <% if (locals.errorMessages && errorMessages.password) { %>
+                    <p class="text-danger"> <%= errorMessages.password.msg %> </p>
+                <% } %>
                 </div>
                 <div class="col-md-6 my-2">
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
+                      <input type="checkbox" class="form-check-input" name="rememberUser">Recordar mi usuario
                     </label>
                   </div>
                 </div>

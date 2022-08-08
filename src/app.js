@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+app.use(cors());
 
 const session = require("express-session");
 const cookies = require("cookie-parser");
@@ -44,14 +46,14 @@ app.set("views", path.join(__dirname, "/views"));
 const mainRouter = require("./routes/mainRouter");
 const productsRouter = require("./routes/productsRouter");
 const usersRouter = require("./routes/usersRouter");
-const apiProducts = require ("./routes/api/apiProductsRouter");
-const apiUsers = require ("./routes/api/apiUsersRouter")
+const apiProducts = require("./routes/api/apiProductsRouter");
+const apiUsers = require("./routes/api/apiUsersRouter");
 
 app.use("/", mainRouter);
 app.use("/products", productsRouter);
 app.use("/user", usersRouter);
 app.use("/api/products", apiProducts);
-app.use("/api/users", apiUsers)
+app.use("/api/users", apiUsers);
 
 // Servidor
 app.listen(4000, () => {

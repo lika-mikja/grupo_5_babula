@@ -25,6 +25,7 @@
 }
 
 .user-description h2 {
+    margin-bottom: 10px;
     color: var(--naranja)
 }
 

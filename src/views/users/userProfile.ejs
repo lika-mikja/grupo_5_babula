@@ -19,10 +19,17 @@
                         </section>
                         <section class="user-description">
                             <div class="user-flex">
-                                <h2>Hola <%= user.firstName %>
+                                <h2>¡Hola, <%= user.firstName %>!
                                 </h2>
+                                <h4>Nombre: <%= user.firstName %>
+                                </h4>
+                                <h4>Apellido: <%= user.lastName %>
+                                </h4>
                                 <h4>Correo electronico: <%= user.email %>
                                 </h4>
+                                <% if (user.roleId && user.roleId===1) { %>
+                                    <h4>Tipo de usuario: Administrador</h4>
+                                    <% } %>
                             </div>
                         </section>
                     </section>

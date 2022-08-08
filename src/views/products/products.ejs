@@ -10,11 +10,13 @@
         <%- include("../partials/header") %>
             <div class="main">
                 <section class="featured-products">
-                    <h2 class="recipes">Platos nativos del día</h2>
+                    <h2 class="recipes">Todos los menús</h2>
                     <div class="products">
                         <% plato.forEach(function(plato){ %>
                             <article>
-                                <img class="product-image" src="/images/products/<%= plato.img %>" alt="product 1">
+                                <section class="product-image-container">
+                                    <img class="product-image" src="/images/products/<%= plato.img %>" alt="product 1">
+                                </section>
                                 <section class="recipes-description">
                                     <p class="product-name">
                                         <%= plato.title %>

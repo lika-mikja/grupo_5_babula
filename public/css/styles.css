@@ -296,6 +296,12 @@ section.access-menu {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(131, 57, 57, 0.2);
 }
+
+.clean p {
+  color: white;
+  text-align: center;
+}
+
 .clean:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -316,9 +322,10 @@ section.access-menu {
   z-index: -1;
   transition: all 0.4s;
 }
-.clean::after {
-  background-color: var(--azul-home);
-}
+/*.clean::after {
+  background-color: #4317a8;
+}*/
+
 .clean:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;

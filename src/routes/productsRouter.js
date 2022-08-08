@@ -15,15 +15,9 @@ const uploadFile = require("../middlewares/multerProductMiddleware");
 /*** GET ALL PRODUCTS ***/
 router.get("/", productsController.index);
 
-/*** Create and edit products ***/
+/*** Create products ***/
 router.get("/create", authMiddleware, productsController.productCreate);
-
-router.post(
-  "/",
-  uploadFile.single("product_image"),
-  validations1,
-  productsController.store
-);
+router.post("/", uploadFile.single("product_img"), validations1, productsController.store);
 
 /*** EDIT ONE PRODUCT ***/
 router.get("/edit/:id", authMiddleware, productsController.productEdit);

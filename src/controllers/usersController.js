@@ -5,14 +5,7 @@ const { validationResult } = require("express-validator");
 const db = require("../database/models");
 
 const User = db.User;
-const usersImagesRoute = path.join(
-  __dirname,
-  "..",
-  "..",
-  "public",
-  "images",
-  "users"
-);
+const usersImagesRoute = path.join(__dirname, "..", "..", "public", "images", "users");
 
 const controller = {
   register: (req, res) => {
@@ -37,7 +30,6 @@ const controller = {
     }
 
     const avatar = req.file.filename;
-    console.log(req.file)
     await User.create({
       firstName,
       lastName,
@@ -63,7 +55,7 @@ const controller = {
       return res.render("./users/userLoginForm.ejs", { errorMessages: errors.mapped(), oldData });
     } else {
       User.findAll()
-        .then (allUsers => {
+        .then(allUsers => {
           let userToLogin;
           for (let i = 0; i < allUsers.length; i++) {
             if (req.body.email == allUsers[i].email && bcryptjs.compareSync(req.body.password, allUsers[i].password)) {
@@ -77,7 +69,7 @@ const controller = {
                 "msg": "Las credenciales no son válidas",
               }
             }
-            return res.render ("./users/userLoginForm.ejs", {errorMessages: customError, oldData});
+            return res.render("./users/userLoginForm.ejs", { errorMessages: customError, oldData });
 
           }
           delete userToLogin.password;

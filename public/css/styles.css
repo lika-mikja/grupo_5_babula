@@ -184,6 +184,11 @@ main {
     margin: 0 auto;
 }
 
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
 main section article h4 {
     font-size: 1.5rem;
     color: white;
@@ -257,15 +262,12 @@ p.product-description {
     align-items: center;
 }
 
-.featured-products .product-image {
+.product-image {
     width: 100%;
     aspect-ratio: 1;
     overflow: hidden;
     display: flex;
     border-radius: 30px;
-}
-
-.featured-products img {
     object-fit: cover;
     width: 100%;
 }
@@ -277,7 +279,7 @@ p.product-description {
     border-radius: 15px;
     padding: 9px;
     text-align: center;
-    margin-top: 24px
+    margin-top: 4px;
 }
 
 .see-more p,
@@ -315,10 +317,7 @@ section.access-menu {
     margin: 50px 0;
 }
 
-.product-detail {
-    border-radius: 8px;
-    overflow: hidden;
-}
+
 
 .container-product-creator {
     display: flex;
@@ -463,8 +462,8 @@ input.form-check-input {
     color: #842029;
 }
 
-.alert-warning{
-    color:var(--azul-home);
+.alert-warning {
+    color: var(--azul-home);
     background-color: var(--crema-home);
     text-align: center;
     border-radius: 10px;
@@ -498,6 +497,7 @@ input.form-check-input {
 
     .recipes-description {
         margin: 20px 0;
+        display: flex;
     }
 
     .clean {
@@ -550,14 +550,14 @@ input.form-check-input {
         column-gap: 32px;
         justify-content: center;
     }
+
     .product-detail-div {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
 
-    .featured-products .product-image {
-        width: 30%;
+    .product-image {
         aspect-ratio: 1;
         overflow: hidden;
         display: flex;

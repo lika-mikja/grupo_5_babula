@@ -9,8 +9,8 @@ const productsImagesRoute = path.join(__dirname, '..', '..', 'public', 'images',
 const controller = {
     index: (req, res) => {
         Products.findAll()
-            .then(products => {
-                res.render('./products/products', { products })
+            .then(plato => {
+                res.render('./products/products', { plato })
             })
     },
 

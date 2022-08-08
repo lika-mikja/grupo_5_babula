@@ -62,8 +62,8 @@ VALUES
         1800,
         "Patatas, repollo colorado, tomate, morron, zanahoria, ajo, cebolla, eneldo, carne vacuna pastoril, porotos , sal y pimienta",
         "borsch.jpeg",
-        "Una leyenda popular afirma que, en 1637, durante un asedio de dos meses por parte de los turcos en la fortaleza de Azov, al sur de Rusia, los cosacos prepararon un plato para la armada con todos los productos comestibles que encontraron y llamaron a esta mezcla nutritiva de verduras y carne «borsch», haciendo un anagrama de una sopa de pescado popular denominada «shcherba».
-La posible etimología puede ser del nombre protoeslavo bŭrščǐ, chirivía, que era el ingrediente principal del plato durante sus primeros siglos de existencia. Finalmente, la remolacha cultivada sustituyó a la chirivía salvaje debido a su sabor y el color pasó de marrón verdoso a un rojizo más atractivo, pero el nombre siguió siendo el mismo. La historia de este plato va ligada a  la evolución de las recetas de caldos y por extensión a las sopas acompañadas por hierbas o plantas que se van añadiendo al agua para conseguir una combinación agradable  y nutritiva.",
+        "Una leyenda popular afirma que, en 1637, durante un asedio de dos meses por parte de los turcos en la fortaleza de Azov, al sur de Rusia, los cosacos prepararon un plato para la armada con todos los productos comestibles que encontraron y llamaron a esta mezcla nutritiva de verduras y carne «borsch».
+La historia de este plato va ligada a  la evolución de las recetas de caldos y por extensión a las sopas acompañadas por hierbas o plantas que se van añadiendo al agua para conseguir una combinación agradable  y nutritiva.",
         1,
         1
     ),

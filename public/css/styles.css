@@ -279,7 +279,6 @@ p.product-description {
     border-radius: 15px;
     padding: 9px;
     text-align: center;
-    margin-top: 4px;
 }
 
 .see-more p,
@@ -474,12 +473,11 @@ input.form-check-input {
     /* Productos destacados */
 
     .products {
+        margin-top: 30px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: flex-start;
-        column-gap: 32px;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 
     .product-detail-view {
@@ -492,11 +490,10 @@ input.form-check-input {
     }
 
     .products article {
-        width: 45%;
+        width: 40%;
     }
 
     .recipes-description {
-        margin: 20px 0;
         display: flex;
     }
 
@@ -562,6 +559,5 @@ input.form-check-input {
         overflow: hidden;
         display: flex;
         border-radius: 30px;
-        flex-wrap: nowrap;
     }
 }

@@ -55,6 +55,12 @@ app.use("/user", usersRouter);
 app.use("/api/products", apiProducts);
 app.use("/api/users", apiUsers);
 
+// Uso de error 404
+
+app.use((req,res,next) => {
+  res.status(404).render("not-found");
+})
+
 // Servidor
 app.listen(4000, () => {
   console.log("Servidor funcionando en el puerto http://localhost:4000");

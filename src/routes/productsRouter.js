@@ -30,5 +30,9 @@ router.get("/detail/:id", productsController.detail);
 router.delete("/delete/:id", productsController.destroy);
 
 /*** GET ONE PRODUCT ***/
+
+router.get("/shop", productsController.shop);
+module.exports = router;
+
 router.get("/shop/:id", productsController.shop);
 module.exports = router;

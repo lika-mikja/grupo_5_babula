@@ -85,9 +85,17 @@ const controller = {
             .catch(error => res.send(error))
     },
 
-    shop: (req, res) => {
+   /*  shop: (req, res) => {
         res.render('./products/shop');
-    }
+        
+    } */
+    shop: (req, res) => {
+        let productId = req.params.id
+        Products.findByPk(productId)
+            .then(plato => {
+                res.render('./products/shop', { plato });
+            });
+    },
 };
 
 

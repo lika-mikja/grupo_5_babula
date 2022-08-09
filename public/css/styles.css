@@ -45,7 +45,7 @@ body {
   background-size: cover;
 }
 
-/* Menu de la página */
+/* Header */
 
 .menu {
   overflow: hidden;
@@ -57,7 +57,8 @@ body {
   font-size: 26px;
   margin: auto;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  /*space-between*/
   box-shadow: rgb(100 100 111 / 20%) -1px 5px 4px 0px;
 }
 
@@ -67,6 +68,8 @@ body {
   padding: 7px;
   font-weight: bold;
   line-height: 23px;
+  display: none;
+  /**/
 }
 
 .name a {
@@ -76,17 +79,20 @@ body {
   text-decoration: none;
 }
 
-div.menu-left {
+.menu-left {
   width: 50%;
   position: relative;
   display: flex;
   align-items: center;
+  display: none;
+  /**/
 }
 
 div.menu-right {
   display: flex;
   align-items: center;
-  margin-right: 14px;
+  margin: 20px;
+  /*margin-right: 14px;*/
   gap: 22px;
   justify-content: space-evenly;
 }
@@ -120,10 +126,15 @@ div.bars {
   color: white;
 }
 
-a.avatar\&text {
+a.avatar_and_text {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+a.avatar_and_text p {
+  display: none;
+  /**/
 }
 
 /* Banner con logo */
@@ -294,6 +305,7 @@ p.product-description {
   box-shadow: 0 0.2rem #dfd9d9;
   transform: translateY(0.2rem);
 }
+
 .see-more:hover:not(:disabled) {
   background: rgb(231, 153, 64);
   color: white;
@@ -306,7 +318,7 @@ p.product-description {
 }
 
 /* Acceder al menú */
-.access-menu {
+HEAD .access-menu {
   width: 100%;
   margin: 30px 0;
   position: relative;
@@ -318,6 +330,7 @@ p.product-description {
   padding: 9px;
   margin: auto;
 }
+
 .clean:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(131, 57, 57, 0.2);
@@ -333,7 +346,7 @@ p.product-description {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.clean::after {
+HEAD .clean::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -354,6 +367,34 @@ p.product-description {
   margin: 30px 0;
   position: relative;
 }
+
+.clean p {
+  color: white;
+  text-align: center;
+}
+
+.clean::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+/*.clean::after {
+  background-color: #4317a8;
+}*/
+
+.clean:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
 /*Formulario de creación de producto/usuario*/
 
 .product-creator {
@@ -508,7 +549,35 @@ input.form-check-input {
   border-radius: 10px;
 }
 
+.alert-warning li {
+  list-style: none;
+}
+
 @media (min-width: 480px) {
+  /* Header */
+
+  .menu {
+    justify-content: space-between;
+  }
+
+  .logo_topbar {
+    width: 40px;
+  }
+
+  .name {
+    display: flex;
+    margin-left: 12px;
+    align-items: center;
+  }
+
+  .menu-left {
+    display: unset;
+  }
+
+  div.bars {
+    display: none;
+  }
+
   /* Productos destacados */
 
   .products {
@@ -542,6 +611,10 @@ input.form-check-input {
 }
 
 @media (min-width: 768px) {
+  div.menu-right {
+    margin-right: 30px;
+  }
+
   /* Productos destacados */
 
   .box-experience {

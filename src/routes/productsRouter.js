@@ -30,6 +30,9 @@ router.get("/detail/:id", productsController.detail);
 router.delete("/delete/:id", productsController.destroy);
 
 /*** GET ONE PRODUCT ***/
+
 router.get("/shop", productsController.shop);
+router.post("/shop/add", productsController.add);
+router.post("/shop/clear", productsController.clear);
 
 module.exports = router;

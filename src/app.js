@@ -22,8 +22,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(
-  session({
+app.use(session({
     secret: "Veo, veo... ¿qué ves?",
     resave: false,
     saveUninitialized: false,
@@ -54,6 +53,12 @@ app.use("/products", productsRouter);
 app.use("/user", usersRouter);
 app.use("/api/products", apiProducts);
 app.use("/api/users", apiUsers);
+
+// Uso de error 404
+
+app.use((req,res,next) => {
+  res.status(404).render("not-found");
+})
 
 // Servidor
 app.listen(4000, () => {

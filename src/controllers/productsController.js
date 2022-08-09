@@ -86,9 +86,23 @@ const controller = {
     },
 
     shop: (req, res) => {
-        res.render('./products/shop');
-    }
-};
+        let plato = req.session.productAdded;
+        res.render('./products/shop', { plato });
+    },
 
+    add: (req, res) => {
+        let productToAddId = req.body.productToAdd;
+        Products.findByPk(productToAddId)
+            .then(plato => {
+                req.session.productAdded = plato;
+                res.render('./products/shop', { plato });
+            });
+    },
+
+    clear: (req, res) => {
+        req.session.productAdded = null;
+        res.redirect('/products/shop');
+    }
+}
 
 module.exports = controller;

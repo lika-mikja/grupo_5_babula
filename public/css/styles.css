@@ -306,12 +306,11 @@ p.product-description {
 }
 
 /* Acceder al menú */
-
-section.access-menu {
+.access-menu {
   width: 100%;
   margin: 30px 0;
+  position: relative;
 }
-
 .clean {
   width: 160px;
   background-color: var(--azul-home);
@@ -333,10 +332,7 @@ section.access-menu {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.clean p {
-  color: white;
-  text-align: center;
-}
+
 .clean::after {
   content: "";
   display: inline-block;
@@ -348,14 +344,15 @@ section.access-menu {
   left: 0;
   z-index: -1;
   transition: all 0.4s;
-}
-/*.clean::after {
-  background-color: #4317a8;
-}*/
-
-.clean:hover::after {
+  background-color: #a81717;
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+.access-menu2 {
+  width: 100%;
+  margin: 30px 0;
+  position: relative;
 }
 /*Formulario de creación de producto/usuario*/
 

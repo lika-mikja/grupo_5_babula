@@ -13,7 +13,7 @@
             <a href="/products">
                 <p class=text-button-menu>Menús</p>
             </a>
-            <a href="/products/shop>" span title="Carrito"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/products/shop" span title="Carrito"><i class="fas fa-shopping-cart"></i></a>
             <!-- Si el usuario esta logeado y la categoria de un usuario logeado es Admin que me muestre el icono de crear producto-->
             <% if (locals.userLogged && locals.userLogged.roleId==1) { %>
                 <a href="/products/create" span title="Crear producto"><i class="fas fa-cart-plus"></i></a>

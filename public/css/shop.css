@@ -147,21 +147,24 @@ a.avatar\&text {
 .seccion-compra {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
-.caja-imagen,
-.caja-texto {
+.caja-imagen {
     margin: 15px;
     display: flex;
-    flex-direction: row-reverse;
 }
+
+.caja-texto {
+    margin-top: 40px;
+    margin-left: 25px;
+    }
 
 .alinear-items {
     display: flex;
     color: var(--azul-home);
     margin: auto;
     padding: auto;
-
 }
 
 div .alinear-items i {
@@ -197,11 +200,11 @@ div .alinear-items p {
 .buttons_buy {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
 }
 
 .buttons_buy button {
-    width: 100px;
+    width: 110px;
     background-color: var(--naranja);
     border-radius: 15px;
     padding: 9px;
@@ -212,21 +215,24 @@ div .alinear-items p {
     box-sizing: border-box;
     border: none;
     margin: 1rem;
+    text-align: center;
 }
 
 .price {
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-    text-align: center;
-    margin: 0.5rem;
-    justify-content: space-evenly;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* margin-left: 20px; */
+    /* text-align: center; */
+    margin-top: 1.5rem;
     font-size: 18px;
     color: var(--gris-oscuro);
-
-
 }
 
+p.product-name {
+    color: var(--naranja);
+    font-size: 25px;
+    font-weight: bold;
+}
 
 button p {
     color: white;
@@ -239,8 +245,7 @@ main {
 }
 
 .finaly-price {
-    margin: 4rem;
-
+    margin: 4rem 2rem;
 }
 
 

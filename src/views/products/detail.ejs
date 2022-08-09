@@ -16,9 +16,11 @@
               <img class="product-image-detail" src="/images/products/<%= plato.img %>" alt="product 1">
             </div>
             <div class="recipes-description">
-              <p class="product-name">
-                <%= plato.title %>
-              </p>
+              <div class="product-name">
+                <p>
+                  <%= plato.title %>
+                </p>
+              </div>
               <p class="product-description">
                 <%= plato.description %>
               </p>
@@ -32,9 +34,11 @@
           </section>
           <section class="buttons-detail">
             <div class="detail-button">
-              <a href="/products/shop/<%= plato.id %>">
-                <p>Agregar al carrito</p>
-              </a>
+              <form method="POST" action="/products/shop/add" class="form">
+                <button type="submit" class="btn btn-primary" name="productToAdd" value="<%= plato.id %>">
+                  <p>Agregar al carrito</p>
+                </button>
+              </form>
             </div>
             <% if (locals.userLogged && locals.userLogged.roleId==1) { %>
               <div class="detail-button">

@@ -22,8 +22,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(
-  session({
+app.use(session({
     secret: "Veo, veo... ¿qué ves?",
     resave: false,
     saveUninitialized: false,

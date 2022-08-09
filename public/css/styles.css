@@ -91,7 +91,7 @@ body {
 div.menu-right {
     display: flex;
     align-items: center;
-    margin: 20px 10px;
+    margin: 20px;
     /*margin-right: 14px;*/
     gap: 22px;
     justify-content: space-evenly;

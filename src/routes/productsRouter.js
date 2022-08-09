@@ -32,7 +32,7 @@ router.delete("/delete/:id", productsController.destroy);
 /*** GET ONE PRODUCT ***/
 
 router.get("/shop", productsController.shop);
-module.exports = router;
+router.post("/shop/add", productsController.add);
+router.post("/shop/clear", productsController.clear);
 
-router.get("/shop/:id", productsController.shop);
 module.exports = router;

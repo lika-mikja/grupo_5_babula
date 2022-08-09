@@ -254,7 +254,7 @@ p.product-description {
 
 .product-image {
   width: 100%;
-  aspect-ratio: 1;
+
   overflow: hidden;
   display: flex;
   border-radius: 30px;
@@ -269,6 +269,17 @@ p.product-description {
   border-radius: 15px;
   padding: 9px;
   text-align: center;
+  border: none;
+  display: block;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+
+  z-index: 1;
+  font-family: inherit;
+
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
 }
 
 .see-more p,
@@ -276,6 +287,22 @@ p.product-description {
   text-align: center;
   color: white;
   text-decoration: none;
+}
+
+.see-more:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+.see-more:hover:not(:disabled) {
+  background: rgb(231, 153, 64);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.see-more:disabled {
+  cursor: auto;
+  color: grey;
 }
 
 /* Acceder al menú */

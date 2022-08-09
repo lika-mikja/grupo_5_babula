@@ -96,7 +96,6 @@ const controller = {
             .then(plato => {
                 req.session.productAdded = plato;
                 res.render('./products/shop', { plato });
-
             });
     },
 

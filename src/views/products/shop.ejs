@@ -36,7 +36,7 @@
                   <p>Sub total:</p>
                 </strong>
                 <p class="separated-name-price">
-                  $ <%= plato.price %>
+                  $<%= plato.price %>
                 </p>
               </div>
               <div class="price">
@@ -49,9 +49,9 @@
                 <strong>
                   <p>Total:</p>
                 </strong>
-              
-                <% let total = plato.price + 50 %>
-                <p class=" separated-name-price"><%= total %></p>
+                <% let subtotal = parseInt(plato.price) %>
+                <% let total = subtotal + 50 %>
+                <p class=" separated-name-price">$<%=total %></p>
             </section>
             </div>
             <section class="buttons_buy">

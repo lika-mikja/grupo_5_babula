@@ -8,10 +8,15 @@ const productInDb = db.Product;
 const productsController = {
   list: async (req, res) => {
     const groupCategory = await db.Product.findAll({
-      attributes: ['categoryId', [sequelize.fn('count', sequelize.col('id')), 'count']],
-      group: ['categoryId'],
-  })
-    productInDb.findAll().then((products) => {
+      attributes: [
+        "categoryId",
+        [sequelize.fn("count", sequelize.col("id")), "count"],
+      ],
+      group: ["categoryId"],
+    });
+    productInDb
+      .findAll()
+      .then((products) => {
         if (products.length) {
           let response = {
             counts: {
@@ -19,7 +24,7 @@ const productsController = {
               counts: products.length,
             },
             products: [],
-            coundByCategory : groupCategory 
+            countByCategory: groupCategory,
           };
           products.forEach((product) => {
             response.products.push({

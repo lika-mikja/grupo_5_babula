@@ -479,10 +479,12 @@ textarea.form-input {
     margin-top: 4px;
 }
 
-.form-notification,
-.form-check,
-.form-check-label {
+.form-notification {
     padding: 10px 16px;
+}
+
+.form-check {
+    margin: 20px 0;
 }
 
 input.form-check-input {

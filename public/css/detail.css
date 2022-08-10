@@ -18,6 +18,12 @@
     border-radius: 30px;
 }
 
+.product-name {
+    color: var(--naranja);
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .image-description {
     display: flex;
     max-width: 400px;

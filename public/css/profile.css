@@ -15,11 +15,9 @@
     aspect-ratio: 1;
     display: flex;
     object-fit: cover;
-
 }
 
 .user-description {
-    width: 100%;
     margin: unset;
     color: var(--gris-oscuro)
 }
@@ -39,12 +37,12 @@
         align-items: flex-start;
         flex-wrap: nowrap;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .image-profile {
         border-radius: 30px;
-        width: 500px;
+        width: 400px;
     }
 
     
